@@ -22,8 +22,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-  grid-row-start: 1;
-  grid-row-end: -1;
+  grid-row: 1/-1;
 
   color: $color-default-white;
 }
