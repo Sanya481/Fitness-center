@@ -1,2 +1,3 @@
-# Fitness-center
-Fitness center in Omsk
+## Fitness-center - Фитнес центр в Омске. 
+
+Третье техническое задание в акселераторе онлайн школы Html academy

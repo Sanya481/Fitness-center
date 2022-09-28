@@ -1,0 +1,132 @@
+.sale h2 {
+  margin: 0 0 62px 0;
+}
+
+.sale__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 211px);
+  gap: 40px;
+}
+
+.popular-sale__list,
+.standard-sale__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// popular-sale
+
+.popular-sale {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  grid-row-start: 1;
+  grid-row-end: -1;
+
+  color: $color-default-white;
+}
+
+.popular-sale__info {
+  background-color: $color-torch-red;
+  padding: 33px 35px 33px 45px;
+}
+
+.popular-sale__image {
+  background-color: $color-deep-sky-blue;
+  background-image: url("../img/decorative/woman-photo.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+
+  background-size: cover;
+}
+
+.popular-sale__list {
+  display: flex;
+  flex-direction: column;
+}
+
+// Меняем порядок следования элементов
+.popular-sale__item--title {
+  order: 2;
+}
+
+.popular-sale__item--price {
+  order: 1;
+}
+
+.popular-sale__item--time {
+  order: 0;
+}
+
+.popular-sale__item--link {
+  order: 3;
+}
+
+.popular-sale__item--title h3 {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0 0 184px 0;
+}
+
+.popular-sale__item--price span {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 109px;
+  margin: 0 0 0 0;
+}
+
+.popular-sale__item--time p {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+  margin: 0 0 -25px 0;
+}
+
+.popular-sale__item--link a {
+  color: $color-default-white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  // padding: 5px 0;
+  position: relative;
+  border-bottom: 1px solid $color-default-white;
+}
+
+
+// standard-sale
+
+.standard-sale {
+  color: $color-resolution-blue;
+  border: 7px solid;
+  padding: 22px 50px 23px 29px;
+}
+
+.standard-sale__item h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0 0 8px;
+}
+
+.standard-sale__item p {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 65px;
+}
+
+.standard-sale__item a {
+  color: $color-resolution-blue;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  // padding: 5px 0;
+  border-bottom: 1px solid $color-resolution-blue;
+}

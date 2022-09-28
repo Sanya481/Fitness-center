@@ -1,0 +1,44 @@
+.header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding-top: 30px;
+}
+
+.header__block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__block a {
+  font-family: $ff-placeholder-second;
+  font-size: 26px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+
+  color: #FFFFFF;
+}
+
+// .header.hiding {
+//   z-index: -1;
+// }
+
+// .header__container {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-top: 30px;
+//   padding-bottom: 40px;
+
+//   @include vp-1024 {
+//     margin-top: 20px;
+//     padding-bottom: 30px;
+//   }
+
+//   @include vp-768 {
+//     margin-top: 10px;
+//   }
+// }

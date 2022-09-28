@@ -1,0 +1,258 @@
+.intro {
+
+  background: $intro-background;
+  color: $color-default-white;
+  padding-top: 51px;
+
+}
+
+.intro__container {
+  // position: relative;
+}
+
+.one {
+  display: grid;
+  grid-template-columns: 396px 700px;
+  column-gap: 64px;
+
+  padding-bottom: 96px;
+}
+
+.second {
+  position: relative;
+  background-image: url("../img/decorative/intro-image.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+// intro__info
+
+.intro__info {
+  display: flex;
+  flex-direction: column;
+
+  max-width: 298px;
+  text-align: right;
+  margin-left: 98px;
+}
+
+.intro__info h1 {
+  font-family: $ff-placeholder-second;
+  font-size: 109px;
+  font-weight: 700;
+  line-height: 109px;
+  margin: 0;
+
+  letter-spacing: 0.03em;
+
+  max-width: 298px;
+  margin-bottom: 80px;
+}
+
+.intro__info span {
+  font-family: $ff-placeholder-second;
+  font-size: 49px;
+  font-weight: 400;
+  line-height: 59px;
+
+  letter-spacing: 0.03em;
+
+  order: -1;
+  margin-bottom: 25px;
+}
+
+.intro__info a {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: $ff-placeholder;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+
+  padding: 24px 56px;
+  border: 4px solid $color-default-white;
+  align-self: flex-end;
+}
+
+.intro__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  font-family: $ff-placeholder;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.intro__list a {
+  color: $color-default-white;
+}
+
+// intro-social
+
+.intro-social {
+  font-size: 12px;
+  line-height: 14px;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.intro-social__item a {
+  text-transform: uppercase;
+}
+
+// // /* ============ intro__block */
+
+// .intro__block {
+//   padding: 299px 0 280px 0;
+//   margin-left: 126px;
+
+//   @include vp-1024 {
+//     margin: 0;
+//     padding: 95px 0 206px;
+//   }
+
+//   @include vp-768 {
+//     padding: 93px 0 189px;
+//   }
+// }
+
+// .intro__block h1 {
+//   font-family: $ff-placeholder-second;
+//   font-weight: 700;
+//   font-size: 80px;
+//   line-height: 94px;
+//   letter-spacing: 0.07em;
+//   text-transform: uppercase;
+//   margin: 0 0 33px;
+
+//   @include vp-1024 {
+//     font-size: 64px;
+//     line-height: 75px;
+//     margin: 0;
+//   }
+
+//   @include vp-768 {
+//     font-size: 36px;
+//     line-height: 42px;
+//     margin-bottom: 8px;
+//   }
+// }
+
+// .intro__block p {
+//   font-weight: 400;
+//   font-size: 22px;
+//   line-height: 35px;
+//   max-width: 685px;
+//   margin: 0 0 43px;
+
+//   @include vp-1024 {
+//     margin: 0 0 58px;
+//   }
+
+//   @include vp-768 {
+//     font-size: 14px;
+//     line-height: 22px;
+//     margin: 0 0 45px;
+//   }
+// }
+
+// .intro__block a {
+//   display: inline-block;
+//   vertical-align: middle;
+//   font-family: $ff-placeholder-second;
+//   font-weight: 700;
+//   font-size: 18px;
+//   line-height: 21px;
+//   text-align: center;
+//   max-width: 420px;
+//   letter-spacing: 0.05em;
+//   text-transform: uppercase;
+//   color: $alice-blue;
+//   background-color: $color-deep-sky-blue;
+//   border-radius: 3px;
+//   padding: 18px 27px;
+//   transition: background-color $trans-default, border-radius $trans-default;
+//   user-select: none;
+
+//   // Свойства для эффекта при наведения
+//   appearance: none;
+//   position: relative;
+//   overflow: hidden;
+
+//   @include effects-off {
+//     &::before {
+//       // Размер цветного пятна при наведении
+//       --size: 0;
+
+//       content: "";
+//       position: absolute;
+//       left: var(--x);
+//       top: var(--y);
+//       width: var(--size);
+//       height: var(--size);
+//       background: radial-gradient(circle closest-side, $color-torch-red, transparent);
+//       transform: translate(-50%, -50%);
+//       transition: width $trans-default, height $trans-default;
+//     }
+
+//     &:hover {
+//       border-radius: 50px;
+//     }
+
+//     &:hover::before {
+//       --size: 800px;
+//     }
+
+//     &:focus {
+//       background-color: $color-dark-slate-blue;
+//       border-radius: 50px;
+//     }
+
+//     &:active {
+//       background-color: $color-blue;
+//     }
+//   }
+
+//   &:active {
+//     background-color: $color-blue;
+//   }
+
+//   @include vp-1024 {
+//     margin-left: 45px;
+//     padding: 15px 27px;
+//   }
+
+//   @include vp-768 {
+//     width: 100%;
+//     font-size: 14px;
+//     line-height: 16px;
+//     margin: 0;
+//     padding: 12px 27px;
+//   }
+// }
+
+// .intro__block span:first-child {
+//   // Свойства для эффекта при наведения
+//   pointer-events: none;
+//   position: relative;
+//   z-index: 5;
+
+//   @include vp-768 {
+//     display: none;
+//   }
+// }
+
+// .intro__block span:last-child {
+//   display: none;
+
+//   @include vp-768 {
+//     display: block;
+//   }
+// }
