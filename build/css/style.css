@@ -1346,6 +1346,13 @@ main {
 }
 
 .callback-group {
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #102654), color-stop(50%, white));
+  background: -o-linear-gradient(left, #102654 50%, white 50%);
+  background: linear-gradient(90deg, #102654 50%, white 50%);
+  border-top: 1px solid #74819c;
+}
+
+.callback-group__container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -1353,7 +1360,7 @@ main {
 }
 
 .free-visit {
-  background-color: #102654;
+  padding: 70px 0;
 }
 
 .free-visit__container {
@@ -1362,6 +1369,7 @@ main {
 
 .free-visit h2 {
   line-height: 64px;
+  text-align: left;
   color: #ffffff;
   margin: 0 0 50px 0;
 }
@@ -1429,11 +1437,14 @@ main {
   cursor: pointer;
   padding: 21px 51px;
   letter-spacing: 0.05em;
+  -webkit-transition: border-radius 0.6s ease;
+  -o-transition: border-radius 0.6s ease;
+  transition: border-radius 0.6s ease;
   grid-column: 1/-1;
 }
 
 .contact {
-  border-top: 1px solid #74819C;
+  padding: 70px 0 70px 120px;
 }
 
 .contact__container {
@@ -1441,6 +1452,7 @@ main {
 }
 
 .contact h2 {
+  text-align: left;
   margin: 0 0 57px 0;
 }
 
@@ -1450,12 +1462,15 @@ main {
   padding: 0;
   display: -ms-grid;
   display: grid;
-  row-gap: 30px;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  max-width: 404px;
   -ms-grid-rows: (62px)[2];
   grid-template-rows: repeat(2, 62px);
+  row-gap: 30px;
+  -webkit-column-gap: 50px;
+  -moz-column-gap: 50px;
+  column-gap: 50px;
+  max-width: 404px;
 }
 
 .contact__item h3 {
@@ -1469,6 +1484,10 @@ main {
   font-size: 14px;
   line-height: 21px;
   color: #102654;
+}
+
+.contact__item a:active {
+  color: #0d7aee;
 }
 
 .contact__item p {
@@ -1623,6 +1642,28 @@ main {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
+  }
+
+  .form__button:hover,
+  .form__button:focus {
+    color: #00b2ff;
+    background-color: #75dfff;
+    text-shadow: 0 0 8px #00b2ff;
+    border-radius: 50px;
+  }
+
+  .form__button:active {
+    color: #0d7aee;
+  }
+
+  .contact__item a:hover,
+  .contact__item a:focus {
+    color: #00b2ff;
+    text-shadow: 0 0 8px #00b2ff;
+  }
+
+  .contact__item a:active {
+    color: #0d7aee;
   }
 
   .nav__item a:hover,

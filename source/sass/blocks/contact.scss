@@ -1,5 +1,5 @@
 .contact {
-  border-top: 1px solid $color-light-slate-grey;
+  padding: 70px 0 70px 120px;
 }
 
 .contact__container {
@@ -7,6 +7,7 @@
 }
 
 .contact h2 {
+  text-align: left;
   margin: 0 0 57px 0;
 }
 
@@ -16,10 +17,12 @@
   padding: 0;
 
   display: grid;
-  row-gap: 30px;
   grid-template-columns: 1fr 1fr;
-  max-width: 404px;
   grid-template-rows: repeat(2, 62px);
+  row-gap: 30px;
+  column-gap: 50px;
+
+  max-width: 404px;
 }
 
 .contact__item h3 {
@@ -33,6 +36,22 @@
   font-size: 14px;
   line-height: 21px;
   color: $color-sapphire;
+
+  @include effects-off {
+    &:hover,
+    &:focus {
+      color: $color-deep-sky-blue;
+      text-shadow: 0 0 8px $color-deep-sky-blue;
+    }
+
+    &:active {
+      color: $color-dodger-blue;
+    }
+  }
+
+  &:active {
+    color: $color-dodger-blue;
+  }
 }
 
 .contact__item p {

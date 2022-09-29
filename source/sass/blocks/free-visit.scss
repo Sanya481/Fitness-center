@@ -1,5 +1,5 @@
 .free-visit {
-  background-color: $color-sapphire;
+  padding: 70px 0;
 }
 
 .free-visit__container {
@@ -8,6 +8,7 @@
 
 .free-visit h2 {
   line-height: 64px;
+  text-align: left;
   color: $color-default-white;
   margin: 0 0 50px 0;
 }
@@ -75,6 +76,21 @@
   cursor: pointer;
   padding: 21px 51px;
   letter-spacing: 0.05em;
+  transition: border-radius $trans-600;
 
   grid-column: 1/-1;
+
+  @include effects-off {
+    &:hover,
+    &:focus {
+      color: $color-deep-sky-blue;
+      background-color: $color-turquoise-blue;
+      text-shadow: 0 0 8px $color-deep-sky-blue;
+      border-radius: 50px;
+    }
+
+    &:active {
+      color: $color-dodger-blue;
+    }
+  }
 }
