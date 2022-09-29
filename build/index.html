@@ -188,93 +188,78 @@
 
   </main>
 
-  <!-- <footer class="footer" id="footer">
+  <footer class="footer">
     <h2 class="visually-hidden">Подвал сайта с социальными сетями, навигацией по сайту и контактами</h2>
     <div class="footer__container container">
 
-      <div class="first-row">
-        <div class="footer__logo logo">
-          <a class="logo__image">
-            <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип сайта">
+      <a class="footer__logo logo">
+        <svg width="100%" height="100%">
+          <use xlink:href="img/sprite/sprite.svg#logo"></use>
+        </svg>
+      </a>
+
+      <nav class="footer__nav nav">
+
+          <ul class="nav__list ">
+            <li class="nav__item">
+              <a href="#">Услуги</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Абонементы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Акции</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Тренеры</a>
+            </li>
+            <li class="nav__item">
+              <a href="#">Расписание</a>
+            </li>
+          </ul>
+
+      </nav>
+
+      <ul class="footer__social social">
+        <li class="social__item">
+          <a href="#" class="social__link" target="_blank">
+            <span class="visually-hidden">Мы в Вконтакте</span>
+
+            <svg class="social__icon" width="100%" height="100%">
+              <use xlink:href="img/sprite/sprite.svg#vkontakte"></use>
+            </svg>
+
           </a>
-        </div>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" target="_blank">
+            <span class="visually-hidden">Мы в Одноклассниках</span>
 
-        <ul class="footer__social social">
-          <li class="social__item">
-            <a href="#" class="social__link" target="_blank">
-              <span class="visually-hidden">Мы в Одноклассниках</span>
+            <svg class="social__icon social__icon--vkontakte" width="100%" height="100%">
+              <use xlink:href="img/sprite/sprite.svg#classmates"></use>
+            </svg>
 
-              <svg class="social__icon" width="100%" height="100%">
-                <use xlink:href="img/sprite/sprite.svg#classmates"></use>
-              </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link" target="_blank">
+            <span class="visually-hidden">Мы в Реддит</span>
 
-            </a>
-          </li>
-          <li class="social__item">
-            <a href="#" class="social__link" target="_blank">
-              <span class="visually-hidden">Мы в Вконтакте</span>
+            <svg class="social__icon social__icon--pinterest" width="100%" height="100%">
+              <use xlink:href="img/sprite/sprite.svg#reddit"></use>
+            </svg>
 
-              <svg class="social__icon social__icon--vkontakte" width="100%" height="100%">
-                <use xlink:href="img/sprite/sprite.svg#vkontakte"></use>
-              </svg>
+          </a>
+        </li>
+      </ul>
 
-            </a>
-          </li>
-          <li class="social__item social__item--pinterest">
-            <a href="#" class="social__link" target="_blank">
-              <span class="visually-hidden">Мы в Пинтерест</span>
 
-              <svg class="social__icon social__icon--pinterest" width="100%" height="100%">
-                <use xlink:href="img/sprite/sprite.svg#pinterest"></use>
-              </svg>
 
-            </a>
-          </li>
-        </ul>
 
-      </div>
 
-      <div class="second-row no-js" data-accordion-container>
 
-        <nav class="footer__nav nav">
-          <div class="nav__wrapper" data-accordion-block>
 
-            <div class="nav__title" data-accordion-title>
-              <h3>Разделы сайта</h3>
-            </div>
-
-            <div class="nav__rows" data-accordion-items>
-              <ul class="nav__list nav__list--first">
-                <li class="nav__item">
-                  <a href="#">О&nbsp;Компаниии</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#">Продукты</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#">Производство печатных плат</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#">Монтаж печатных плат</a>
-                </li>
-              </ul>
-              <ul class="nav__list nav__list--second">
-                <li class="nav__item">
-                  <a href="#">Комплектующие</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#">Доставка</a>
-                </li>
-                <li class="nav__item">
-                  <a href="#">Контакты</a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </nav>
-
-        <div class="footer__contact contact">
+      <!-- <div class="footer__contact contact">
           <div class="contact__wrapper" data-accordion-block>
 
             <div class="contact__title" data-accordion-title>
@@ -299,59 +284,10 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
 
     </div>
-  </footer> -->
-
-  <!-- Модальное окно с формой обратной связи -->
-
-  <!-- <section class="callback callback-modal overlay" id="callback-modal-section">
-    <h2 class="visually-hidden">Модальное окно с формой для обратной связи</h2>
-    <div class="callback-modal__wrapper" id="callback-modal">
-
-      <div class="callback__block callback-modal__block">
-        <p>Закажите звонок</p>
-        <span>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</span>
-        <form class="callback-modal__form form" action="https://echo.htmlacademy.ru" method="post">
-
-          <ul class="form__list" id="callback-modal-form">
-            <li class="callback__item callback__item--name">
-              <label>
-                <input type="text" name="user-name" placeholder="Имя" data-input-username required>
-              </label>
-            </li>
-            <li class="callback__item callback__item--phone">
-              <label>
-                <input type="tel" name="user-phone" placeholder="Телефон" maxlength="18" data-phone-pattern required>
-              </label>
-            </li>
-            <li class="callback__item callback__item--textarea">
-              <label>
-                <textarea name="user-question" cols="30" rows="10" placeholder="Ваш вопрос"
-                  data-textarea-question></textarea>
-              </label>
-            </li>
-          </ul>
-
-          <div class="callback-modal__confirmation approval">
-            <div class="callback-modal__approval">
-              <input class="visually-hidden" type="checkbox" id="user-personal-data" name="user-email" required>
-              <label for="user-personal-data">Я согласен на обработку персональных
-                данных</label>
-            </div>
-
-            <button class="callback__button" type="submit" value="Отправить">Отправить</button>
-          </div>
-
-          <button type="button" class="callback-modal__btn-close" id="callback-modal__btn-close">
-            <span class="visually-hidden">Закрыть</span>
-          </button>
-        </form>
-      </div>
-
-    </div>
-  </section> -->
+  </footer>
 
   <script src="js/main.min.js"></script>
 </body>

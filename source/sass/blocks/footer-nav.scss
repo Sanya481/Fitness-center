@@ -1,0 +1,45 @@
+.footer__nav {
+  max-width: 470px;
+  margin-right: 129px;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.nav__item a {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  padding: 5px 0;
+  transition: color $trans-default, text-shadow $trans-default;
+  user-select: none;
+
+  @include effects-off {
+
+    &:hover,
+    &:focus {
+      color: $color-deep-sky-blue;
+      text-shadow: 0 0 8px $color-deep-sky-blue;
+    }
+
+    &:active {
+      color: $color-dodger-blue;
+    }
+  }
+
+  &:active {
+    color: $color-dodger-blue;
+  }
+
+  @include vp-768 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
