@@ -1,0 +1,42 @@
+.contact {
+  border-top: 1px solid $color-light-slate-grey;
+}
+
+.contact__container {
+  padding: 70px 20px 70px 0;
+}
+
+.contact h2 {
+  margin: 0 0 57px 0;
+}
+
+.contact__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: grid;
+  row-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  max-width: 404px;
+  grid-template-rows: repeat(2, 62px);
+}
+
+.contact__item h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 0 15px 0;
+}
+
+.contact__item a {
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-sapphire;
+}
+
+.contact__item p {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}

@@ -55,11 +55,12 @@
 @import "blocks/catalog.scss";
 @import "blocks/product.scss";
 
-// Callback
+// Сallback-group
 // ---------------------------------
 
-@import "blocks/callback.scss";
-@import "blocks/approval.scss";
+@import "blocks/callback-group.scss";
+@import "blocks/free-visit.scss";
+@import "blocks/contact.scss";
 
 // Footer
 // ---------------------------------
@@ -69,10 +70,7 @@
 @import "blocks/footer-nav.scss";
 @import "blocks/social.scss";
 
-// Modal-callback
-// ---------------------------------
 
-@import "blocks/modal-callback.scss";
 
 // ---------------------------------
 

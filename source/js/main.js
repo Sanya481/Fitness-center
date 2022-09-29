@@ -1,9 +1,5 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
-import './more-information.js';
-import './modal-callback.js';
-import './footer-accordion.js';
-import {checkMouseMove} from './intro-callback-btn-hover.js';
 import {onEventCalllback} from './phone-input-mask.js';
 
 // ---------------------------------
@@ -13,10 +9,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
-  checkMouseMove();
   iosVhFix();
 
-  // Находим все поля ввода телфона и вешаем обработчик - ловушку фокуса
+  // Находим все поля ввода телфона и вешаем обработчик
   const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
   for (let elem of phoneInputs) {
     for (let ev of ['input', 'blur', 'focus']) {
