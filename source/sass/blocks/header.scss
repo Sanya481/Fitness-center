@@ -18,27 +18,25 @@
   line-height: 26px;
   font-weight: 700;
   letter-spacing: 0.03em;
+  color: $color-default-white;
+  user-select: none;
 
-  color: #FFFFFF;
+  transition: letter-spacing $trans-default;
+
+  @include effects-off {
+    &:hover,
+    &:focus {
+      letter-spacing: 1.5px;
+      color: $color-dark-erulean;
+      // text-shadow: 0 0 8px $color-deep-sky-blue;
+    }
+
+    &:active {
+      color: $color-purple-heart;
+    }
+  }
+
+  &:active {
+    color: $color-purple-heart;
+  }
 }
-
-// .header.hiding {
-//   z-index: -1;
-// }
-
-// .header__container {
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   margin-top: 30px;
-//   padding-bottom: 40px;
-
-//   @include vp-1024 {
-//     margin-top: 20px;
-//     padding-bottom: 30px;
-//   }
-
-//   @include vp-768 {
-//     margin-top: 10px;
-//   }
-// }
