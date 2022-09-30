@@ -55,9 +55,8 @@ const checkCoachSwiper = () => {
         },
         1200: {
           slidesPerView: 4,
-          spaceBetween: 39,
+          spaceBetween: 40,
           slidesPerGroup: 1,
-
         },
       },
 

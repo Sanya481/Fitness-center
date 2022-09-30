@@ -106,7 +106,8 @@
 
 // event__photo
 .event__photo {
-  background-image: url('../img/decorative/men-photo-event.jpg');
-  background-position: 0 0 ;
-  background-repeat: no-repeat;
+  width: 660px;
+  height: 500px;
+
+  background-color: $color-neon-blue;
 }

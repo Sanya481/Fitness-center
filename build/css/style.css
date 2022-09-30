@@ -2002,9 +2002,9 @@ main {
 }
 
 .event__photo {
-  background-image: url("../img/decorative/men-photo-event.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  width: 660px;
+  height: 500px;
+  background-color: #2c39f2;
 }
 
 .coach h2 {
@@ -2026,6 +2026,7 @@ main {
   color: #ffffff;
   width: 260px;
   cursor: pointer;
+  background-color: #74819C;
 }
 
 .coach__item h3 {
@@ -2140,11 +2141,11 @@ main {
 }
 
 .coach__button.swiper-button-prev {
-  left: -60px;
+  left: -63px;
 }
 
 .coach__button.swiper-button-next {
-  right: -60px;
+  right: -63px;
 }
 
 .coach__button.swiper-button-prev::after,
@@ -2324,7 +2325,19 @@ main {
 }
 
 .about__container {
-  padding: 52px 0 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.about__info {
+  margin-left: 60px;
 }
 
 .about__info h3 {
@@ -2332,7 +2345,7 @@ main {
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
-  margin: 0 0 23px 0;
+  margin: 16px 0 7px;
 }
 
 .about__info span {
@@ -2341,7 +2354,7 @@ main {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  margin-bottom: 55px;
+  margin-bottom: 39px;
 }
 
 .about__info p {
@@ -2349,12 +2362,19 @@ main {
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
-  margin: 0 0 20px 0;
+  margin: 0 0 8px;
   max-width: 355px;
 }
 
 .about__info p:last-child {
   margin: 0;
+}
+
+.about__image {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  width: 660px;
+  height: 401px;
 }
 
 .catalog {

@@ -19,6 +19,8 @@
   color: $color-default-white;
   width: 260px;
   cursor: pointer;
+
+  background-color: $color-light-slate-grey;
 }
 
 .coach__item h3 {
@@ -146,11 +148,11 @@
 }
 
 .coach__button.swiper-button-prev {
-  left: -60px;
+  left: -63px;
 }
 
 .coach__button.swiper-button-next {
-  right: -60px;
+  right: -63px;
 }
 
 .coach__button.swiper-button-prev::after,
