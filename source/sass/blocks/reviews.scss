@@ -2,6 +2,11 @@
   margin: 0 0 62px 0;
 }
 
+// Позиционируем стрелки переключения карусели
+.reviews__wrapper {
+  position: relative;
+}
+
 .reviews__slider {
   max-width: 560px;
 
@@ -46,28 +51,34 @@
 // reviews__button
 
 .reviews__button {
-  position: absolute;
-
   background-color: transparent;
-  color: $color-dark-gray;
   border: none;
+}
 
-  &--next {
-    content: "";
-    position: absolute;
-    background-image: url('../img/svg/arrow.svg');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    transform: rotate(180deg);
-    right: 0;
-  }
+.reviews__button.swiper-button-prev {
+  left: 223px;
+}
 
-  &--prev {
-    content: "";
-    position: absolute;
-    background-image: url('../img/svg/arrow.svg');
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    left: 0;
-  }
+.reviews__button.swiper-button-next {
+  right: 223px;
+}
+
+.reviews__button.swiper-button-next::after,
+.reviews__button.swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  background-image: url('../img/svg/arrow.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 32px;
+}
+
+.reviews__button.swiper-button-prev::after {
+  left: 6px;
+}
+
+.reviews__button.swiper-button-next::after {
+  transform: rotate(180deg);
+  right: 6px;
 }

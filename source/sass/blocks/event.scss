@@ -1,0 +1,112 @@
+.event__container {
+  display: grid;
+  grid-template-columns: 43% 57%;
+}
+
+.event__info {
+  color: #fff;
+  background-color: #ED0233;
+  padding: 83px 77px 83px 79px;
+}
+
+.event__top-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.event__top-block h2 {
+  font-family: $ff-placeholder-second;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  max-width: 201px;
+  margin: 0;
+}
+
+.event__date {
+  margin-top: -1px;
+  margin-right: 5px;
+}
+
+// date__number
+.date__number {
+  position: relative;
+  max-width: 64px;
+  margin-bottom: 9px;
+}
+
+.date__number p,
+.date__time p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+
+  border-bottom: 1px solid #fff;
+}
+
+.date__number p {
+  padding-bottom: 2px;
+  margin-bottom: -5px;
+}
+
+.date__time p {
+  padding-bottom: 4px;
+  margin-bottom: -7px;
+}
+
+.date__number span,
+.date__time span {
+  display: inline-block;
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.date__month p,
+.date__month span {
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+}
+
+// .date__month
+.date__month {
+  position: absolute;
+  right: 0px;
+  top: 35px;
+}
+
+// .date__time
+.date__time {
+  max-width: 88px;
+}
+
+.event__bottom-block p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 0 46px;
+}
+
+.event__bottom-block a {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px 20px;
+  color: #FFFFFF;
+  border: 4px solid #FFFFFF;
+}
+
+
+// event__photo
+.event__photo {
+  background-image: url('../img/decorative/men-photo-event.jpg');
+  background-position: 0 0 ;
+  background-repeat: no-repeat;
+}

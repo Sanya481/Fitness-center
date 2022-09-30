@@ -1,7 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {onEventCalllback} from './phone-input-mask.js';
-import {checkReviewsSwiper} from './vendor.js';
+import {checkReviewsSwiper, checkCoachSwiper} from './vendor.js';
 
 // ---------------------------------
 
@@ -12,6 +12,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   checkReviewsSwiper();
+  checkCoachSwiper();
+
 
   // Находим все поля ввода телфона и вешаем обработчик
   const phoneInputs = document.querySelectorAll('[data-phone-pattern]');

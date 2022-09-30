@@ -1895,6 +1895,280 @@ main {
   border-bottom: 1px solid #1C3374;
 }
 
+.event__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 43% 57%;
+  grid-template-columns: 43% 57%;
+}
+
+.event__info {
+  color: #fff;
+  background-color: #ED0233;
+  padding: 83px 77px 83px 79px;
+}
+
+.event__top-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.event__top-block h2 {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  max-width: 201px;
+  margin: 0;
+}
+
+.event__date {
+  margin-top: -1px;
+  margin-right: 5px;
+}
+
+.date__number {
+  position: relative;
+  max-width: 64px;
+  margin-bottom: 9px;
+}
+
+.date__number p,
+.date__time p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  border-bottom: 1px solid #fff;
+}
+
+.date__number p {
+  padding-bottom: 2px;
+  margin-bottom: -5px;
+}
+
+.date__time p {
+  padding-bottom: 4px;
+  margin-bottom: -7px;
+}
+
+.date__number span,
+.date__time span {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+}
+
+.date__month p,
+.date__month span {
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+}
+
+.date__month {
+  position: absolute;
+  right: 0px;
+  top: 35px;
+}
+
+.date__time {
+  max-width: 88px;
+}
+
+.event__bottom-block p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 0 46px;
+}
+
+.event__bottom-block a {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px 20px;
+  color: #FFFFFF;
+  border: 4px solid #FFFFFF;
+}
+
+.event__photo {
+  background-image: url("../img/decorative/men-photo-event.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.coach h2 {
+  text-align: left;
+  margin: 0 0 62px 0;
+}
+
+.coach__wrapper {
+  position: relative;
+}
+
+.coach__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.coach__item {
+  color: #ffffff;
+  width: 260px;
+  cursor: pointer;
+}
+
+.coach__item h3 {
+  font-weight: 700;
+  font-size: 18px;
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  line-height: 27px;
+}
+
+.coach__photo {
+  width: 260px;
+  height: 294px;
+}
+
+.coach-description {
+  position: absolute;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding-top: 52px;
+  top: 0;
+  -webkit-transition: background-color 0.3s ease;
+  -o-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.coach-description h3 {
+  position: static;
+  margin: 0;
+  line-height: 24px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 0.8s ease;
+  -o-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+}
+
+.coach-description span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  line-height: 24px;
+  color: #B6BDCC;
+  margin: 0 0 31px;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 1.2s ease;
+  -o-transition: opacity 1.2s ease;
+  transition: opacity 1.2s ease;
+}
+
+.coach-description__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: left;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: opacity 1.6s ease;
+  -o-transition: opacity 1.6s ease;
+  transition: opacity 1.6s ease;
+}
+
+.coach__item:hover .coach-description {
+  background-color: rgba(16, 38, 84, 0.89);
+}
+
+.coach__item:hover h3,
+.coach__item:hover span,
+.coach__item:hover .coach-description__list {
+  opacity: 1;
+}
+
+.coach-description__item {
+  position: relative;
+  margin-bottom: 13px;
+  padding-left: 42px;
+}
+
+.coach-description__item:last-child {
+  margin-bottom: 0;
+}
+
+.coach-description__item::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  top: 7px;
+  left: 26px;
+}
+
+.coach-description__item p {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
+
+.coach__button {
+  background-color: transparent;
+  border: none;
+}
+
+.coach__button.swiper-button-prev {
+  left: -60px;
+}
+
+.coach__button.swiper-button-next {
+  right: -60px;
+}
+
+.coach__button.swiper-button-prev::after,
+.coach__button.swiper-button-next::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/svg/arrow.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 32px;
+}
+
+.coach__button.swiper-button-prev::after {
+  left: 6px;
+}
+
+.coach__button.swiper-button-next::after {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+  right: 6px;
+}
+
 .advantages {
   background-color: #F8F9FC;
 }
@@ -2216,6 +2490,10 @@ main {
   margin: 0 0 62px 0;
 }
 
+.reviews__wrapper {
+  position: relative;
+}
+
 .reviews__slider {
   max-width: 560px;
   display: -webkit-box;
@@ -2258,31 +2536,38 @@ main {
 }
 
 .reviews__button {
-  position: absolute;
   background-color: transparent;
-  color: #AFAFAF;
   border: none;
 }
 
-.reviews__button--next {
+.reviews__button.swiper-button-prev {
+  left: 223px;
+}
+
+.reviews__button.swiper-button-next {
+  right: 223px;
+}
+
+.reviews__button.swiper-button-next::after,
+.reviews__button.swiper-button-prev::after {
   content: "";
   position: absolute;
   background-image: url("../img/svg/arrow.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
+  width: 16px;
+  height: 32px;
+}
+
+.reviews__button.swiper-button-prev::after {
+  left: 6px;
+}
+
+.reviews__button.swiper-button-next::after {
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
-  right: 0;
-}
-
-.reviews__button--prev {
-  content: "";
-  position: absolute;
-  background-image: url("../img/svg/arrow.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  left: 0;
+  right: 6px;
 }
 
 .callback-group {

@@ -1,0 +1,174 @@
+.coach h2 {
+  text-align: left;
+  margin: 0 0 62px 0;
+}
+
+// Блок для позиционирования стрелок переключения слайдера
+.coach__wrapper {
+  position: relative;
+}
+
+// coach__item
+.coach__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.coach__item {
+  color: $color-default-white;
+  width: 260px;
+  cursor: pointer;
+}
+
+.coach__item h3 {
+  font-weight: 700;
+  font-size: 18px;
+
+  // Выравнивание по центру
+  position: absolute;
+  bottom: 22px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  line-height: 27px;
+}
+
+.coach__photo {
+  width: 260px;
+  height: 294px;
+}
+
+// coach-description
+.coach-description {
+  position: absolute;
+  text-align: center;
+
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding-top: 52px;
+  top: 0;
+
+  transition: background-color $trans-default;
+}
+
+.coach-description h3 {
+  position: static;
+  margin: 0;
+  line-height: 24px;
+
+  // Убираем видимость и включаем только при наведении
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.8s ease;
+}
+
+.coach-description span {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  color: $color-spindle;
+  margin: 0 0 31px;
+
+  // Убираем видимость и включаем только при наведении
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 1.2s ease;
+}
+
+.coach-description__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: left;
+
+  // Убираем видимость и включаем только при наведении
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 1.6s ease;
+}
+
+.coach__item:hover .coach-description {
+  background-color: $coach-item-shadow;
+}
+
+// Пытаемся сделать каскадное появление - сверху вниз
+.coach__item:hover h3,
+.coach__item:hover span,
+.coach__item:hover .coach-description__list {
+  opacity: 1;
+}
+
+// Создаем кастомный маркер
+.coach-description__item {
+  position: relative;
+  margin-bottom: 13px;
+  padding-left: 42px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: $color-default-white;
+    border-radius: 10px;
+    top: 7px;
+    left: 26px;
+  }
+}
+
+.coach-description__item p {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
+
+// coach__button
+
+.coach__button {
+  background-color: transparent;
+  border: none;
+}
+
+.coach__button.swiper-button-prev {
+  left: -60px;
+}
+
+.coach__button.swiper-button-next {
+  right: -60px;
+}
+
+.coach__button.swiper-button-prev::after,
+.coach__button.swiper-button-next::after {
+  content: "";
+  position: absolute;
+  background-image: url('../img/svg/arrow.svg');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 32px;
+}
+
+.coach__button.swiper-button-prev::after {
+  left: 6px;
+}
+
+.coach__button.swiper-button-next::after {
+  transform: rotate(180deg);
+  right: 6px;
+}
