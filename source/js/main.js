@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {onEventCalllback} from './phone-input-mask.js';
 import {checkReviewsSwiper, checkCoachSwiper} from './vendor.js';
+import {changeSubscriptionTab} from './subscription-tab.js';
 
 // ---------------------------------
 
@@ -13,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   checkReviewsSwiper();
   checkCoachSwiper();
+  changeSubscriptionTab();
 
 
   // Находим все поля ввода телфона и вешаем обработчик

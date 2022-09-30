@@ -1752,10 +1752,188 @@ main {
 
 .subscription {
   font-family: "Roboto Condensed", "Arial", sans-serif;
+  background-color: #F8F9FC;
+  background-image: url("../img/background/casino-chips.png");
+  background-position: right 465px;
+  background-repeat: no-repeat;
+}
+
+.subscription__container {
+  padding: 120px 20px;
 }
 
 .subscription h2 {
   margin: 0 0 53px 0;
+}
+
+.subscription__tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.subscription__tabs-wrapper {
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 46px;
+  -moz-column-gap: 46px;
+  column-gap: 46px;
+}
+
+.subscription__tabs button {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  line-height: 30px;
+  font-size: 20px;
+  background-color: transparent;
+  color: #102654;
+  padding-bottom: 10px;
+  border: none;
+  margin-bottom: -2px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.subscription__tabs button.is-active {
+  opacity: 1;
+  border-bottom: 2px solid #D10A42;
+}
+
+.subscription__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.subscription__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 62px 26px;
+  height: 448px;
+  cursor: pointer;
+  background-color: #ffffff;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 5;
+}
+
+.subscription__item:hover {
+  border: 7px solid;
+  border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+  border-image-slice: 26;
+}
+
+.subscription__item h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+  margin: 0 0 10px;
+}
+
+.subscription__item p {
+  font-size: 16px;
+  line-height: 24px;
+  color: #495A7D;
+  margin: 0 0 65px;
+}
+
+.subscription__item span:first-child {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: #103AAE;
+}
+
+.subscription__item a {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: 2px solid #102654;
+  padding: 24px 42px 24px;
+  max-width: 208px;
+  color: #102654;
+  -webkit-transition: background 0.6s ease, color 0.6s ease;
+  -o-transition: background 0.6s ease, color 0.6s ease;
+  transition: background 0.6s ease, color 0.6s ease;
+}
+
+.subscription__item a:hover,
+.subscription__item a:focus {
+  background: -o-linear-gradient(352.95deg, #ED0233 17.6%, #003EB7 95.31%);
+  background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  color: #ffffff;
+  border: none;
+}
+
+.subscription__item a:active {
+  background: #ED0233;
+}
+
+.subscription__price {
+  position: relative;
+  margin-bottom: 34px;
+  padding-right: 45px;
+}
+
+.subscription__price::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/decorative/ruble.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 42px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.subscription__price span:last-child {
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150px;
+  color: #e8e8e8;
+  opacity: .48;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  top: -56px;
+  z-index: -1;
+}
+
+.subscription__list {
+  display: none;
+}
+
+.subscription__list.is-active {
+  display: -ms-grid;
+  display: grid;
 }
 
 .sale h2 {
@@ -2838,6 +3016,18 @@ main {
 } */
 
 @media (min-width: 1024px) {
+  .product__link--2 {
+    background-image: url("../img/catalog/card-2.jpg");
+  }
+}
+
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 2dppx) {
+  .product__link--2 {
+    background-image: url("../img/catalog/card-2@2x.jpg");
+  }
+}
+
+@media (min-width: 1200px) {
   .callback-contact__link:hover svg,
   .callback-contact__link:focus svg {
     -webkit-animation: shake 1s forwards;
@@ -2851,10 +3041,6 @@ main {
 
   .callback-contact__link:active span {
     color: #0d7aee;
-  }
-
-  .product__link--2 {
-    background-image: url("../img/catalog/card-2.jpg");
   }
 
   .product__link:hover,
@@ -2928,12 +3114,6 @@ main {
 
   .social__icon:active {
     fill: #2e80fd;
-  }
-}
-
-@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1024px) and (-o-min-device-pixel-ratio: 2/1), (min-width: 1024px) and (min-resolution: 2dppx) {
-  .product__link--2 {
-    background-image: url("../img/catalog/card-2@2x.jpg");
   }
 }
 
