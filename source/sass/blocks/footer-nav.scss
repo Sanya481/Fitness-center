@@ -1,6 +1,15 @@
 .footer__nav {
   max-width: 470px;
   margin-right: 129px;
+
+  @include vp-1199 {
+    margin-right: 30px;
+    max-width: 400px;
+  }
+
+  @include vp-767 {
+    margin: 0;
+  }
 }
 
 .nav__list {
@@ -11,6 +20,15 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
+
+  @include vp-1199 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    row-gap: 15px;
+  }
 }
 
 .nav__item a {
@@ -20,6 +38,11 @@
   padding: 5px 0;
   transition: color $trans-default, text-shadow $trans-default;
   user-select: none;
+
+  @include vp-1199 {
+    font-size: 14px;
+    line-height: 19px;
+  }
 
   @include effects-off {
 
@@ -38,8 +61,4 @@
     color: $color-dodger-blue;
   }
 
-  @include vp-768 {
-    font-size: 14px;
-    line-height: 19px;
-  }
 }

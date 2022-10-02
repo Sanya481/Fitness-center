@@ -1,14 +1,35 @@
 .contact {
   padding: 70px 0 70px 120px;
+
+  @include vp-1199 {
+    padding: 0;
+  }
 }
 
-.contact__container {
-  padding: 70px 20px 70px 0;
+.contact__wrapper {
+  @include vp-1199 {
+    max-width: 688px;
+    padding: 70px 5px;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    padding: 70px 15px 62px 15px;
+  }
 }
 
 .contact h2 {
   text-align: left;
   margin: 0 0 57px 0;
+
+  @include vp-1199 {
+    margin: 0 0 57px 88px;
+  }
+
+  @include vp-767 {
+    margin: -3px 0 35px;
+  }
 }
 
 .contact__list {
@@ -23,6 +44,58 @@
   column-gap: 50px;
 
   max-width: 404px;
+
+  position: relative;
+
+  @include vp-1199 {
+    max-width: 490px;
+    grid-template-rows: repeat(2, 55px);
+    row-gap: 35px;
+    margin: 0 0 0 88px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    background-color: #74819C;
+    right: 50%;
+    transform: translate(-50%);
+
+    @include vp-767 {
+      display: none;
+    }
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+
+    max-width: none;
+    margin: 0;
+  }
+}
+
+.contact__item {
+  @include vp-767 {
+    &--address {
+      order: 0;
+    }
+
+    &--phone {
+      order: 2;
+    }
+
+    &--timetable {
+      order: 1;
+    }
+
+    &--mail {
+      order: 3;
+    }
+  }
 }
 
 .contact__item h3 {
@@ -30,6 +103,12 @@
   font-size: 16px;
   line-height: 24px;
   margin: 0 0 15px 0;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 6px;
+  }
 }
 
 .contact__item a {
@@ -37,7 +116,13 @@
   line-height: 21px;
   color: $color-sapphire;
 
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
   @include effects-off {
+
     &:hover,
     &:focus {
       color: $color-deep-sky-blue;
@@ -58,4 +143,9 @@
   font-size: 14px;
   line-height: 21px;
   margin: 0;
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+  }
 }

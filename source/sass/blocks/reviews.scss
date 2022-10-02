@@ -1,5 +1,9 @@
 .reviews h2 {
   margin: 0 0 62px 0;
+
+  @include vp-767 {
+    margin: 0 0 43px;
+  }
 }
 
 // Позиционируем стрелки переключения карусели
@@ -12,6 +16,12 @@
 
   display: flex;
   align-items: center;
+
+  @include vp-767 {
+    width: 100%;
+    max-width: none;
+    padding: 0 33px;
+  }
 }
 
 // reviews__item
@@ -24,6 +34,15 @@
   background: #1C3374;
   box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
   margin: 0;
+
+  @include vp-767 {
+    display: grid;
+    grid-template-rows: 68px 1fr;
+    row-gap: 15px;
+    grid-template-columns: min-content 1fr;
+
+    padding: 41px 22px 35px 22px;
+  }
 }
 
 .reviews__item h3 {
@@ -31,12 +50,24 @@
   font-weight: 700;
   font-size: 20px;
   line-height: 30px;
+
+  @include vp-767 {
+    margin: 0;
+    line-height: 26px;
+    margin: 8px 0 0 16px;
+    padding: 0;
+  }
 }
 
 .reviews__item p {
   font-size: 16px;
   line-height: 22px;
   margin: 0;
+
+  @include vp-767 {
+    grid-column: 1/-1;
+    text-align: center;
+  }
 }
 
 .reviews__author {
@@ -46,6 +77,14 @@
   position: absolute;
   top: 70px;
   left: 60px;
+
+  @include vp-767 {
+    position: static;
+    grid-row: 1/2;
+    margin-left: 18px;
+    width: 68px;
+    height: 68px;
+  }
 }
 
 // reviews__button
@@ -56,11 +95,17 @@
 }
 
 .reviews__button.swiper-button-prev {
-  left: 223px;
+
+  @include vp-767 {
+    left: 0;
+  }
 }
 
 .reviews__button.swiper-button-next {
-  right: 223px;
+
+  @include vp-767 {
+    right: 0;
+  }
 }
 
 .reviews__button.swiper-button-next::after,
@@ -72,13 +117,26 @@
   background-repeat: no-repeat;
   width: 16px;
   height: 32px;
+
+  @include vp-767 {
+    width: 10px;
+    height: 32px;
+  }
 }
 
 .reviews__button.swiper-button-prev::after {
   left: 6px;
+
+  @include vp-767 {
+    left: 0;
+  }
 }
 
 .reviews__button.swiper-button-next::after {
   transform: rotate(180deg);
   right: 6px;
+
+  @include vp-767 {
+    right: 0;
+  }
 }

@@ -1,0 +1,44 @@
+.social-intro {
+  align-self: end;
+  margin-bottom: 38px;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.social-intro__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 9px;
+}
+
+.social-intro__item a {
+  font-size: 12px;
+  line-height: 14px;
+  user-select: none;
+
+  text-transform: uppercase;
+  color: $color-default-white;
+
+  @include effects-off {
+    &:hover,
+    &:focus {
+      color: $color-deep-sky-blue;
+      text-shadow: 0 0 8px $color-deep-sky-blue;
+    }
+
+    &:active {
+      color: $color-dodger-blue;
+    }
+  }
+
+  &:active {
+    color: $color-dodger-blue;
+  }
+}

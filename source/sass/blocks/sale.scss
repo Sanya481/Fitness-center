@@ -1,5 +1,9 @@
 .sale h2 {
   margin: 0 0 62px 0;
+
+  @include vp-767 {
+    margin: -2px 0 43px;
+  }
 }
 
 .sale__grid {
@@ -7,10 +11,20 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(2, 211px);
   gap: 40px;
+
+  @include vp-1199 {
+    grid-template-rows: 462px 211px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
 }
 
 .popular-sale__list,
-.standard-sale__list {
+.standard-sale {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -21,29 +35,45 @@
 .popular-sale {
   display: grid;
   grid-template-columns: 1fr 1fr;
-
   grid-row: 1/-1;
 
   color: $color-default-white;
-}
 
-.popular-sale__info {
-  background-color: $color-torch-red;
-  padding: 33px 35px 33px 45px;
+  @include vp-1199 {
+    grid-column: 1/-1;
+    grid-row: auto;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
 }
 
 .popular-sale__image {
-  background-color: $color-deep-sky-blue;
-  background-image: url("../img/decorative/woman-photo.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
+  width: 280px;
+  height: 462px;
 
-  background-size: cover;
+  @include vp-1199 {
+    width: 399px;
+  }
+
+  @include vp-767 {
+    height: 299px;
+    width: 100%;
+  }
 }
 
 .popular-sale__list {
   display: flex;
   flex-direction: column;
+
+  background-color: $color-torch-red;
+  padding: 33px 35px 33px 45px;
+
+  @include vp-767 {
+    align-items: center;
+    padding: 33px 47px 43px 47px;
+  }
 }
 
 // Меняем порядок следования элементов
@@ -67,6 +97,11 @@
   font-size: 18px;
   line-height: 25px;
   margin: 0 0 184px 0;
+
+  @include vp-767 {
+    text-align: center;
+    margin: 0px 0 26px;
+  }
 }
 
 .popular-sale__item--price span {
@@ -74,6 +109,10 @@
   font-size: 70px;
   line-height: 109px;
   margin: 0 0 0 0;
+
+  @include vp-767 {
+    line-height: 104px;
+  }
 }
 
 .popular-sale__item--time p {
@@ -103,6 +142,15 @@
   color: $color-resolution-blue;
   border: 7px solid;
   padding: 22px 50px 23px 29px;
+
+  border: 7px solid;
+  border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+  border-image-slice: 26;
+
+  @include vp-767 {
+    text-align: center;
+    padding: 33px 30px 36px 29px;
+  }
 }
 
 .standard-sale__item h3 {
@@ -110,12 +158,20 @@
   font-size: 26px;
   line-height: 30px;
   margin: 0 0 8px;
+
+  @include vp-767 {
+    margin: 0 0 10px;
+  }
 }
 
 .standard-sale__item p {
   font-size: 16px;
   line-height: 22px;
   margin: 0 0 65px;
+
+  @include vp-767 {
+    margin: 0 0 20px;
+  }
 }
 
 .standard-sale__item a {

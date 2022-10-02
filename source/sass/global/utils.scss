@@ -89,6 +89,14 @@ main {
 // Общие стили для отступов у секций
 .section-margin {
   margin-bottom: 120px;
+
+  @include vp-1199 {
+    margin-bottom: 100px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 70px;
+  }
 }
 
 // Общие стили для заголовков
@@ -99,4 +107,14 @@ main {
   font-weight: 700;
   letter-spacing: 0.03em;
   text-align: center;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 42px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }

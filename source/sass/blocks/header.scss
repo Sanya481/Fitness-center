@@ -4,12 +4,20 @@
   right: 0;
   left: 0;
   padding-top: 30px;
+
+  @include vp-1199 {
+    padding-bottom: 17px;
+    padding-top: 38px;
+  }
+
+  @include vp-767 {
+    padding-top: 19px;
+  }
 }
 
 .header__block {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .header__block a {
@@ -21,14 +29,26 @@
   color: $color-default-white;
   user-select: none;
 
-  transition: letter-spacing $trans-default;
+  transition: letter-spacing $trans-default, color $trans-default;
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
 
   @include effects-off {
+
     &:hover,
     &:focus {
       letter-spacing: 1.5px;
       color: $color-dark-erulean;
-      // text-shadow: 0 0 8px $color-deep-sky-blue;
     }
 
     &:active {

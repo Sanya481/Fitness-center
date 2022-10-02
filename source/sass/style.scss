@@ -28,6 +28,9 @@
 // ---------------------------------
 
 @import "blocks/intro.scss";
+@import "blocks/intro__image.scss";
+@import "blocks/social-intro.scss";
+
 
 // Subscription
 // ---------------------------------
@@ -59,12 +62,6 @@
 
 @import "blocks/about.scss";
 
-// Catalog
-// ---------------------------------
-
-@import "blocks/catalog.scss";
-@import "blocks/product.scss";
-
 // Reviews
 // ---------------------------------
 
@@ -81,7 +78,6 @@
 // ---------------------------------
 
 @import "blocks/footer.scss";
-@import "blocks/footer-logo.scss";
 @import "blocks/footer-nav.scss";
 @import "blocks/social.scss";
 
