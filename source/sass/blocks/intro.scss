@@ -175,7 +175,7 @@
 
 
   @include vp-1199 {
-    bottom: 12px;
+    bottom: 17px;
     left: -80px;
   }
 
@@ -186,6 +186,14 @@
 }
 
 .intro-zone__item {
+  @include vp-1199 {
+    margin-bottom: -3px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   @include vp-767 {
     margin-bottom: -3px;
 

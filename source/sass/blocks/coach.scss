@@ -1,6 +1,6 @@
 .coach h2 {
   text-align: left;
-  margin: -3px 0 52px;
+  margin: -2px 0 52px 3px;
 
   @include vp-1199 {
     text-align: center;
@@ -45,7 +45,7 @@
   // Выравнивание по центру
   position: absolute;
   bottom: 22px;
-  left: 0;
+  left: 4px;
   right: 0;
   margin: 0;
   text-align: center;
@@ -207,11 +207,19 @@
 }
 
 .coach__button.swiper-button-prev {
-  left: -7px;
+  left: -64px;
+
+  @include vp-1199 {
+    left: -8px;
+  }
 }
 
 .coach__button.swiper-button-next {
-  right: -7px;
+  right: -64px;
+
+  @include vp-1199 {
+    right: -7px;
+  }
 }
 
 .coach__button.swiper-button-prev::after,
@@ -230,7 +238,7 @@
 }
 
 .coach__button.swiper-button-prev::after {
-  left: 6px;
+  left: 8px;
 }
 
 .coach__button.swiper-button-next::after {

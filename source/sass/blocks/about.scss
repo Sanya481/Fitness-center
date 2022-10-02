@@ -38,8 +38,10 @@
 
 .about__info h2 {
   margin: 16px 0 7px;
+  text-align: left;
 
   @include vp-1199 {
+    text-align: center;
     margin: -2px 0 9px;
   }
 

@@ -1,5 +1,5 @@
 .contact {
-  padding: 70px 0 70px 120px;
+  padding: 70px 0 60px 124px;
 
   @include vp-1199 {
     padding: 0;
@@ -9,7 +9,7 @@
 .contact__wrapper {
   @include vp-1199 {
     max-width: 688px;
-    padding: 70px 5px;
+    padding: 70px 5px 63px 5px;
     margin: 0 auto;
   }
 
@@ -21,10 +21,10 @@
 
 .contact h2 {
   text-align: left;
-  margin: 0 0 57px 0;
+  margin: 0 0 41px;
 
   @include vp-1199 {
-    margin: 0 0 57px 88px;
+    margin: 0 0 31px 88px;
   }
 
   @include vp-767 {
@@ -39,9 +39,8 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 62px);
-  row-gap: 30px;
-  column-gap: 50px;
+  column-gap: 55px;
+  row-gap: 18px;
 
   max-width: 404px;
 
@@ -49,8 +48,8 @@
 
   @include vp-1199 {
     max-width: 490px;
-    grid-template-rows: repeat(2, 55px);
-    row-gap: 35px;
+    grid-template-rows: auto;
+    row-gap: 19px;
     margin: 0 0 0 88px;
   }
 
@@ -60,8 +59,12 @@
     height: 100%;
     width: 2px;
     background-color: #74819C;
-    right: 50%;
+    right: 42%;
     transform: translate(-50%);
+
+    @include vp-1199 {
+      right: 45%;
+    }
 
     @include vp-767 {
       display: none;
@@ -79,6 +82,25 @@
 }
 
 .contact__item {
+  &--phone {
+    justify-self: end;
+    margin-right: 23px;
+
+    @include vp-1199 {
+      justify-self: center;
+      margin-right: 20px;
+    }
+  }
+
+  &--mail {
+    justify-self: end;
+
+    @include vp-1199 {
+      justify-self: center;
+      margin-right: -5px;
+    }
+  }
+
   @include vp-767 {
     &--address {
       order: 0;
@@ -102,7 +124,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 24px;
-  margin: 0 0 15px 0;
+  margin: 0;
 
   @include vp-1199 {
     font-size: 20px;

@@ -17,7 +17,11 @@
 }
 
 .advantages h2 {
-  margin: 0 0 80px 0;
+  margin: -2px 0 70px 4px;
+
+  @include vp-1199 {
+    margin: 0 0 44px 0;
+  }
 
   @include vp-767 {
     margin: 0 0 45px;
@@ -31,16 +35,19 @@
   padding: 0;
 
   display: grid;
-  grid-template-columns: 340px 240px 340px;
-  grid-template-rows: repeat(2, 154px);
-  grid-column-gap: 60px;
+  grid-template-columns: 345px 240px 345px;
+  grid-template-rows: min-content min-content;
+  grid-column-gap: 57px;
   margin: 0 60px;
 
+  row-gap: 34px;
+
   @include vp-1199 {
+    grid-auto-flow: row dense;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: none;
-    row-gap: 50px;
-    column-gap: 50px;
+    column-gap: 30px;
+    row-gap: 43px;
     margin: 0;
   }
 
@@ -78,7 +85,13 @@
   }
 
   &--square {
-    padding-left: 155px;
+    padding-bottom: 77px;
+    padding-left: 167px;
+
+    @include vp-1199 {
+      padding-bottom: 0;
+      padding-left: 117px;
+    }
 
     @include vp-767 {
       padding: 80px 67px 0;
@@ -91,7 +104,13 @@
   }
 
   &--parking {
-    padding-left: 107px;
+    padding-bottom: 77px;
+    padding-left: 105px;
+
+    @include vp-1199 {
+      padding-bottom: 0;
+      padding-left: 87px;
+    }
 
     @include vp-767 {
       padding: 80px 45px 0;
@@ -111,6 +130,10 @@
 
     padding-left: 138px;
 
+    @include vp-1199 {
+      padding-left: 117px;
+    }
+
     @include vp-767 {
       padding: 87px 50px 0;
     }
@@ -128,6 +151,10 @@
 
     padding-left: 107px;
 
+    @include vp-1199 {
+      padding-left: 88px;
+    }
+
     @include vp-767 {
       padding: 80px 43px 0;
     }
@@ -144,6 +171,12 @@
   font-size: 22px;
   line-height: 33px;
   margin: 0 0 20px 0;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 1px;
+  }
 
   @include vp-767 {
     font-size: 20px;
@@ -174,7 +207,8 @@
 
   @include vp-1199 {
     width: 442px;
-    padding: 45px 36px;
+    min-height: 239px;
+    padding: 18px 23px;
 
     justify-self: center;
     grid-column: 1/-1;
@@ -199,8 +233,15 @@
 
   order: -1;
 
+  @include vp-1199 {
+    line-height: 76px;
+    margin-bottom: -3px;
+    margin-top: -4px;
+  }
+
   @include vp-767 {
-    margin-bottom: -22px;
+    margin-bottom: -8px;
+    margin-top: 19px;
   }
 }
 
@@ -208,6 +249,12 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 39px;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0 0 14px;
+  }
 
   @include vp-767 {
     font-size: 22px;
@@ -228,20 +275,59 @@
   }
 }
 
-// .advantages__icon {
-//   width: 108px;
-//   height: 71px;
+@media (min-width: 1200px) {
+  .advantages__block.advantages__block--square {
+    padding-left: 167px;
+    border-bottom: 2px solid $line-color;
+  }
 
-//   position: relative;
+  .advantages__block.advantages__block--square h3 {
+    margin: -7px 0 6px;
+  }
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     background-image: url("../img/svg/900.svg");
-//     background-repeat: no-repeat;
-//     background-position: 0 0;
-//     width: 108px;
-//     height: 71px;
-//     left: 0;
-//   }
-// }
+  .advantages__block.advantages__block--parking {
+    padding-left: 105px;
+    border-bottom: 2px solid $line-color;
+  }
+
+  .advantages__block.advantages__block--parking h3 {
+    margin: -7px 0 6px;
+  }
+
+  .advantages__block.advantages__block--center {
+    grid-row: 1/-1;
+    height: 307px;
+  }
+
+  .advantages__block.advantages__block--center span {
+    line-height: 81px;
+  }
+
+  .advantages__block.advantages__block--center h3 {
+    margin-bottom: 34px;
+  }
+
+  .advantages__block.advantages__block--center span {
+    margin-top: -7px;
+    margin-left: -4px;
+  }
+
+  .advantages__block.advantages__block--сomfort {
+    padding-top: 46px;
+    padding-left: 159px;
+  }
+
+  .advantages__block.advantages__block--сomfort h3 {
+    margin: -7px 0 6px;
+  }
+
+  .advantages__block.advantages__block--сoach {
+    grid-column: 3/4;
+    padding-top: 46px;
+    padding-left: 105px;
+  }
+
+  .advantages__block.advantages__block--сoach h3 {
+    margin: -7px 0 6px;
+  }
+}
