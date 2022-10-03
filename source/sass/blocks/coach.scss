@@ -84,7 +84,6 @@
   width: 100%;
   overflow: auto;
   padding: 52px 10px 5px;
-  overflow: auto;
   top: 0;
 
   transition: background-color $trans-default;
@@ -133,7 +132,6 @@
 
 .coach-description__list {
   list-style: none;
-  margin: 0;
   padding: 0;
 
   max-width: 200px;
@@ -147,22 +145,28 @@
   transition: opacity 1.6s ease;
 }
 
-.coach__item:hover .coach-description {
+@include effects-off {
+  .coach__item:hover .coach-description {
+    background-color: $coach-item-shadow;
+  }
+
+  // Пытаемся сделать каскадное появление - сверху вниз
+  .coach__item:hover h3,
+  .coach__item:hover span,
+  .coach__item:hover .coach-description__list {
+    opacity: 1;
+  }
+}
+
+.coach__item:active .coach-description {
   background-color: $coach-item-shadow;
 }
 
-// Пытаемся сделать каскадное появление - сверху вниз
-.coach__item:hover h3,
-.coach__item:hover span,
-.coach__item:hover .coach-description__list {
+.coach__item:active h3,
+.coach__item:active span,
+.coach__item:active .coach-description__list {
   opacity: 1;
 }
-
-// .coach__item:focus h3,
-// .coach__item:focus span,
-// .coach__item:focus .coach-description__list {
-//   opacity: 1;
-// }
 
 // Создаем кастомный маркер
 .coach-description__item {
@@ -227,7 +231,7 @@
 .coach__button.swiper-button-next::after {
   content: "";
   position: absolute;
-  background-image: url('../img/svg/arrow.svg');
+  background-image: url("../img/svg/arrow.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
   width: 16px;
@@ -255,6 +259,7 @@
 
 // Эффекты при наведении в десктопной версии
 @include effects-off {
+
   .coach__button:hover.swiper-button-prev::after,
   .coach__button:focus.swiper-button-prev::after {
     transform: scale(1.5);

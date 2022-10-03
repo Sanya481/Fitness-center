@@ -31,16 +31,14 @@
 // advantages__grid
 .advantages__grid {
   list-style: none;
-  margin: 0;
   padding: 0;
 
   display: grid;
   grid-template-columns: 345px 240px 345px;
   grid-template-rows: min-content min-content;
   grid-column-gap: 57px;
-  margin: 0 60px;
-
   row-gap: 34px;
+  margin: 0 60px;
 
   @include vp-1199 {
     grid-auto-flow: row dense;
@@ -60,9 +58,7 @@
   display: flex;
   border-bottom: 2px solid $line-color;
 
-
-  // !!! Не работает почему-то
-  &::nth-last-child(n+2) {
+  &:nth-last-child(-n+2) {
     border-bottom: none;
   }
 
@@ -80,24 +76,20 @@
   }
 
   &--square {
-    margin-left: 28px;
-    margin-top: -13px;
+    margin: -13px 0 0 28px;
+    padding: 0 0 76px 0;
 
     @include vp-1199 {
-      padding-right: 35px;
-    }
-
-    @include vp-767 {
-      // padding: 80px 67px 0;
+      padding: 0 35px 0 0;
     }
   }
 
   &--parking {
-    margin-top: -13px;
-    margin-left: 3px;
+    margin: -13px 0 0 3px;
+    padding: 0 7px 76px 0;
 
     @include vp-1199 {
-      padding-right: 2px;
+      padding: 0 2px 0 0;
     }
 
     @include vp-767 {
@@ -108,34 +100,22 @@
   &--сomfort {
     margin-top: 35px;
     margin-left: 21px;
-
-    // @include vp-1199 {
-    //   margin-top: 0;
-    //   margin-left: 0;
-    // }
-
-    @include vp-767 {
-      // padding: 87px 50px 0;
-    }
   }
 
   &--сoach {
     margin-top: 35px;
     margin-left: 3px;
-
-    // @include vp-1199 {
-    //   margin-top: 0;
-    //   margin-left: 0;
-    // }
-
-    @include vp-767 {
-      // padding: 80px 43px 0;
-    }
   }
 
   @include vp-1199 {
     margin-top: 0;
     margin-left: 0;
+  }
+}
+
+@media (min-width: $vp-1200) {
+  .advantages__block.advantages__block--сoach .advantages__in-numbers {
+    margin-right: 33px;
   }
 }
 
@@ -155,7 +135,7 @@
   margin: 0;
   margin-bottom: -6px;
 
-  background: linear-gradient(127.61deg, #D10A42 0%, #0041CA 45.58%);
+  background: $color-shadow-text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
@@ -225,11 +205,6 @@
     width: 100%;
     min-height: 239px;
     margin: 0 0 39px;
-  }
-}
-
-.advantages__block.advantages__block--center {
-  @include vp-767 {
     padding: 16px 65px 43px 65px;
   }
 }
@@ -237,19 +212,17 @@
 .advantages__block--center span {
   font-weight: 700;
   font-size: 74px;
-  line-height: 111px;
-
+  line-height: 75px;
+  margin-top: -13px;
   order: -1;
 
   @include vp-1199 {
     line-height: 76px;
-    margin-bottom: -3px;
-    margin-top: -4px;
+    margin: -4px 0 -3px 0;
   }
 
   @include vp-767 {
-    margin-bottom: -11px;
-    margin-top: 20px;
+    margin: 20px 0 -11px 0;
   }
 }
 
@@ -257,6 +230,7 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 39px;
+  margin: 0 0 34px;
 
   @include vp-1199 {
     font-size: 22px;
@@ -277,6 +251,7 @@
   line-height: 24px;
   text-align: center;
   max-width: 172px;
+  margin: 0;
 
   @include vp-1199 {
     margin: 0;
@@ -285,44 +260,4 @@
   @include vp-767 {
     max-width: none;
   }
-}
-
-@media (min-width: 1200px) {
-  .advantages__block.advantages__block--square {
-    padding-bottom: 76px;
-    padding-right: 0;
-  }
-
-  .advantages__block.advantages__block--parking {
-    padding-bottom: 76px;
-    padding-right: 7px;
-  }
-
-  .advantages__block.advantages__block--center h3 {
-    margin: 0;
-    margin-bottom: 34px;
-  }
-
-  .advantages__block.advantages__block--center span {
-    line-height: 75px;
-    margin-top: -13px;
-  }
-
-  .advantages__block.advantages__block--center p {
-    margin: 0;
-  }
-
-  .advantages__block.advantages__block--сomfort {
-    border: none;
-  }
-
-  .advantages__block.advantages__block--сoach {
-    border: none;
-  }
-
-  .advantages__block.advantages__block--сoach .advantages__in-numbers {
-    margin-right: 33px;
-  }
-
-
 }

@@ -137,7 +137,6 @@
   }
 
   @include effects-off {
-
     &:hover,
     &:focus {
       color: $color-sapphire;
@@ -150,7 +149,7 @@
   margin: 0;
   padding: 0;
 
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 
@@ -162,6 +161,14 @@
 
   @include vp-767 {
     gap: 35px;
+  }
+}
+
+.subscription__list.is-active {
+  display: grid;
+
+  @include vp-1199 {
+    display: flex;
   }
 }
 
@@ -196,7 +203,6 @@
   }
 
   @include effects-off {
-
     &:hover,
     &:focus {
       border: 7px solid;
@@ -243,7 +249,7 @@
   &::after {
     content: "";
     position: absolute;
-    background-image: url("../img/decorative/ruble.png");
+    background-image: url("../img/svg/rouble.svg");
     background-position: 0 0;
     background-repeat: no-repeat;
     width: 30px;
@@ -253,6 +259,8 @@
     right: 0;
 
     @include vp-767 {
+      width: 31px;
+      height: 46px;
       right: -7px;
     }
   }
@@ -275,7 +283,7 @@
   font-size: 100px;
   line-height: 150px;
   color: #e8e8e8;
-  opacity: .48;
+  opacity: 0.48;
 
   position: absolute;
   left: 50%;
@@ -324,19 +332,5 @@
   // Эффекты при нажатии в планшетной и мобильной версии
   &:active {
     background: $color-torch-red;
-  }
-}
-
-// Свойства для JS
-
-.subscription__list {
-  display: none;
-}
-
-.subscription__list.is-active {
-  display: grid;
-
-  @include vp-1199 {
-    display: flex;
   }
 }

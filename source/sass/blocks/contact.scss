@@ -58,7 +58,7 @@
     position: absolute;
     height: 100%;
     width: 2px;
-    background-color: #74819C;
+    background-color: $color-light-slate-grey;
     right: 42%;
     transform: translate(-50%);
 
@@ -144,7 +144,6 @@
   }
 
   @include effects-off {
-
     &:hover,
     &:focus {
       color: $color-deep-sky-blue;

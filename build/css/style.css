@@ -1573,7 +1573,7 @@ main {
   height: 20px;
 }
 
-/* Чтобы при добавлении контента логотип не уменьшался и ничего не залазило на него */
+/* Чтобы при добавлении контента логотип не уменьшался и ничего не залазило на него  */
 
 .header__logo {
   -ms-flex-negative: 0;
@@ -1690,6 +1690,7 @@ main {
 .intro__image {
   width: 500px;
   height: 556px;
+  background-color: #003eb7;
   margin-right: 122px;
 }
 
@@ -1740,7 +1741,7 @@ main {
 
 .subscription {
   font-family: "Roboto Condensed", "Arial", sans-serif;
-  background-color: #F8F9FC;
+  background-color: #f8f9fc;
   position: relative;
 }
 
@@ -1803,24 +1804,28 @@ main {
 }
 
 .subscription__tabs button:active {
-  color: #103AAE;
+  color: #103aae;
   opacity: 1;
 }
 
 .subscription__tabs button.is-active {
   opacity: 1;
-  border-bottom: 2px solid #D10A42;
+  border-bottom: 2px solid #d10a42;
 }
 
 .subscription__list {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: -ms-grid;
-  display: grid;
+  display: none;
   -ms-grid-columns: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
+}
+
+.subscription__list.is-active {
+  display: -ms-grid;
+  display: grid;
 }
 
 .subscription__item {
@@ -1859,7 +1864,7 @@ main {
 .subscription__item p {
   font-size: 16px;
   line-height: 24px;
-  color: #495A7D;
+  color: #495a7d;
   margin: 0 0 65px;
 }
 
@@ -1872,7 +1877,7 @@ main {
 .subscription__price::after {
   content: "";
   position: absolute;
-  background-image: url("../img/decorative/ruble.png");
+  background-image: url("../img/svg/rouble.svg");
   background-position: 0 0;
   background-repeat: no-repeat;
   width: 30px;
@@ -1888,7 +1893,7 @@ main {
   font-weight: 700;
   font-size: 60px;
   line-height: 90px;
-  color: #103AAE;
+  color: #103aae;
 }
 
 .subscription__price span:last-child {
@@ -1896,7 +1901,7 @@ main {
   font-size: 100px;
   line-height: 150px;
   color: #e8e8e8;
-  opacity: .48;
+  opacity: 0.48;
   position: absolute;
   left: 50%;
   -webkit-transform: translate(-50%);
@@ -1922,16 +1927,7 @@ main {
 }
 
 .subscription__item a:active {
-  background: #ED0233;
-}
-
-.subscription__list {
-  display: none;
-}
-
-.subscription__list.is-active {
-  display: -ms-grid;
-  display: grid;
+  background: #ed0233;
 }
 
 .sale h2 {
@@ -1966,6 +1962,7 @@ main {
 
 .popular-sale__image {
   width: 280px;
+  background-color: #003eb7;
 }
 
 .popular-sale__list {
@@ -1976,7 +1973,7 @@ main {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background-color: #ED0233;
+  background-color: #ed0233;
   padding: 33px 35px 33px 45px;
 }
 
@@ -2040,11 +2037,10 @@ main {
 }
 
 .standard-sale {
-  color: #1C3374;
-  border: 7px solid;
+  color: #1c3374;
   padding: 22px 50px 23px 29px;
   border: 7px solid;
-  border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+  border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
   border-image-slice: 26;
 }
 
@@ -2062,13 +2058,13 @@ main {
 }
 
 .standard-sale__item a {
-  color: #1C3374;
+  color: #1c3374;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  border-bottom: 1px solid #1C3374;
+  border-bottom: 1px solid #1c3374;
 }
 
 .standard-sale__item a:active {
@@ -2083,8 +2079,8 @@ main {
 }
 
 .event__info {
-  color: #fff;
-  background-color: #ED0233;
+  color: #ffffff;
+  background-color: #ed0233;
   padding: 83px 77px 83px 79px;
 }
 
@@ -2122,7 +2118,7 @@ main {
   font-size: 18px;
   line-height: 27px;
   margin: 0;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #ffffff;
 }
 
 .date__number-wrapper {
@@ -2184,8 +2180,8 @@ main {
   text-transform: uppercase;
   text-align: center;
   padding: 25px 20px;
-  color: #FFFFFF;
-  border: 4px solid #FFFFFF;
+  color: #ffffff;
+  border: 4px solid #ffffff;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
@@ -2223,7 +2219,7 @@ main {
 .coach__item {
   color: #ffffff;
   cursor: pointer;
-  background-color: #74819C;
+  background-color: #74819c;
 }
 
 .coach__item h3 {
@@ -2250,7 +2246,6 @@ main {
   width: 100%;
   overflow: auto;
   padding: 52px 10px 5px;
-  overflow: auto;
   top: 0;
   -webkit-transition: background-color 0.3s ease;
   -o-transition: background-color 0.3s ease;
@@ -2273,7 +2268,7 @@ main {
   vertical-align: middle;
   font-size: 16px;
   line-height: 24px;
-  color: #B6BDCC;
+  color: #b6bdcc;
   margin: 0 0 31px;
   opacity: 0;
   pointer-events: none;
@@ -2284,7 +2279,6 @@ main {
 
 .coach-description__list {
   list-style: none;
-  margin: 0;
   padding: 0;
   max-width: 200px;
   margin: 0 auto;
@@ -2296,13 +2290,13 @@ main {
   transition: opacity 1.6s ease;
 }
 
-.coach__item:hover .coach-description {
+.coach__item:active .coach-description {
   background-color: rgba(16, 38, 84, 0.89);
 }
 
-.coach__item:hover h3,
-.coach__item:hover span,
-.coach__item:hover .coach-description__list {
+.coach__item:active h3,
+.coach__item:active span,
+.coach__item:active .coach-description__list {
   opacity: 1;
 }
 
@@ -2386,7 +2380,7 @@ main {
 }
 
 .advantages {
-  background-color: #F8F9FC;
+  background-color: #f8f9fc;
 }
 
 .advantages__container {
@@ -2399,7 +2393,6 @@ main {
 
 .advantages__grid {
   list-style: none;
-  margin: 0;
   padding: 0;
   display: -ms-grid;
   display: grid;
@@ -2410,8 +2403,8 @@ main {
   grid-template-rows: -webkit-min-content -webkit-min-content;
   grid-template-rows: min-content min-content;
   grid-column-gap: 57px;
-  margin: 0 60px;
   row-gap: 34px;
+  margin: 0 60px;
 }
 
 .advantages__block {
@@ -2421,18 +2414,18 @@ main {
   border-bottom: 2px solid rgba(209, 10, 66, 0.2);
 }
 
-.advantages__block::nth-last-child(n+2) {
+.advantages__block:nth-last-child(-n+2) {
   border-bottom: none;
 }
 
 .advantages__block--square {
-  margin-left: 28px;
-  margin-top: -13px;
+  margin: -13px 0 0 28px;
+  padding: 0 0 76px 0;
 }
 
 .advantages__block--parking {
-  margin-top: -13px;
-  margin-left: 3px;
+  margin: -13px 0 0 3px;
+  padding: 0 7px 76px 0;
 }
 
 .advantages__block--сomfort {
@@ -2455,8 +2448,8 @@ main {
   line-height: 71px;
   margin: 0;
   margin-bottom: -6px;
-  background: -o-linear-gradient(322.39deg, #D10A42 0%, #0041CA 45.58%);
-  background: linear-gradient(127.61deg, #D10A42 0%, #0041CA 45.58%);
+  background: -o-linear-gradient(322.39deg, #d10a42 0%, #0041ca 45.58%);
+  background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -2465,7 +2458,7 @@ main {
 .advantages__in-numbers span {
   font-size: 14px;
   line-height: 21px;
-  color: #2E35AC;
+  color: #2e35ac;
 }
 
 .advantages__info h3 {
@@ -2484,7 +2477,7 @@ main {
 }
 
 .advantages__block--center {
-  background-color: #1C3374;
+  background-color: #1c3374;
   color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2508,7 +2501,8 @@ main {
 .advantages__block--center span {
   font-weight: 700;
   font-size: 74px;
-  line-height: 111px;
+  line-height: 75px;
+  margin-top: -13px;
   -webkit-box-ordinal-group: 0;
   -ms-flex-order: -1;
   order: -1;
@@ -2518,6 +2512,7 @@ main {
   font-weight: 700;
   font-size: 26px;
   line-height: 39px;
+  margin: 0 0 34px;
 }
 
 .advantages__block--center p {
@@ -2526,6 +2521,7 @@ main {
   line-height: 24px;
   text-align: center;
   max-width: 172px;
+  margin: 0;
 }
 
 .about__container {
@@ -2578,6 +2574,7 @@ main {
   align-self: flex-start;
   -ms-flex-negative: 0;
   flex-shrink: 0;
+  background-color: #b8b8b8;
   width: 660px;
   height: 401px;
   -o-object-fit: cover;
@@ -2616,10 +2613,10 @@ main {
 .reviews__item {
   position: relative;
   padding: 54px 62px 56px 170px;
-  color: #FFFFFF;
-  background: #1C3374;
-  -webkit-box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
-  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+  color: #ffffff;
+  background: #1c3374;
+  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   margin: 0;
 }
 
@@ -2639,6 +2636,7 @@ main {
 .reviews__author {
   width: 80px;
   height: 80px;
+  background-color: #b8b8b8;
   position: absolute;
   top: 62px;
   left: 63px;
@@ -2700,7 +2698,7 @@ main {
   background: -webkit-gradient(linear, left top, right top, color-stop(50%, #102654), color-stop(50%, white));
   background: -o-linear-gradient(left, #102654 50%, white 50%);
   background: linear-gradient(90deg, #102654 50%, white 50%);
-  border-top: 1px solid #74819C;
+  border-top: 1px solid #74819c;
 }
 
 .callback-group__container {
@@ -2753,7 +2751,7 @@ main {
   width: 100%;
   border: none;
   background-color: transparent;
-  border-bottom: 1px solid #74819C;
+  border-bottom: 1px solid #74819c;
   color: #ffffff;
   padding: 5px 24px 5px 5px;
   outline: none;
@@ -2835,7 +2833,7 @@ main {
   position: absolute;
   height: 100%;
   width: 2px;
-  background-color: #74819C;
+  background-color: #74819c;
   right: 42%;
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
@@ -2877,7 +2875,7 @@ main {
 }
 
 .footer {
-  background-color: #030A1A;
+  background-color: #030a1a;
   color: #ffffff;
 }
 
@@ -2951,7 +2949,7 @@ main {
   flex-wrap: wrap;
   max-width: 130px;
   margin-right: -4px;
-  gap: 0px;
+  gap: 0;
 }
 
 .social__link {
@@ -2999,8 +2997,8 @@ main {
 
   .intro__link a:hover,
   .intro__link a:focus {
-    color: #D10A42;
-    background-color: #F8F9FC;
+    color: #d10a42;
+    background-color: #f8f9fc;
   }
 
   .intro__link a:active {
@@ -3019,12 +3017,12 @@ main {
 
   .subscription__tabs button:hover,
   .subscription__tabs button:focus {
-    color: #D10A42;
+    color: #d10a42;
     opacity: 1;
   }
 
   .subscription__tabs button:active {
-    color: #103AAE;
+    color: #103aae;
   }
 
   .subscription__tabs button.is-active:hover,
@@ -3035,25 +3033,25 @@ main {
   .subscription__item:hover,
   .subscription__item:focus {
     border: 7px solid;
-    border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 26;
   }
 
   .subscription__item a:hover,
   .subscription__item a:focus {
-    background: -o-linear-gradient(352.95deg, #ED0233 17.6%, #003EB7 95.31%);
-    background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     color: #ffffff;
     border: none;
   }
 
   .subscription__item a:active {
-    background: #ED0233;
+    background: #ed0233;
   }
 
   .popular-sale__item--link a:hover,
   .popular-sale__item--link a:focus {
-    color: #694ED5;
+    color: #694ed5;
   }
 
   .popular-sale__item--link a:active {
@@ -3076,6 +3074,16 @@ main {
 
   .event__bottom-block a:active {
     background-color: #2e80fd;
+  }
+
+  .coach__item:hover .coach-description {
+    background-color: rgba(16, 38, 84, 0.89);
+  }
+
+  .coach__item:hover h3,
+  .coach__item:hover span,
+  .coach__item:hover .coach-description__list {
+    opacity: 1;
   }
 
   .coach__button:hover.swiper-button-prev::after,
@@ -3102,38 +3110,6 @@ main {
     -webkit-transform: rotate(180deg) translateX(-10px);
     -ms-transform: rotate(180deg) translateX(-10px);
     transform: rotate(180deg) translateX(-10px);
-  }
-
-  .advantages__block.advantages__block--square {
-    padding-bottom: 76px;
-    padding-right: 0;
-  }
-
-  .advantages__block.advantages__block--parking {
-    padding-bottom: 76px;
-    padding-right: 7px;
-  }
-
-  .advantages__block.advantages__block--center h3 {
-    margin: 0;
-    margin-bottom: 34px;
-  }
-
-  .advantages__block.advantages__block--center span {
-    line-height: 75px;
-    margin-top: -13px;
-  }
-
-  .advantages__block.advantages__block--center p {
-    margin: 0;
-  }
-
-  .advantages__block.advantages__block--сomfort {
-    border: none;
-  }
-
-  .advantages__block.advantages__block--сoach {
-    border: none;
   }
 
   .advantages__block.advantages__block--сoach .advantages__in-numbers {
@@ -3345,14 +3321,14 @@ main {
     gap: 37px;
   }
 
-  .subscription__item {
-    width: 442px;
-  }
-
   .subscription__list.is-active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+  }
+
+  .subscription__item {
+    width: 442px;
   }
 
   .sale h2 {
@@ -3395,7 +3371,7 @@ main {
   }
 
   .event__top-block {
-    margin-bottom: 0px;
+    margin-bottom: 0;
   }
 
   .event__top-block h2 {
@@ -3410,7 +3386,7 @@ main {
   }
 
   .date__number {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     max-width: 56px;
     padding-right: 13px;
   }
@@ -3419,7 +3395,7 @@ main {
   .date__time p {
     font-size: 12px;
     line-height: 18px;
-    padding-bottom: 0px;
+    padding-bottom: 0;
     margin-bottom: -3px;
   }
 
@@ -3511,11 +3487,11 @@ main {
   }
 
   .advantages__block--square {
-    padding-right: 35px;
+    padding: 0 35px 0 0;
   }
 
   .advantages__block--parking {
-    padding-right: 2px;
+    padding: 0 2px 0 0;
   }
 
   .advantages__block {
@@ -3546,8 +3522,7 @@ main {
 
   .advantages__block--center span {
     line-height: 76px;
-    margin-bottom: -3px;
-    margin-top: -4px;
+    margin: -4px 0 -3px 0;
   }
 
   .advantages__block--center h3 {
@@ -3612,7 +3587,7 @@ main {
   }
 
   .reviews h2 {
-    margin: 0px 0 40px;
+    margin: 0 0 40px;
   }
 
   .reviews__slider {
@@ -3899,6 +3874,8 @@ main {
   }
 
   .subscription__price::after {
+    width: 31px;
+    height: 46px;
     right: -7px;
   }
 
@@ -3950,7 +3927,7 @@ main {
 
   .popular-sale__item--title h3 {
     text-align: center;
-    margin: 0px 0 26px;
+    margin: 0 0 26px;
   }
 
   .popular-sale__item--price span {
@@ -3980,7 +3957,7 @@ main {
 
   .event__date {
     margin-top: -2px;
-    padding-right: 0px;
+    padding-right: 0;
   }
 
   .date__month {
@@ -4075,15 +4052,11 @@ main {
     width: 100%;
     min-height: 239px;
     margin: 0 0 39px;
-  }
-
-  .advantages__block.advantages__block--center {
     padding: 16px 65px 43px 65px;
   }
 
   .advantages__block--center span {
-    margin-bottom: -11px;
-    margin-top: 20px;
+    margin: 20px 0 -11px 0;
   }
 
   .advantages__block--center h3 {
@@ -4170,7 +4143,6 @@ main {
   }
 
   .reviews__item h3 {
-    margin: 0;
     line-height: 26px;
     margin: 8px 0 0 16px;
     padding: 0;

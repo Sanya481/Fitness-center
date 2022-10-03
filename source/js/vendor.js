@@ -136,4 +136,4 @@ const checkReviewsSwiper = () => {
   }
 };
 
-export { checkReviewsSwiper, checkCoachSwiper };
+export {checkReviewsSwiper, checkCoachSwiper};

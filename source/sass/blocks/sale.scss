@@ -56,6 +56,7 @@
 
 .popular-sale__image {
   width: 280px;
+  background-color: $color-cobalt;
 
   @include vp-1199 {
     width: 399px;
@@ -104,7 +105,7 @@
 
   @include vp-767 {
     text-align: center;
-    margin: 0px 0 26px;
+    margin: 0 0 26px;
   }
 }
 
@@ -162,11 +163,10 @@
 
 .standard-sale {
   color: $color-resolution-blue;
-  border: 7px solid;
   padding: 22px 50px 23px 29px;
 
   border: 7px solid;
-  border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+  border-image-source: $red-to-blue;
   border-image-slice: 26;
 
   // Дополнительные модификаторы для правльных переносов слов

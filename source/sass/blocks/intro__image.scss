@@ -1,7 +1,7 @@
 .intro__image {
   width: 500px;
   height: 556px;
-
+  background-color: $color-cobalt;
   margin-right: 122px;
 
   @include vp-1199 {

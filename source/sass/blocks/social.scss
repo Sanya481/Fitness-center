@@ -8,7 +8,7 @@
   flex-wrap: wrap;
   max-width: 130px;
   margin-right: -4px;
-  gap: 0px;
+  gap: 0;
 
   @include vp-1199 {
     margin: 0 -10px 0 0;
