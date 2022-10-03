@@ -1,0 +1,247 @@
+.sale h2 {
+  margin: -7px 0 50px;
+
+  @include vp-1199 {
+    margin: -1px 0 42px;
+  }
+
+  @include vp-767 {
+    margin: -2px 0 45px;
+  }
+}
+
+.sale__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
+
+  @include vp-1199 {
+    grid-template-rows: 462px 211px;
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.popular-sale__list,
+.standard-sale {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// popular-sale
+
+.popular-sale {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1/-1;
+
+  color: $color-default-white;
+
+  @include vp-1199 {
+    grid-column: 1/-1;
+    grid-row: auto;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.popular-sale__image {
+  width: 280px;
+  background-color: $color-cobalt;
+
+  @include vp-1199 {
+    width: 399px;
+  }
+
+  @include vp-767 {
+    height: 299px;
+    width: 100%;
+  }
+}
+
+.popular-sale__list {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $color-torch-red;
+  padding: 33px 35px 33px 45px;
+
+  @include vp-767 {
+    align-items: center;
+    padding: 33px 47px 43px 47px;
+  }
+}
+
+// Меняем порядок следования элементов
+.popular-sale__item--title {
+  order: 2;
+}
+
+.popular-sale__item--price {
+  order: 1;
+}
+
+.popular-sale__item--time {
+  order: 0;
+}
+
+.popular-sale__item--link {
+  order: 3;
+}
+
+.popular-sale__item--title h3 {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0 0 184px 0;
+
+  @include vp-767 {
+    text-align: center;
+    margin: 0 0 26px;
+  }
+}
+
+.popular-sale__item--price span {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 109px;
+  margin: 0 0 0 0;
+
+  @include vp-767 {
+    line-height: 104px;
+  }
+}
+
+.popular-sale__item--time p {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+  margin: 0 0 -25px 0;
+}
+
+.popular-sale__item--link a {
+  color: $color-default-white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  // padding: 5px 0;
+  position: relative;
+  border-bottom: 1px solid $color-default-white;
+
+  // Эффекты при наведении в десктопной версии
+  @include effects-off {
+    // popular-sale
+    &:hover,
+    &:focus {
+      color: $color-slate-blue;
+    }
+
+    &:active {
+      color: $deep-dodger-blue;
+    }
+  }
+
+  // Эффекты при нажатии в планшетной и мобильной версии
+  &:active {
+    color: $deep-dodger-blue;
+  }
+}
+
+
+// standard-sale
+
+.standard-sale {
+  color: $color-resolution-blue;
+  padding: 22px 50px 23px 29px;
+
+  border: 7px solid;
+  border-image-source: $red-to-blue;
+  border-image-slice: 26;
+
+  // Дополнительные модификаторы для правльных переносов слов
+  @include vp-1199 {
+    &--month {
+      padding: 22px 60px 23px 29px;
+    }
+
+    &--discount {
+      padding: 22px 25px 23px 29px;
+    }
+  }
+
+  @include vp-767 {
+    text-align: center;
+    padding: 33px 30px 36px 29px;
+  }
+}
+
+.standard-sale__item h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0 0 8px;
+
+  @include vp-1199 {
+    margin: 0 0 9px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 10px;
+  }
+}
+
+.standard-sale__item p {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 65px;
+
+  @include vp-767 {
+    margin: 0 0 20px;
+  }
+}
+
+.standard-sale--month p {
+  @include vp-1199 {
+    margin: 0 0 42px;
+  }
+}
+
+.standard-sale__item a {
+  color: $color-resolution-blue;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  // padding: 5px 0;
+  border-bottom: 1px solid $color-resolution-blue;
+
+  // Эффекты при наведении в десктопной версии
+  @include effects-off {
+    &:hover,
+    &:focus {
+      color: $deep-sky-blue;
+    }
+
+    &:active {
+      color: $deep-dodger-blue;
+    }
+  }
+
+  // Эффекты при нажатии в планшетной и мобильной версии
+  &:active {
+    color: $deep-dodger-blue;
+  }
+}

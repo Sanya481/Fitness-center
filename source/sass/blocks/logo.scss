@@ -1,0 +1,23 @@
+.logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 89px;
+  height: 20px;
+
+  @include vp-1199 {
+    width: 82px;
+    height: 18px;
+    font-size: 0;
+    line-height: 0;
+  }
+
+  @include vp-767 {
+    width: 68px;
+    height: 15px;
+  }
+}
+/* Чтобы при добавлении контента логотип не уменьшался и ничего не залазило на него  */
+.header__logo {
+  flex-shrink: 0;
+  margin-right: 100px;
+}

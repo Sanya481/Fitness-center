@@ -1,0 +1,224 @@
+.event__container {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.event__info {
+  color: $color-default-white;
+  background-color: $color-torch-red;
+  padding: 83px 77px 83px 79px;
+
+  @include vp-1199 {
+    padding: 48px 44px 39px 44px;
+  }
+
+  @include vp-767 {
+    padding: 48px 44px 48px;
+  }
+}
+
+.event__top-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 9px;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+  }
+}
+
+.event__top-block h2 {
+  font-family: $ff-placeholder-second;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  max-width: 201px;
+  margin: 0;
+
+  @include vp-1199 {
+    font-size: 52px;
+    line-height: 52px;
+    max-width: 120px;
+  }
+}
+
+.event__date {
+  margin-top: -1px;
+  margin-right: 5px;
+
+  @include vp-1199 {
+    padding-right: 2px;
+    margin-right: 0;
+  }
+
+  @include vp-767 {
+    margin-top: -2px;
+    padding-right: 0;
+  }
+}
+
+// date__number
+.date__number {
+  max-width: 64px;
+  margin-bottom: 9px;
+
+  @include vp-1199 {
+    margin-bottom: 0;
+    max-width: 56px;
+    padding-right: 13px;
+  }
+}
+
+.date__number p,
+.date__time p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+
+  border-bottom: 1px solid $color-default-white;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+    padding-bottom: 0;
+    margin-bottom: -3px;
+  }
+}
+
+.date__number-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.date__number p {
+  padding-bottom: 2px;
+  margin-bottom: -5px;
+}
+
+.date__time p {
+  padding-bottom: 4px;
+  margin-bottom: -7px;
+}
+
+.date__number span,
+.date__time span {
+  display: inline-block;
+
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.date__month p,
+.date__month span {
+  font-size: 14px;
+  line-height: 21px;
+  border: none;
+
+  @include vp-1199 {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+// .date__month
+.date__month {
+  margin-left: 5px;
+
+  @include vp-767 {
+    margin-left: 3px;
+  }
+}
+
+.date__month p {
+  @include vp-1199 {
+    margin-bottom: -8px;
+  }
+}
+
+// .date__time
+.date__time {
+  max-width: 88px;
+}
+
+.event__bottom-block p {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 0 46px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0 0 29px;
+  }
+}
+
+.event__bottom-block a {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 25px 20px;
+  color: $color-default-white;
+  border: 4px solid $color-default-white;
+
+  transition: background-color $trans-default;
+
+  @include vp-1199 {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 12px 25px;
+  }
+
+  // Эффекты при наведении в десктопной версии
+  @include effects-off {
+    &:hover,
+    &:focus {
+      background-color: $color-blue;
+    }
+
+    &:active {
+      background-color: $deep-dodger-blue;
+    }
+  }
+
+  // Эффекты при нажатии в планшетной и мобильной версии
+  &:active {
+    background-color: $deep-dodger-blue;
+  }
+}
+
+// event__photo
+.event__photo {
+  width: 660px;
+
+  background-color: $color-neon-blue;
+
+  @include vp-1199 {
+    width: 386px;
+    // height: 292px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 292px;
+  }
+}
+
+.event__photo img {
+  object-fit: cover;
+}

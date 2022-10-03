@@ -1,0 +1,263 @@
+.advantages {
+  background-color: $color-ghost-white;
+}
+
+.advantages__container {
+  padding: 120px 20px;
+
+  @include vp-1199 {
+    padding: 100px 5px 93px 5px;
+  }
+
+  @include vp-767 {
+    max-width: none;
+    padding: 70px 0 29px;
+    margin: 0;
+  }
+}
+
+.advantages h2 {
+  margin: -2px 0 70px 4px;
+
+  @include vp-1199 {
+    margin: 0 0 44px 0;
+  }
+
+  @include vp-767 {
+    margin: 0 0 45px;
+  }
+}
+
+// advantages__grid
+.advantages__grid {
+  list-style: none;
+  padding: 0;
+
+  display: grid;
+  grid-template-columns: 345px 240px 345px;
+  grid-template-rows: min-content min-content;
+  grid-column-gap: 57px;
+  row-gap: 34px;
+  margin: 0 60px;
+
+  @include vp-1199 {
+    grid-auto-flow: row dense;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: none;
+    column-gap: 30px;
+    row-gap: 43px;
+    margin: 0;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.advantages__block {
+  display: flex;
+  border-bottom: 2px solid $line-color;
+
+  &:nth-last-child(-n+2) {
+    border-bottom: none;
+  }
+
+  @include vp-1199 {
+    border-bottom: none;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-right: 0;
+    row-gap: 5px;
+    margin: 0 46px 34px;
+  }
+
+  &--square {
+    margin: -13px 0 0 28px;
+    padding: 0 0 76px 0;
+
+    @include vp-1199 {
+      padding: 0 35px 0 0;
+    }
+  }
+
+  &--parking {
+    margin: -13px 0 0 3px;
+    padding: 0 7px 76px 0;
+
+    @include vp-1199 {
+      padding: 0 2px 0 0;
+    }
+
+    @include vp-767 {
+      margin: 0 46px 42px;
+    }
+  }
+
+  &--сomfort {
+    margin-top: 35px;
+    margin-left: 21px;
+  }
+
+  &--сoach {
+    margin-top: 35px;
+    margin-left: 3px;
+  }
+
+  @include vp-1199 {
+    margin-top: 0;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $vp-1200) {
+  .advantages__block.advantages__block--сoach .advantages__in-numbers {
+    margin-right: 33px;
+  }
+}
+
+// advantages__in-numbers
+.advantages__in-numbers {
+  margin-right: 30px;
+
+  @include vp-767 {
+    margin-right: 0;
+  }
+}
+
+.advantages__in-numbers p {
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 71px;
+  margin: 0;
+  margin-bottom: -6px;
+
+  background: $color-shadow-text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include vp-1199 {
+    font-size: 58px;
+    line-height: 58px;
+  }
+}
+
+.advantages__in-numbers span {
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-persian-blue;
+}
+
+.advantages__info h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 33px;
+  margin-top: 4px;
+  margin-bottom: 6px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 1px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 3px;
+  }
+}
+
+.advantages__info p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+}
+
+// .advantages__block--center
+.advantages__block--center {
+  background-color: $color-resolution-blue;
+  color: $color-default-white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  grid-column: 2/3;
+  grid-row: 1/-1;
+
+  @include vp-1199 {
+    width: 442px;
+    min-height: 239px;
+    padding: 18px 23px;
+
+    justify-self: center;
+    grid-column: 1/-1;
+    grid-row: auto;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    min-height: 239px;
+    margin: 0 0 39px;
+    padding: 16px 65px 43px 65px;
+  }
+}
+
+.advantages__block--center span {
+  font-weight: 700;
+  font-size: 74px;
+  line-height: 75px;
+  margin-top: -13px;
+  order: -1;
+
+  @include vp-1199 {
+    line-height: 76px;
+    margin: -4px 0 -3px 0;
+  }
+
+  @include vp-767 {
+    margin: 20px 0 -11px 0;
+  }
+}
+
+.advantages__block--center h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 39px;
+  margin: 0 0 34px;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0 0 14px;
+  }
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 33px;
+    margin: 0 0 6px;
+  }
+}
+
+.advantages__block--center p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  max-width: 172px;
+  margin: 0;
+
+  @include vp-1199 {
+    margin: 0;
+  }
+
+  @include vp-767 {
+    max-width: none;
+  }
+}

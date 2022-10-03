@@ -1,0 +1,54 @@
+.social {
+  line-height: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 130px;
+  margin-right: -4px;
+  gap: 0;
+
+  @include vp-1199 {
+    margin: 0 -10px 0 0;
+  }
+
+  @include vp-767 {
+    margin: 0 0 0 -4px;
+  }
+}
+
+.social__link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+
+  user-select: none;
+}
+
+.social__icon {
+  width: 100%;
+  height: 100%;
+  fill: $color-alice-blue;
+  transition: fill $trans-default;
+}
+
+// Эффекты при наведении в десктопной версии
+@include effects-off {
+  .social__link:hover .social__icon,
+  .social__link:focus .social__icon {
+    fill: $deep-sky-blue;
+  }
+
+  .social__link:active .social__icon {
+    fill: $deep-dodger-blue;
+  }
+}
+
+// Эффекты при нажатии в планшетной и мобильной версии
+.social__link:active .social__icon {
+  fill: $deep-dodger-blue;
+}

@@ -1,0 +1,289 @@
+.coach h2 {
+  text-align: left;
+  margin: -2px 0 52px 3px;
+
+  @include vp-1199 {
+    text-align: center;
+    margin: -3px 0 42px;
+  }
+}
+
+// Блок для позиционирования стрелок переключения слайдера
+.coach__wrapper {
+  position: relative;
+}
+
+.coach__slider.swiper {
+  @include vp-1199 {
+    width: 566px;
+  }
+
+  @include vp-767 {
+    width: 226px;
+  }
+}
+
+// coach__item
+.coach__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.coach__item {
+  color: $color-default-white;
+  // width: 260px;
+  cursor: pointer;
+
+  background-color: $color-light-slate-grey;
+}
+
+.coach__item h3 {
+  font-weight: 700;
+  font-size: 18px;
+
+  // Выравнивание по центру
+  position: absolute;
+  bottom: 22px;
+  left: 4px;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  line-height: 27px;
+
+  @include vp-1199 {
+    left: 8px;
+  }
+}
+
+.coach__photo {
+  width: 260px;
+  height: 294px;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    height: 274px;
+  }
+}
+
+.coach__photo img {
+  @include vp-1199 {
+    object-fit: cover;
+  }
+}
+
+// coach-description
+.coach-description {
+  position: absolute;
+  text-align: center;
+
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  padding: 52px 10px 5px;
+  top: 0;
+
+  transition: background-color $trans-default;
+
+  @include vp-767 {
+    padding-top: 45px;
+  }
+}
+
+.coach-description h3 {
+  position: static;
+  margin: 0;
+  line-height: 24px;
+
+  // Убираем видимость и включаем только при наведении
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 0.8s ease;
+
+  @include vp-767 {
+    margin-bottom: -2px;
+  }
+}
+
+.coach-description span {
+  display: inline-block;
+  vertical-align: middle;
+
+  font-size: 16px;
+  line-height: 24px;
+
+  color: $color-spindle;
+  margin: 0 0 31px;
+
+  // Убираем видимость и включаем только при наведении
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 1.2s ease;
+
+  @include vp-767 {
+    margin: 0 0 33px;
+  }
+}
+
+.coach-description__list {
+  list-style: none;
+  padding: 0;
+
+  max-width: 200px;
+  margin: 0 auto;
+  text-align: left;
+
+  // Убираем видимость и включаем только при наведении
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity 1.6s ease;
+}
+
+@include effects-off {
+  .coach__item:hover .coach-description {
+    background-color: $coach-item-shadow;
+  }
+
+  // Пытаемся сделать каскадное появление - сверху вниз
+  .coach__item:hover h3,
+  .coach__item:hover span,
+  .coach__item:hover .coach-description__list {
+    opacity: 1;
+  }
+}
+
+.coach__item:active .coach-description {
+  background-color: $coach-item-shadow;
+}
+
+.coach__item:active h3,
+.coach__item:active span,
+.coach__item:active .coach-description__list {
+  opacity: 1;
+}
+
+// Создаем кастомный маркер
+.coach-description__item {
+  position: relative;
+  margin-bottom: 13px;
+  padding-left: 42px;
+
+  @include vp-767 {
+    padding-left: 37px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: $color-default-white;
+    border-radius: 10px;
+    top: 7px;
+    left: 26px;
+
+    @include vp-767 {
+      left: 21px;
+    }
+  }
+}
+
+.coach-description__item p {
+  font-size: 14px;
+  line-height: 21px;
+  margin: 0;
+}
+
+// coach__button
+
+.coach__button {
+  background-color: transparent;
+  border: none;
+}
+
+.coach__button.swiper-button-prev {
+  left: -64px;
+
+  @include vp-1199 {
+    left: -8px;
+  }
+}
+
+.coach__button.swiper-button-next {
+  right: -64px;
+
+  @include vp-1199 {
+    right: -7px;
+  }
+}
+
+.coach__button.swiper-button-prev::after,
+.coach__button.swiper-button-next::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/svg/arrow.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 32px;
+
+  transition: transform $trans-default;
+
+  @include vp-767 {
+    width: 10px;
+  }
+}
+
+.coach__button.swiper-button-prev::after {
+  left: 8px;
+}
+
+.coach__button.swiper-button-next::after {
+  transform: rotate(180deg);
+  right: 6px;
+
+  @include vp-767 {
+    bottom: 2px;
+  }
+}
+
+// Эффекты при наведении в десктопной версии
+@include effects-off {
+
+  .coach__button:hover.swiper-button-prev::after,
+  .coach__button:focus.swiper-button-prev::after {
+    transform: scale(1.5);
+  }
+
+  .coach__button:hover.swiper-button-next::after,
+  .coach__button:focus.swiper-button-next::after {
+    transform: rotate(180deg) scale(1.5);
+  }
+
+  .coach__button:active.swiper-button-prev::after {
+    transform: translateX(-10px);
+  }
+
+  .coach__button:active.swiper-button-next::after {
+    transform: rotate(180deg) translateX(-10px);
+  }
+}
+
+// Эффекты при нажатии в планшетной и мобильной версии
+.coach__button:active.swiper-button-prev::after {
+  transform: translateX(-10px);
+}
+
+.coach__button:active.swiper-button-next::after {
+  transform: rotate(180deg) translateX(-10px);
+}
