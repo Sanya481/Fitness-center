@@ -98,6 +98,7 @@
 
 .about__image {
   align-self: flex-start;
+  flex-shrink: 0;
 
   width: 660px;
   height: 401px;

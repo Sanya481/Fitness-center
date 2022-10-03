@@ -1,5 +1,5 @@
 .reviews h2 {
-  margin: -3px 0 53px;
+  margin: -3px 0 55px;
 
   @include vp-1199 {
     margin: 0px 0 40px;
@@ -144,6 +144,8 @@
   width: 16px;
   height: 32px;
 
+  transition: transform $trans-default;
+
   @include vp-767 {
     width: 10px;
     height: 32px;
@@ -165,4 +167,34 @@
   @include vp-767 {
     right: 0;
   }
+}
+
+// Эффекты при наведении в десктопной версии
+@include effects-off {
+  .reviews__button:hover.swiper-button-prev::after,
+  .reviews__button:focus.swiper-button-prev::after {
+    transform: scale(1.5);
+  }
+
+  .reviews__button:hover.swiper-button-next::after,
+  .reviews__button:focus.swiper-button-next::after {
+    transform: rotate(180deg) scale(1.5);
+  }
+
+  .reviews__button:active.swiper-button-prev::after {
+    transform: translateX(-10px);
+  }
+
+  .reviews__button:active.swiper-button-next::after {
+    transform: rotate(180deg) translateX(-10px);
+  }
+}
+
+// Эффекты при нажатии в планшетной и мобильной версии
+.reviews__button:active.swiper-button-prev::after {
+  transform: translateX(-10px);
+}
+
+.reviews__button:active.swiper-button-next::after {
+  transform: rotate(180deg) translateX(-10px);
 }

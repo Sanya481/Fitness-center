@@ -83,7 +83,8 @@
   height: 100%;
   width: 100%;
   overflow: auto;
-  padding-top: 52px;
+  padding: 52px 10px 5px;
+  overflow: auto;
   top: 0;
 
   transition: background-color $trans-default;
@@ -232,6 +233,8 @@
   width: 16px;
   height: 32px;
 
+  transition: transform $trans-default;
+
   @include vp-767 {
     width: 10px;
   }
@@ -248,4 +251,34 @@
   @include vp-767 {
     bottom: 2px;
   }
+}
+
+// Эффекты при наведении в десктопной версии
+@include effects-off {
+  .coach__button:hover.swiper-button-prev::after,
+  .coach__button:focus.swiper-button-prev::after {
+    transform: scale(1.5);
+  }
+
+  .coach__button:hover.swiper-button-next::after,
+  .coach__button:focus.swiper-button-next::after {
+    transform: rotate(180deg) scale(1.5);
+  }
+
+  .coach__button:active.swiper-button-prev::after {
+    transform: translateX(-10px);
+  }
+
+  .coach__button:active.swiper-button-next::after {
+    transform: rotate(180deg) translateX(-10px);
+  }
+}
+
+// Эффекты при нажатии в планшетной и мобильной версии
+.coach__button:active.swiper-button-prev::after {
+  transform: translateX(-10px);
+}
+
+.coach__button:active.swiper-button-next::after {
+  transform: rotate(180deg) translateX(-10px);
 }

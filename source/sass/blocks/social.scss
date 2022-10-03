@@ -15,7 +15,7 @@
   }
 
   @include vp-767 {
-    margin: 0;
+    margin: 0 0 0 -4px;
   }
 }
 
@@ -34,20 +34,21 @@
   height: 100%;
   fill: $color-alice-blue;
   transition: fill $trans-default;
+}
 
-  @include effects-off {
-
-    &:hover,
-    &:focus {
-      fill: $deep-sky-blue;
-    }
-
-    &:active {
-      fill: $deep-dodger-blue;
-    }
+// Эффекты при наведении в десктопной версии
+@include effects-off {
+  .social__link:hover .social__icon,
+  .social__link:focus .social__icon {
+    fill: $deep-sky-blue;
   }
 
-  &:active {
+  .social__link:active .social__icon {
     fill: $deep-dodger-blue;
   }
+}
+
+// Эффекты при нажатии в планшетной и мобильной версии
+.social__link:active .social__icon {
+  fill: $deep-dodger-blue;
 }

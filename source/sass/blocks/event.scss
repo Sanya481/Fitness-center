@@ -53,13 +53,16 @@
   @include vp-1199 {
     padding-right: 2px;
     margin-right: 0;
+  }
 
+  @include vp-767 {
+    margin-top: -2px;
+    padding-right: 0px;
   }
 }
 
 // date__number
 .date__number {
-  position: relative;
   max-width: 64px;
   margin-bottom: 9px;
 
@@ -84,6 +87,12 @@
     padding-bottom: 0px;
     margin-bottom: -3px;
   }
+}
+
+.date__number-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .date__number p {
@@ -124,13 +133,10 @@
 
 // .date__month
 .date__month {
-  position: absolute;
-  right: 0px;
-  top: 35px;
+  margin-left: 5px;
 
-  @include vp-1199 {
-    right: 13px;
-    top: 19px;
+  @include vp-767 {
+    margin-left: 3px;
   }
 }
 
@@ -170,27 +176,46 @@
   color: #FFFFFF;
   border: 4px solid #FFFFFF;
 
+  transition: background-color $trans-default;
+
   @include vp-1199 {
     font-size: 10px;
     line-height: 12px;
     padding: 12px 25px;
+  }
+
+  // Эффекты при наведении в десктопной версии
+  @include effects-off {
+    &:hover,
+    &:focus {
+      background-color: $color-blue;
+    }
+
+    &:active {
+      background-color: $deep-dodger-blue;
+    }
+  }
+
+  // Эффекты при нажатии в планшетной и мобильной версии
+  &:active {
+    background-color: $deep-dodger-blue;
   }
 }
 
 // event__photo
 .event__photo {
   width: 660px;
-  height: 500px;
 
   background-color: $color-neon-blue;
 
   @include vp-1199 {
     width: 386px;
-    height: 292px;
+    // height: 292px;
   }
 
   @include vp-767 {
     width: 100%;
+    height: 292px;
   }
 }
 

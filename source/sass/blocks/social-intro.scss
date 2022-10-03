@@ -16,6 +16,11 @@
   flex-direction: column;
   align-items: center;
   row-gap: 9px;
+
+  // Чтобы был хоть какой-то перенос при переполнении иконок
+  flex-wrap: wrap;
+  max-height: 250px;
+  column-gap: 15px;
 }
 
 .social-intro__item a {
@@ -27,6 +32,7 @@
   color: $color-default-white;
 
   @include effects-off {
+
     &:hover,
     &:focus {
       color: $color-deep-sky-blue;

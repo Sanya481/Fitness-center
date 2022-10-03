@@ -6,12 +6,12 @@
   padding: 120px 20px;
 
   @include vp-1199 {
-    padding: 100px 5px;
+    padding: 100px 5px 93px 5px;
   }
 
   @include vp-767 {
     max-width: none;
-    padding: 70px 0 64px;
+    padding: 70px 0 29px;
     margin: 0;
   }
 }
@@ -57,120 +57,126 @@
 }
 
 .advantages__block {
-  position: relative;
+  display: flex;
+  border-bottom: 2px solid $line-color;
 
-  &::before {
-    content: "";
-    position: absolute;
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    height: 80px;
-    left: 0;
 
-    @include vp-767 {
-      left: 50%;
-      top: 0;
-      transform: translate(-50%);
-    }
+  // !!! Не работает почему-то
+  &::nth-last-child(n+2) {
+    border-bottom: none;
+  }
+
+  @include vp-1199 {
+    border-bottom: none;
   }
 
   @include vp-767 {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 0 15px;
-    margin: 0 auto 35px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    padding-right: 0;
+    row-gap: 5px;
+    margin: 0 46px 34px;
   }
 
   &--square {
-    padding-bottom: 77px;
-    padding-left: 167px;
+    margin-left: 28px;
+    margin-top: -13px;
 
     @include vp-1199 {
-      padding-bottom: 0;
-      padding-left: 117px;
+      padding-right: 35px;
     }
 
     @include vp-767 {
-      padding: 80px 67px 0;
+      // padding: 80px 67px 0;
     }
-  }
-
-  &--square::before {
-    background-image: url("../img/svg/900.svg");
-    width: 108px;
   }
 
   &--parking {
-    padding-bottom: 77px;
-    padding-left: 105px;
+    margin-top: -13px;
+    margin-left: 3px;
 
     @include vp-1199 {
-      padding-bottom: 0;
-      padding-left: 87px;
+      padding-right: 2px;
     }
 
     @include vp-767 {
-      padding: 80px 45px 0;
-      margin-bottom: 45px;
+      margin: 0 46px 42px;
     }
-  }
-
-  &--parking::before {
-    background-image: url("../img/svg/70.svg");
-    width: 72px;
   }
 
   &--сomfort {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    margin-top: 35px;
+    margin-left: 21px;
 
-    padding-left: 138px;
-
-    @include vp-1199 {
-      padding-left: 117px;
-    }
+    // @include vp-1199 {
+    //   margin-top: 0;
+    //   margin-left: 0;
+    // }
 
     @include vp-767 {
-      padding: 87px 50px 0;
+      // padding: 87px 50px 0;
     }
-  }
-
-  &--сomfort::before {
-    background-image: url("../img/svg/350.svg");
-    width: 108px;
   }
 
   &--сoach {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    margin-top: 35px;
+    margin-left: 3px;
 
-    padding-left: 107px;
-
-    @include vp-1199 {
-      padding-left: 88px;
-    }
+    // @include vp-1199 {
+    //   margin-top: 0;
+    //   margin-left: 0;
+    // }
 
     @include vp-767 {
-      padding: 80px 43px 0;
+      // padding: 80px 43px 0;
     }
   }
 
-  &--сoach::before {
-    background-image: url("../img/svg/5.svg");
-    width: 70px;
+  @include vp-1199 {
+    margin-top: 0;
+    margin-left: 0;
   }
 }
 
-.advantages__block h3 {
+// advantages__in-numbers
+.advantages__in-numbers {
+  margin-right: 30px;
+
+  @include vp-767 {
+    margin-right: 0;
+  }
+}
+
+.advantages__in-numbers p {
+  font-weight: 700;
+  font-size: 71px;
+  line-height: 71px;
+  margin: 0;
+  margin-bottom: -6px;
+
+  background: linear-gradient(127.61deg, #D10A42 0%, #0041CA 45.58%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @include vp-1199 {
+    font-size: 58px;
+    line-height: 58px;
+  }
+}
+
+.advantages__in-numbers span {
+  font-size: 14px;
+  line-height: 21px;
+  color: $color-persian-blue;
+}
+
+.advantages__info h3 {
   font-weight: 700;
   font-size: 22px;
   line-height: 33px;
-  margin: 0 0 20px 0;
+  margin-top: 4px;
+  margin-bottom: 6px;
 
   @include vp-1199 {
     font-size: 20px;
@@ -185,7 +191,7 @@
   }
 }
 
-.advantages__block p {
+.advantages__info p {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -217,6 +223,8 @@
 
   @include vp-767 {
     width: 100%;
+    min-height: 239px;
+    margin: 0 0 39px;
   }
 }
 
@@ -240,8 +248,8 @@
   }
 
   @include vp-767 {
-    margin-bottom: -8px;
-    margin-top: 19px;
+    margin-bottom: -11px;
+    margin-top: 20px;
   }
 }
 
@@ -259,7 +267,7 @@
   @include vp-767 {
     font-size: 22px;
     line-height: 33px;
-    margin: 0 0 9px;
+    margin: 0 0 6px;
   }
 }
 
@@ -270,6 +278,10 @@
   text-align: center;
   max-width: 172px;
 
+  @include vp-1199 {
+    margin: 0;
+  }
+
   @include vp-767 {
     max-width: none;
   }
@@ -277,57 +289,40 @@
 
 @media (min-width: 1200px) {
   .advantages__block.advantages__block--square {
-    padding-left: 167px;
-    border-bottom: 2px solid $line-color;
-  }
-
-  .advantages__block.advantages__block--square h3 {
-    margin: -7px 0 6px;
+    padding-bottom: 76px;
+    padding-right: 0;
   }
 
   .advantages__block.advantages__block--parking {
-    padding-left: 105px;
-    border-bottom: 2px solid $line-color;
-  }
-
-  .advantages__block.advantages__block--parking h3 {
-    margin: -7px 0 6px;
-  }
-
-  .advantages__block.advantages__block--center {
-    grid-row: 1/-1;
-    height: 307px;
-  }
-
-  .advantages__block.advantages__block--center span {
-    line-height: 81px;
+    padding-bottom: 76px;
+    padding-right: 7px;
   }
 
   .advantages__block.advantages__block--center h3 {
+    margin: 0;
     margin-bottom: 34px;
   }
 
   .advantages__block.advantages__block--center span {
-    margin-top: -7px;
-    margin-left: -4px;
+    line-height: 75px;
+    margin-top: -13px;
+  }
+
+  .advantages__block.advantages__block--center p {
+    margin: 0;
   }
 
   .advantages__block.advantages__block--сomfort {
-    padding-top: 46px;
-    padding-left: 159px;
-  }
-
-  .advantages__block.advantages__block--сomfort h3 {
-    margin: -7px 0 6px;
+    border: none;
   }
 
   .advantages__block.advantages__block--сoach {
-    grid-column: 3/4;
-    padding-top: 46px;
-    padding-left: 105px;
+    border: none;
   }
 
-  .advantages__block.advantages__block--сoach h3 {
-    margin: -7px 0 6px;
+  .advantages__block.advantages__block--сoach .advantages__in-numbers {
+    margin-right: 33px;
   }
+
+
 }

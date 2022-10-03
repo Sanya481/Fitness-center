@@ -136,7 +136,7 @@
         <div class="subscription__variants">
 
           <ul class="subscription__list is-active" data-tab-content="tab-1">
-            <li class="subscription__item">
+            <li class="subscription__item" tabindex="0">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
               <div class="subscription__price price-shadow">
@@ -145,7 +145,7 @@
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item">
+            <li class="subscription__item" tabindex="0">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00 </p>
               <div class="subscription__price price-shadow">
@@ -154,7 +154,7 @@
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item">
+            <li class="subscription__item" tabindex="0">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00 </p>
               <div class="subscription__price price-shadow">
@@ -166,7 +166,7 @@
           </ul>
 
           <ul class="subscription__list" data-tab-content="tab-2">
-            <li class="subscription__item">
+            <li class="subscription__item" tabindex="0">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
               <div class="subscription__price price-shadow">
@@ -175,7 +175,7 @@
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item">
+            <li class="subscription__item" tabindex="0">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00 </p>
               <div class="subscription__price price-shadow">
@@ -184,7 +184,7 @@
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item">
+            <li class="subscription__item" tabindex="0">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00 </p>
               <div class="subscription__price price-shadow">
@@ -196,7 +196,7 @@
           </ul>
 
           <ul class="subscription__list" data-tab-content="tab-3">
-            <li class="subscription__item">
+            <li class="subscription__item" tabindex="0">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
               <div class="subscription__price price-shadow">
@@ -205,7 +205,7 @@
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item">
+            <li class="subscription__item" tabindex="0">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00 </p>
               <div class="subscription__price price-shadow">
@@ -214,7 +214,7 @@
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item">
+            <li class="subscription__item" tabindex="0">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00 </p>
               <div class="subscription__price price-shadow">
@@ -240,12 +240,15 @@
 
               <div class="date__number">
                 <p>Дата</p>
-                <span>7</span>
 
-                <div class="date__month">
-                  <p>Марта</p>
-                  <span>2019</span>
+                <div class="date__number-wrapper">
+                  <span>7</span>
+                  <div class="date__month">
+                    <p>Марта</p>
+                    <span>2019</span>
+                  </div>
                 </div>
+
               </div>
 
               <div class="date__time">
@@ -539,18 +542,25 @@
         <ul class="advantages__grid">
 
           <li class="advantages__block advantages__block--square">
+            <div class="advantages__in-numbers">
+              <p>900</p>
+              <span>кв/м</span>
+            </div>
             <div class="advantages__info">
               <h3>Площадь</h3>
-              <p>Занимайтесь без очередей и толпучки</p>
-              <!-- <div class="advantages__icon">
-
-              </div> -->
+              <p>Занимайтесь без очередей и&nbsp;толпучки</p>
             </div>
           </li>
 
           <li class="advantages__block advantages__block--parking">
-            <h3>Собственная парковка</h3>
-            <p>Вы всегда найдете место для своей машины на нашей парковке</p>
+            <div class="advantages__in-numbers">
+              <p>70</p>
+              <span>машин</span>
+            </div>
+            <div class="advantages__info">
+              <h3>Собственная парковка</h3>
+              <p>Вы всегда найдете место для своей машины на нашей парковке</p>
+            </div>
           </li>
 
           <li class="advantages__block advantages__block--center">
@@ -560,13 +570,25 @@
           </li>
 
           <li class="advantages__block advantages__block--сomfort">
-            <h3>Комфорт</h3>
-            <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+            <div class="advantages__in-numbers">
+              <p>350</p>
+              <span>мест</span>
+            </div>
+            <div class="advantages__info">
+              <h3>Комфорт</h3>
+              <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
+            </div>
           </li>
 
           <li class="advantages__block advantages__block--сoach">
-            <h3>Тренерский опыт</h3>
-            <p>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
+            <div class="advantages__in-numbers">
+              <p>5+</p>
+              <span>лет</span>
+            </div>
+            <div class="advantages__info">
+              <h3>Тренерский опыт</h3>
+              <p>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
+            </div>
           </li>
 
         </ul>
@@ -734,15 +756,17 @@
 
             <form class="free-visit__form form" action="https://echo.htmlacademy.ru" method="post">
 
-              <p class="form__field form__field--name">
-                <input class="form__input" type="text" name="user-name" placeholder=" " required>
-                <label class="form__label">Имя</label>
-              </p>
-              <p class="form__field form__field--phone">
-                <input class="form__input" type="tel" name="user-phone" placeholder=" " maxlength="18"
-                  data-phone-pattern required>
-                <label class="form__label">Телефон</label>
-              </p>
+              <div class="form__wrapper">
+                <p class="form__field form__field--name">
+                  <input class="form__input" type="text" name="user-name" placeholder=" " required>
+                  <label class="form__label">Имя</label>
+                </p>
+                <p class="form__field form__field--phone">
+                  <input class="form__input" type="tel" name="user-phone" placeholder=" " maxlength="18"
+                    data-phone-pattern required>
+                  <label class="form__label">Телефон</label>
+                </p>
+              </div>
 
               <button class="form__button" type="submit" value="Отправить">Отправить</button>
 
@@ -759,7 +783,7 @@
             <ul class="contact__list">
               <li class="contact__item contact__item--address">
                 <h3>Адрес:</h3>
-                <a href="https://yandex.ru/maps/-/CCUV7OeN-A">
+                <a href="https://yandex.ru/maps/-/CCUV7OeN-A" target="_blank">
                   г. Омск, ул. 60 лет Октября, 7
                 </a>
               </li>
@@ -802,11 +826,18 @@
 
       <nav class="footer__nav nav">
 
-        <ul class="nav__list ">
-          <li class="nav__item">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--logo">
+            <a class="nav__footer-logo logo">
+              <svg width="100%" height="100%">
+                <use xlink:href="img/sprite/sprite.svg#logo"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="nav__item nav__item--service">
             <a href="#">Услуги</a>
           </li>
-          <li class="nav__item">
+          <li class="nav__item nav__item--subscription">
             <a href="#">Абонементы</a>
           </li>
           <li class="nav__item">
@@ -854,35 +885,6 @@
           </a>
         </li>
       </ul>
-
-
-
-      <!-- <div class="footer__contact contact">
-          <div class="contact__wrapper" data-accordion-block>
-
-            <div class="contact__title" data-accordion-title>
-              <h3>Наш офис</h3>
-            </div>
-
-            <ul class="contact__list" data-accordion-items>
-              <li class="contact__item">
-                <a href="https://yandex.ru/maps/-/CCUV6HALDD">г.&nbsp;Мытищи, Олимпийский проспект, д.10</a>
-              </li>
-              <li class="contact__item">
-                <a href="tel:+74955894050">+7&nbsp;(495)&nbsp;589-40-50</a>
-              </li>
-              <li class="contact__item">
-                <a href="tel:+79253895829">+7&nbsp;(925)&nbsp;389-58-29</a>
-              </li>
-              <li class="contact__item">
-                <a href="tel:+79253647813">+7&nbsp;(925)&nbsp;364-78-13</a>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-
-      </div> -->
 
     </div>
   </footer>
