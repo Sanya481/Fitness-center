@@ -1,0 +1,111 @@
+.popular-sale {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1/-1;
+
+  color: $color-default-white;
+
+  @include vp-1199 {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
+
+  @include vp-767 {
+    display: block;
+  }
+}
+
+.popular-sale__image {
+  width: 280px;
+  background-color: $color-cobalt;
+
+  @include vp-1199 {
+    width: 399px;
+    min-height: 462px;
+  }
+
+  @include vp-767 {
+    height: 299px;
+    width: 100%;
+  }
+}
+
+.popular-sale__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.popular-sale__info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  background-color: $color-torch-red;
+  padding: 33px 35px 33px 45px;
+
+  @include vp-767 {
+    align-items: center;
+    padding: 33px 47px 43px 47px;
+  }
+}
+
+.popular-sale__info h3 {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0 0 184px 0;
+  order: 1;
+
+  @include vp-767 {
+    text-align: center;
+    margin: 0 0 26px;
+  }
+}
+
+.popular-sale__info span {
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 109px;
+  margin: 0 0 0 0;
+  order: 1;
+
+  @include vp-767 {
+    line-height: 104px;
+  }
+}
+
+.popular-sale__info p {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+  margin: 0 0 -25px 0;
+  order: 0;
+}
+
+.popular-sale__info a {
+  color: $color-default-white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  order: 3;
+  border-bottom: 1px solid $color-default-white;
+
+  // Эффекты при наведении в десктопной версии
+  @include effects-off {
+    // popular-sale
+    &:hover,
+    &:focus {
+      color: $color-slate-blue;
+    }
+
+    &:active {
+      color: $deep-dodger-blue;
+    }
+  }
+
+  // Эффекты при нажатии в планшетной и мобильной версии
+  &:active {
+    color: $deep-dodger-blue;
+  }
+}

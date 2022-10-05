@@ -70,138 +70,12 @@
 }
 
 .coach__photo img {
+  width: 100%;
+  height: 100%;
+
   @include vp-1199 {
     object-fit: cover;
   }
-}
-
-// coach-description
-.coach-description {
-  position: absolute;
-  text-align: center;
-
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-  padding: 52px 10px 5px;
-  top: 0;
-
-  transition: background-color $trans-default;
-
-  @include vp-767 {
-    padding-top: 45px;
-  }
-}
-
-.coach-description h3 {
-  position: static;
-  margin: 0;
-  line-height: 24px;
-
-  // Убираем видимость и включаем только при наведении
-  opacity: 0;
-  pointer-events: none;
-
-  transition: opacity 0.8s ease;
-
-  @include vp-767 {
-    margin-bottom: -2px;
-  }
-}
-
-.coach-description span {
-  display: inline-block;
-  vertical-align: middle;
-
-  font-size: 16px;
-  line-height: 24px;
-
-  color: $color-spindle;
-  margin: 0 0 31px;
-
-  // Убираем видимость и включаем только при наведении
-  opacity: 0;
-  pointer-events: none;
-
-  transition: opacity 1.2s ease;
-
-  @include vp-767 {
-    margin: 0 0 33px;
-  }
-}
-
-.coach-description__list {
-  list-style: none;
-  padding: 0;
-
-  max-width: 200px;
-  margin: 0 auto;
-  text-align: left;
-
-  // Убираем видимость и включаем только при наведении
-  opacity: 0;
-  pointer-events: none;
-
-  transition: opacity 1.6s ease;
-}
-
-@include effects-off {
-  .coach__item:hover .coach-description {
-    background-color: $coach-item-shadow;
-  }
-
-  // Пытаемся сделать каскадное появление - сверху вниз
-  .coach__item:hover h3,
-  .coach__item:hover span,
-  .coach__item:hover .coach-description__list {
-    opacity: 1;
-  }
-}
-
-.coach__item:active .coach-description {
-  background-color: $coach-item-shadow;
-}
-
-.coach__item:active h3,
-.coach__item:active span,
-.coach__item:active .coach-description__list {
-  opacity: 1;
-}
-
-// Создаем кастомный маркер
-.coach-description__item {
-  position: relative;
-  margin-bottom: 13px;
-  padding-left: 42px;
-
-  @include vp-767 {
-    padding-left: 37px;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 6px;
-    background-color: $color-default-white;
-    border-radius: 10px;
-    top: 7px;
-    left: 26px;
-
-    @include vp-767 {
-      left: 21px;
-    }
-  }
-}
-
-.coach-description__item p {
-  font-size: 14px;
-  line-height: 21px;
-  margin: 0;
 }
 
 // coach__button
@@ -212,7 +86,7 @@
 }
 
 .coach__button.swiper-button-prev {
-  left: -64px;
+  left: -55px;
 
   @include vp-1199 {
     left: -8px;
@@ -220,7 +94,7 @@
 }
 
 .coach__button.swiper-button-next {
-  right: -64px;
+  right: -55px;
 
   @include vp-1199 {
     right: -7px;
@@ -259,7 +133,6 @@
 
 // Эффекты при наведении в десктопной версии
 @include effects-off {
-
   .coach__button:hover.swiper-button-prev::after,
   .coach__button:focus.swiper-button-prev::after {
     transform: scale(1.5);

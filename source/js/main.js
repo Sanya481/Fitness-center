@@ -4,6 +4,11 @@ import {onEventCalllback} from './phone-input-mask.js';
 import {checkReviewsSwiper, checkCoachSwiper} from './vendor.js';
 import {changeSubscriptionTab} from './subscription-tab.js';
 
+// Кнопки для переключения табов
+const subscriptionTabButtons = document.querySelectorAll('[data-tab-button]');
+// Находим все поля ввода телефона и вешаем обработчик
+const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
+
 // ---------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -14,14 +19,18 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   checkReviewsSwiper();
   checkCoachSwiper();
-  changeSubscriptionTab();
 
+  // Если таких кнопок нет - то ничего не происходит
+  if (subscriptionTabButtons) {
+    changeSubscriptionTab();
+  }
 
-  // Находим все поля ввода телфона и вешаем обработчик
-  const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
-  for (let elem of phoneInputs) {
-    for (let ev of ['input', 'blur', 'focus']) {
-      elem.addEventListener(ev, onEventCalllback);
+  // Если нет ни одного поля ввода номера телефона - то ничего не происходит
+  if (phoneInputs) {
+    for (let elem of phoneInputs) {
+      for (let ev of ['input', 'blur', 'focus']) {
+        elem.addEventListener(ev, onEventCalllback);
+      }
     }
   }
 

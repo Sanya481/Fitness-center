@@ -28,9 +28,8 @@
 // ---------------------------------
 
 @import "blocks/intro.scss";
-@import "blocks/intro__image.scss";
 @import "blocks/social-intro.scss";
-
+@import "blocks/intro-zone.scss";
 
 // Subscription
 // ---------------------------------
@@ -41,16 +40,21 @@
 // ---------------------------------
 
 @import "blocks/sale.scss";
+@import "blocks/popular-sale.scss";
+@import "blocks/standard-sale.scss";
+
 
 // Event
 // ---------------------------------
 
 @import "blocks/event.scss";
+@import "blocks/date.scss";
 
 // Coach
 // ---------------------------------
 
 @import "blocks/coach.scss";
+@import "blocks/coach-description.scss";
 
 // Аdvantages
 // ---------------------------------
@@ -73,12 +77,13 @@
 @import "blocks/callback-group.scss";
 @import "blocks/free-visit.scss";
 @import "blocks/contact.scss";
+@import "blocks/form.scss";
 
 // Footer
 // ---------------------------------
 
 @import "blocks/footer.scss";
-@import "blocks/footer-nav.scss";
+@import "blocks/nav.scss";
 @import "blocks/social.scss";
 
 // ---------------------------------

@@ -1,17 +1,3 @@
-.footer__nav {
-  max-width: 470px;
-  margin-right: 129px;
-
-  @include vp-1199 {
-    margin-right: 30px;
-    max-width: 400px;
-  }
-
-  @include vp-767 {
-    margin: 0;
-  }
-}
-
 .nav__list {
   list-style: none;
   margin: 0;
@@ -19,6 +5,7 @@
 
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 40px;
 
   @include vp-1199 {
@@ -84,10 +71,11 @@
 }
 
 .nav__item.nav__item--logo {
-  display: none;
+  margin-right: 238px;
+
 
   @include vp-1199 {
-    display: none;
+    margin-right: 32px;
   }
 
   @include vp-767 {
@@ -96,6 +84,9 @@
 }
 
 .nav__item.nav__item--logo .logo {
+  display: block;
+  padding: 0;
+
   @include vp-767 {
     display: block;
     width: 68px;
@@ -106,17 +97,3 @@
     margin-top: 5px;
   }
 }
-
-// .nav__footer-logo {
-//   display: none;
-
-//   @include vp-1199 {
-//     display: none;
-//   }
-
-//   @include vp-767 {
-//     display: block;
-//     width: 68px;
-//     height: 15px;
-//   }
-// }
