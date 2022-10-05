@@ -15,6 +15,11 @@
     bottom: -73px;
     right: 0;
 
+    @include retina {
+      background-image: url("../img/background/casino-chips@2x.png");
+      background-size: 285px 417px;
+    }
+
     @include vp-1199 {
       background-image: url("../img/background/casino-chips-tablet.png");
       background-position: 0 0;
@@ -22,6 +27,11 @@
       height: 375px;
       bottom: -53px;
       right: 0;
+
+      @include retina {
+        background-image: url("../img/background/casino-chips-tablet@2x.png");
+        background-size: 347px 375px;
+      }
     }
 
     @include vp-767 {
@@ -237,46 +247,13 @@
   position: relative;
 
   margin-bottom: 34px;
-  padding-right: 45px;
 
   @include vp-767 {
     margin-bottom: 30px;
-    padding-right: 32px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/svg/rouble.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 42px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-
-    @include vp-767 {
-      width: 31px;
-      height: 46px;
-      right: -7px;
-    }
   }
 }
 
 .subscription__item span:first-child {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 90px;
-  color: $color-egyptian-blue;
-
-  @include vp-767 {
-    font-size: 48px;
-    line-height: 72px;
-  }
-}
-
-.subscription__price span:last-child {
   font-weight: 700;
   font-size: 100px;
   line-height: 150px;
@@ -293,6 +270,29 @@
     font-size: 80px;
     line-height: 120px;
     top: -43px;
+  }
+}
+
+.subscription__price span {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: $color-egyptian-blue;
+  margin-right: 11px;
+
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 72px;
+  }
+}
+
+.subscription__price-shadow {
+  width: 30px;
+  height: 42px;
+
+  @include vp-767 {
+    width: 24px;
+    height: 33px;
   }
 }
 

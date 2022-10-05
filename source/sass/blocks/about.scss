@@ -102,7 +102,6 @@
   @include vp-1199 {
     width: 100%;
   }
-
 }
 
 // about__image
@@ -138,7 +137,6 @@
 
 // about__video
 .about__video {
-  position: relative;
   max-width: 364px;
   height: 228px;
   position: absolute;
@@ -190,10 +188,8 @@
   position: absolute;
   z-index: 5;
 
-  width: 72px;
-  height: 72px;
-  background: linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
 
   // Позиционирование по центру
   left: 50%;
@@ -202,62 +198,24 @@
 
   transition: width $trans-default, height $trans-default;
 
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+  }
+
   &::after {
     content: "";
     position: absolute;
-    width: 0;
-    height: 0;
-    border: 0 solid transparent;
-    border-bottom-width: 8px;
-    border-top-width: 6px;
-    border-left: 13px solid #fff;
-    left: 54%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    transition: all $trans-default, height $trans-default;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
+    background-image: url("../img/svg/play-button.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
     width: 100px;
     height: 100px;
 
-    border-width: 2px;
-    border-style: solid;
-
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    border-image-source: linear-gradient(97.05deg, rgba(237, 2, 51, 0.2) 17.6%, rgba(0, 62, 183, 0.2) 95.31%);
-    border-image-slice: 26;
-    border-radius: 50%;
-  }
-
-  @include vp-1199 {
-    width: 52px;
-    height: 52px;
-
-    &::after {
-      border-bottom-width: 5px;
-      border-top-width: 5px;
-      border-left: 9px solid #fff;
-    }
-
-    &::before {
+    @include vp-1199 {
+      background-image: url("../img/svg/play-button-tablet.svg");
       width: 73px;
       height: 73px;
     }
   }
-
-  @include effects-off {
-    &:hover,
-    &:focus {
-      width: 92px;
-      height: 92px;
-    }
-  }
 }
-
-

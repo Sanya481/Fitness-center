@@ -6,6 +6,7 @@
   color: $color-default-white;
 
   @include vp-1199 {
+    grid-template-columns: 41% 59%;
     grid-column: 1/-1;
     grid-row: 1/2;
   }
@@ -16,23 +17,35 @@
 }
 
 .popular-sale__image {
-  width: 280px;
+  width: 100%;
+  height: 100%;
   background-color: $color-cobalt;
+  background-image: url("../img/decorative/woman-photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include retina {
+    background-image: url("../img/decorative/woman-photo@2x.jpg");
+  }
 
   @include vp-1199 {
-    width: 399px;
-    min-height: 462px;
+    background-image: url("../img/decorative/woman-photo-tablet.jpg");
+
+    @include retina {
+      background-image: url("../img/decorative/woman-photo-tablet@2x.jpg");
+    }
   }
 
   @include vp-767 {
-    height: 299px;
-    width: 100%;
-  }
-}
+    min-height: 299px;
+    background-image: url("../img/decorative/woman-photo-mobile.jpg");
+    background-position: center top;
 
-.popular-sale__image img {
-  width: 100%;
-  height: 100%;
+    @include retina {
+      background-image: url("../img/decorative/woman-photo-mobile@2x.jpg");
+    }
+  }
 }
 
 .popular-sale__info {
@@ -53,7 +66,7 @@
   font-size: 18px;
   line-height: 25px;
   margin: 0 0 184px 0;
-  order: 1;
+  order: 2;
 
   @include vp-767 {
     text-align: center;
@@ -93,6 +106,7 @@
 
   // Эффекты при наведении в десктопной версии
   @include effects-off {
+
     // popular-sale
     &:hover,
     &:focus {

@@ -1582,7 +1582,7 @@ main {
 }
 
 .intro {
-  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   color: #ffffff;
   padding-top: 52px;
 }
@@ -1868,32 +1868,9 @@ main {
   vertical-align: middle;
   position: relative;
   margin-bottom: 34px;
-  padding-right: 45px;
-}
-
-.subscription__price::after {
-  content: "";
-  position: absolute;
-  background-image: url("../img/svg/rouble.svg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  width: 30px;
-  height: 42px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  right: 0;
 }
 
 .subscription__item span:first-child {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 90px;
-  color: #103aae;
-}
-
-.subscription__price span:last-child {
   font-weight: 700;
   font-size: 100px;
   line-height: 150px;
@@ -1906,6 +1883,19 @@ main {
   transform: translate(-50%);
   top: -56px;
   z-index: -1;
+}
+
+.subscription__price span {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: #103aae;
+  margin-right: 11px;
+}
+
+.subscription__price-shadow {
+  width: 30px;
+  height: 42px;
 }
 
 .subscription__item a {
@@ -1953,13 +1943,13 @@ main {
 }
 
 .popular-sale__image {
-  width: 280px;
-  background-color: #003eb7;
-}
-
-.popular-sale__image img {
   width: 100%;
   height: 100%;
+  background-color: #003eb7;
+  background-image: url("../img/decorative/woman-photo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .popular-sale__info {
@@ -1981,9 +1971,9 @@ main {
   font-size: 18px;
   line-height: 25px;
   margin: 0 0 184px 0;
-  -webkit-box-ordinal-group: 2;
-  -ms-flex-order: 1;
-  order: 1;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
 }
 
 .popular-sale__info span {
@@ -2591,7 +2581,6 @@ main {
 }
 
 .about__video {
-  position: relative;
   max-width: 364px;
   height: 228px;
   position: absolute;
@@ -2619,11 +2608,8 @@ main {
 .about__video a {
   position: absolute;
   z-index: 5;
-  width: 72px;
-  height: 72px;
-  background: -o-linear-gradient(45.11deg, #003D85 25.38%, #B80027 74.89%);
-  background: linear-gradient(44.89deg, #003D85 25.38%, #B80027 74.89%);
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -2637,37 +2623,11 @@ main {
 .about__video a::after {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
-  border: 0 solid transparent;
-  border-bottom-width: 8px;
-  border-top-width: 6px;
-  border-left: 13px solid #fff;
-  left: 54%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  -webkit-transition: all 0.3s ease, height 0.3s ease;
-  -o-transition: all 0.3s ease, height 0.3s ease;
-  transition: all 0.3s ease, height 0.3s ease;
-}
-
-.about__video a::before {
-  content: "";
-  position: absolute;
+  background-image: url("../img/svg/play-button.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
   width: 100px;
   height: 100px;
-  border-width: 2px;
-  border-style: solid;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  border-image-source: linear-gradient(97.05deg, rgba(237, 2, 51, 0.2) 17.6%, rgba(0, 62, 183, 0.2) 95.31%);
-  border-image-slice: 26;
-  border-radius: 50%;
 }
 
 .reviews h2 {
@@ -3200,12 +3160,6 @@ main {
     margin-right: 33px;
   }
 
-  .about__video a:hover,
-  .about__video a:focus {
-    width: 92px;
-    height: 92px;
-  }
-
   .reviews__button:hover.swiper-button-prev::after,
   .reviews__button:focus.swiper-button-prev::after {
     -webkit-transform: scale(1.5);
@@ -3434,6 +3388,8 @@ main {
   }
 
   .popular-sale {
+    -ms-grid-columns: 41% 59%;
+    grid-template-columns: 41% 59%;
     grid-column: 1/-1;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
@@ -3441,8 +3397,7 @@ main {
   }
 
   .popular-sale__image {
-    width: 399px;
-    min-height: 462px;
+    background-image: url("../img/decorative/woman-photo-tablet.jpg");
   }
 
   .standard-sale--month {
@@ -3684,17 +3639,12 @@ main {
   }
 
   .about__video a {
-    width: 52px;
-    height: 52px;
+    width: 73px;
+    height: 73px;
   }
 
   .about__video a::after {
-    border-bottom-width: 5px;
-    border-top-width: 5px;
-    border-left: 9px solid #fff;
-  }
-
-  .about__video a::before {
+    background-image: url("../img/svg/play-button-tablet.svg");
     width: 73px;
     height: 73px;
   }
@@ -3844,6 +3794,17 @@ main {
   }
 }
 
+@media (max-width: 1199px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1199px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1199px) and (min-resolution: 2dppx) {
+  .subscription::after {
+    background-image: url("../img/background/casino-chips-tablet@2x.png");
+    background-size: 347px 375px;
+  }
+
+  .popular-sale__image {
+    background-image: url("../img/decorative/woman-photo-tablet@2x.jpg");
+  }
+}
+
 @media (max-width: 767px) {
   .section-margin {
     margin-bottom: 70px;
@@ -3979,24 +3940,22 @@ main {
 
   .subscription__price {
     margin-bottom: 30px;
-    padding-right: 32px;
-  }
-
-  .subscription__price::after {
-    width: 31px;
-    height: 46px;
-    right: -7px;
   }
 
   .subscription__item span:first-child {
+    font-size: 80px;
+    line-height: 120px;
+    top: -43px;
+  }
+
+  .subscription__price span {
     font-size: 48px;
     line-height: 72px;
   }
 
-  .subscription__price span:last-child {
-    font-size: 80px;
-    line-height: 120px;
-    top: -43px;
+  .subscription__price-shadow {
+    width: 24px;
+    height: 33px;
   }
 
   .subscription__item a {
@@ -4023,8 +3982,9 @@ main {
   }
 
   .popular-sale__image {
-    height: 299px;
-    width: 100%;
+    min-height: 299px;
+    background-image: url("../img/decorative/woman-photo-mobile.jpg");
+    background-position: center top;
   }
 
   .popular-sale__info {
@@ -4448,5 +4408,22 @@ main {
 
   .social {
     margin: 0 0 0 -4px;
+  }
+}
+
+@media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
+  .popular-sale__image {
+    background-image: url("../img/decorative/woman-photo-mobile@2x.jpg");
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .subscription::after {
+    background-image: url("../img/background/casino-chips@2x.png");
+    background-size: 285px 417px;
+  }
+
+  .popular-sale__image {
+    background-image: url("../img/decorative/woman-photo@2x.jpg");
   }
 }
