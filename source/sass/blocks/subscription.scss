@@ -13,7 +13,12 @@
     width: 285px;
     height: 417px;
     bottom: -73px;
-    right: -9px;
+    right: 0;
+
+    @include retina {
+      background-image: url("../img/background/casino-chips@2x.png");
+      background-size: 285px 417px;
+    }
 
     @include vp-1199 {
       background-image: url("../img/background/casino-chips-tablet.png");
@@ -22,6 +27,11 @@
       height: 375px;
       bottom: -53px;
       right: 0;
+
+      @include retina {
+        background-image: url("../img/background/casino-chips-tablet@2x.png");
+        background-size: 347px 375px;
+      }
     }
 
     @include vp-767 {
@@ -31,7 +41,7 @@
 }
 
 .subscription__container {
-  padding: 120px 20px;
+  padding: 120px 60px;
 
   @include vp-1199 {
     padding: 100px 5px;
@@ -173,13 +183,10 @@
 }
 
 .subscription__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block;
+  text-align: center;
   padding: 56px 26px 62px 26px;
-  height: 450px;
   cursor: pointer;
-  overflow: auto;
 
   background-color: $color-default-white;
 
@@ -198,7 +205,6 @@
 
   @include vp-767 {
     width: 100%;
-    height: 384px;
     padding: 42px 25px 15px;
   }
 
@@ -236,49 +242,18 @@
 }
 
 .subscription__price {
+  display: inline-block;
+  vertical-align: middle;
   position: relative;
 
   margin-bottom: 34px;
-  padding-right: 45px;
 
   @include vp-767 {
     margin-bottom: 30px;
-    padding-right: 32px;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-image: url("../img/svg/rouble.svg");
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    width: 30px;
-    height: 42px;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 0;
-
-    @include vp-767 {
-      width: 31px;
-      height: 46px;
-      right: -7px;
-    }
   }
 }
 
 .subscription__item span:first-child {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 90px;
-  color: $color-egyptian-blue;
-
-  @include vp-767 {
-    font-size: 48px;
-    line-height: 72px;
-  }
-}
-
-.subscription__price span:last-child {
   font-weight: 700;
   font-size: 100px;
   line-height: 150px;
@@ -298,7 +273,31 @@
   }
 }
 
+.subscription__price span {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: $color-egyptian-blue;
+  margin-right: 11px;
+
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 72px;
+  }
+}
+
+.subscription__price-shadow {
+  width: 30px;
+  height: 42px;
+
+  @include vp-767 {
+    width: 24px;
+    height: 33px;
+  }
+}
+
 .subscription__item a {
+  display: block;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
@@ -306,6 +305,7 @@
   text-transform: uppercase;
   border: 2px solid $color-sapphire;
   padding: 24px 42px 24px;
+  margin: 0 auto;
   max-width: 208px;
 
   color: $color-sapphire;
@@ -321,7 +321,6 @@
     &:focus {
       background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
       color: $color-default-white;
-      border: none;
     }
 
     &:active {

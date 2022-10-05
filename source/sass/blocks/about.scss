@@ -2,8 +2,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  position: relative;
   padding-bottom: 115px;
 
   @include vp-1199 {
@@ -94,11 +92,23 @@
   }
 }
 
+// about__media-wrapper
+
+.about__media-wrapper {
+  position: relative;
+  align-self: flex-start;
+  flex-shrink: 0;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
 // about__image
 
 .about__image {
-  align-self: flex-start;
-  flex-shrink: 0;
+  position: relative;
+  z-index: -1;
   background-color: $color-pink-swan;
 
   width: 660px;
@@ -107,7 +117,6 @@
 
   @include vp-1199 {
     width: 100%;
-    align-self: auto;
     height: 345px;
   }
 
@@ -118,6 +127,9 @@
 }
 
 .about__image img {
+  width: 100%;
+  height: 100%;
+
   @include vp-767 {
     object-fit: cover;
   }
@@ -127,11 +139,21 @@
 .about__video {
   max-width: 364px;
   height: 228px;
-
   position: absolute;
-  left: 53%;
-  bottom: 0;
-  transform: translate(-49%);
+  left: -63px;
+  bottom: -114px;
+  background-color: $color-light-slate-grey;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $color-video-shadow;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
 
   @include vp-1199 {
     max-width: 266px;
@@ -139,18 +161,61 @@
 
     left: 50%;
     transform: translate(-50%);
+    bottom: -83px;
   }
 
   @include vp-767 {
-    position: static;
+    position: relative;
     transform: none;
     width: 100%;
     max-width: none;
+    left: 0;
+    bottom: 0;
   }
 }
 
-.about__video video {
+.about__video img {
+  position: relative;
+  z-index: 1;
+
   @include vp-767 {
     object-fit: cover;
+    width: 100%;
+  }
+}
+
+.about__video a {
+  position: absolute;
+  z-index: 5;
+
+  width: 100px;
+  height: 100px;
+
+  // Позиционирование по центру
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  transition: width $trans-default, height $trans-default;
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/svg/play-button.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+
+    @include vp-1199 {
+      background-image: url("../img/svg/play-button-tablet.svg");
+      width: 73px;
+      height: 73px;
+    }
   }
 }

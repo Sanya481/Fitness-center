@@ -20,6 +20,12 @@
   justify-content: space-between;
 }
 
+/* Чтобы при добавлении контента логотип не уменьшался и ничего не залазило на него  */
+.header__logo {
+  flex-shrink: 0;
+  margin-right: 100px;
+}
+
 .header__block a {
   font-family: $ff-placeholder-second;
   font-size: 26px;

@@ -3,7 +3,7 @@
 }
 
 .advantages__container {
-  padding: 120px 20px;
+  padding: 120px 60px;
 
   @include vp-1199 {
     padding: 100px 5px 93px 5px;
@@ -34,9 +34,9 @@
   padding: 0;
 
   display: grid;
-  grid-template-columns: 345px 240px 345px;
+  grid-template-columns: minmax(290px, 345px) 240px minmax(290px, 345px);
   grid-template-rows: min-content min-content;
-  grid-column-gap: 57px;
+  column-gap: 57px;
   row-gap: 34px;
   margin: 0 60px;
 

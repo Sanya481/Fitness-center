@@ -162,49 +162,26 @@
   }
 }
 
-// intro-zone
-.intro-zone {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  position: absolute;
-  bottom: 24px;
-  left: -78px;
-
+// intro__image
+.intro__image {
+  width: 500px;
+  height: 556px;
+  background-color: $color-cobalt;
+  margin-right: 122px;
 
   @include vp-1199 {
-    bottom: 17px;
-    left: -80px;
+    width: 324px;
+    height: 390px;
+    margin-right: 0;
+    flex-shrink: 0;
   }
 
   @include vp-767 {
-    left: 0;
-    bottom: 12px;
+    display: none;
   }
 }
 
-.intro-zone__item {
-  @include vp-1199 {
-    margin-bottom: -3px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-
-  @include vp-767 {
-    margin-bottom: -3px;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-.intro-zone a {
-  font-size: 14px;
-  line-height: 21px;
-
-  color: $color-default-white;
+.intro__image img {
+  width: 100%;
+  height: 100%;
 }

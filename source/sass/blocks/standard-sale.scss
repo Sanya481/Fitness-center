@@ -1,0 +1,86 @@
+.standard-sale {
+  list-style: none;
+  margin: 0;
+
+  color: $color-resolution-blue;
+  padding: 22px 50px 23px 29px;
+
+  border: 7px solid;
+  border-image-source: $red-to-blue;
+  border-image-slice: 26;
+
+  // Дополнительные модификаторы для правльных переносов слов
+  @include vp-1199 {
+    &--month {
+      padding: 22px 60px 23px 29px;
+    }
+
+    &--discount {
+      padding: 22px 25px 23px 29px;
+    }
+  }
+
+  @include vp-767 {
+    text-align: center;
+    padding: 33px 30px 36px 29px;
+  }
+}
+
+.standard-sale h3 {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0 0 8px;
+
+  @include vp-1199 {
+    margin: 0 0 9px;
+  }
+
+  @include vp-767 {
+    margin: 0 0 10px;
+  }
+}
+
+.standard-sale p {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 65px;
+
+  @include vp-767 {
+    margin: 0 0 20px;
+  }
+}
+
+.standard-sale--month p {
+  @include vp-1199 {
+    margin: 0 0 42px;
+  }
+}
+
+.standard-sale a {
+  color: $color-resolution-blue;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid $color-resolution-blue;
+
+  // Эффекты при наведении в десктопной версии
+  @include effects-off {
+    &:hover,
+    &:focus {
+      color: $deep-sky-blue;
+    }
+
+    &:active {
+      color: $deep-dodger-blue;
+    }
+  }
+
+  // Эффекты при нажатии в планшетной и мобильной версии
+  &:active {
+    color: $deep-dodger-blue;
+  }
+}

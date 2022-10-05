@@ -69,8 +69,8 @@
             <source type="img/webp"
               srcset="img/decorative/men-photo-intro.webp, img/decorative/men-photo-intro@2x.webp 2x">
             <!-- jpg - 1px, 2px -->
-            <img src="img/decorative/men-photo-intro.jpg" srcset="img/decorative/men-photo-intro@2x.jpg 2x" width="100%"
-              height="100%" alt="Мужчина в половину роста в футболке супермена">
+            <img src="img/decorative/men-photo-intro.jpg" srcset="img/decorative/men-photo-intro@2x.jpg 2x" width="500"
+              height="566" alt="Мужчина в половину роста в футболке супермена">
           </picture>
         </div>
 
@@ -94,6 +94,7 @@
 
     <section class="about section-margin">
       <div class="about__container container section-title">
+
         <div class="about__info">
           <h2>Тренажерный зал</h2>
           <span>Просторный зал площадью 900 кв/м</span>
@@ -102,21 +103,36 @@
           <p>В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
             несколько оборудованных залов для различных видов групповых занятий. </p>
         </div>
-        <div class="about__image">
-          <picture>
-            <!-- Размеры изображения 1x - 660 * 401, 2x - 1320 * 802 -->
-            <!-- webp 1x, 2x -->
-            <source type="img/webp" srcset="img/decorative/gym-equipment.webp, img/decorative/gym-equipment@2x.webp 2x">
-            <!-- jpg 1x, 2x -->
-            <img src="img/decorative/gym-equipment.jpg" srcset="img/decorative/gym-equipment@2x.jpg 2x" width="100%"
-              height="100%" alt="Пример тренажеров, которые есть в зале">
-          </picture>
+
+        <div class="about__media-wrapper">
+
+          <div class="about__image">
+            <picture>
+              <!-- Размеры изображения 1x - 660 * 401, 2x - 1320 * 802 -->
+              <!-- webp 1x, 2x -->
+              <source type="img/webp"
+                srcset="img/decorative/gym-equipment.webp, img/decorative/gym-equipment@2x.webp 2x">
+              <!-- jpg 1x, 2x -->
+              <img src="img/decorative/gym-equipment.jpg" srcset="img/decorative/gym-equipment@2x.jpg 2x" width="660"
+                height="401" alt="Пример тренажеров, которые есть в зале">
+            </picture>
+          </div>
+
+          <div class="about__video">
+            <picture>
+              <!-- Размеры изображения 1x - 364 * 228, 2x - 728 * 456 -->
+              <!-- webp 1x, 2x -->
+              <source type="img/webp"
+                srcset="img/background/video-background.webp, img/background/video-background.webp 2x">
+              <!-- jpg 1x, 2x -->
+              <img src="img/background/video-background.jpg" srcset="img/background/video-background@2x.jpg 2x"
+                width="364" height="228" alt="Пример тренажеров, которые есть в зале">
+            </picture>
+            <a href="https://www.youtube.com/watch?v=9TZXsZItgdw"></a>
+          </div>
+
         </div>
-        <div class="about__video">
-          <video width="100%" height="100%" controls poster="img/background/video-background.jpg">
-            <source type="video/mp4" src="video/free-interactive-courses.mp4">
-          </video>
-        </div>
+
       </div>
     </section>
 
@@ -136,90 +152,117 @@
         <div class="subscription__variants">
 
           <ul class="subscription__list is-active" data-tab-content="tab-1">
-            <li class="subscription__item" tabindex="0">
+            <li class="subscription__item">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
-              <div class="subscription__price price-shadow">
+              <div class="subscription__price">
                 <span>5000</span>
                 <span>5000</span>
+                <svg class="subscription__price-shadow" width="30" height="42">
+                  <use xlink:href="img/sprite/sprite.svg#rouble"></use>
+                </svg>
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item" tabindex="0">
+            <li class="subscription__item">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00 </p>
-              <div class="subscription__price price-shadow">
+              <div class="subscription__price">
                 <span>1700</span>
                 <span>1700</span>
+                <svg class="subscription__price-shadow" width="30" height="42">
+                  <use xlink:href="img/sprite/sprite.svg#rouble"></use>
+                </svg>
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item" tabindex="0">
+            <li class="subscription__item">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00 </p>
-              <div class="subscription__price price-shadow">
+              <div class="subscription__price">
                 <span>2700</span>
                 <span>2700</span>
+                <svg class="subscription__price-shadow" width="30" height="42">
+                  <use xlink:href="img/sprite/sprite.svg#rouble"></use>
+                </svg>
               </div>
               <a href="#">Купить абонемент</a>
             </li>
           </ul>
 
           <ul class="subscription__list" data-tab-content="tab-2">
-            <li class="subscription__item" tabindex="0">
+            <li class="subscription__item">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
-              <div class="subscription__price price-shadow">
+              <div class="subscription__price">
                 <span>10000</span>
                 <span>10000</span>
+                <svg class="subscription__price-shadow" width="30" height="42">
+                  <use xlink:href="img/sprite/sprite.svg#rouble"></use>
+                </svg>
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item" tabindex="0">
+            <li class="subscription__item">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00 </p>
-              <div class="subscription__price price-shadow">
+              <div class="subscription__price">
                 <span>20000</span>
                 <span>20000</span>
+                <svg class="subscription__price-shadow" width="30" height="42">
+                  <use xlink:href="img/sprite/sprite.svg#rouble"></use>
+                </svg>
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item" tabindex="0">
+            <li class="subscription__item">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00 </p>
-              <div class="subscription__price price-shadow">
+              <div class="subscription__price">
                 <span>30000</span>
                 <span>30000</span>
+                <svg class="subscription__price-shadow" width="30" height="42">
+                  <use xlink:href="img/sprite/sprite.svg#rouble"></use>
+                </svg>
               </div>
               <a href="#">Купить абонемент</a>
             </li>
           </ul>
 
           <ul class="subscription__list" data-tab-content="tab-3">
-            <li class="subscription__item" tabindex="0">
+            <li class="subscription__item">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
-              <div class="subscription__price price-shadow">
+              <div class="subscription__price">
                 <span>15000</span>
                 <span>15000</span>
+                <svg class="subscription__price-shadow" width="30" height="42">
+                  <use xlink:href="img/sprite/sprite.svg#rouble"></use>
+                </svg>
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item" tabindex="0">
+            <li class="subscription__item">
               <h3>Дневной</h3>
               <p>с 8:00 до 17:00 </p>
-              <div class="subscription__price price-shadow">
+              <div class="subscription__price">
                 <span>25000</span>
                 <span>2500</span>
+                <svg class="subscription__price-shadow" width="30" height="42">
+                  <use xlink:href="img/sprite/sprite.svg#rouble"></use>
+                </svg>
               </div>
               <a href="#">Купить абонемент</a>
             </li>
-            <li class="subscription__item" tabindex="0">
+            <li class="subscription__item">
               <h3>Полный день</h3>
               <p>с 8:00 до 22:00 </p>
-              <div class="subscription__price price-shadow">
+              <div class="subscription__price">
                 <span>35000</span>
                 <span>35000</span>
+                <svg class="subscription__price-shadow" width="30" height="42">
+                  <use xlink:href="img/sprite/sprite.svg#rouble"></use>
+                </svg>
               </div>
               <a href="#">Купить абонемент</a>
             </li>
@@ -273,8 +316,8 @@
             <source type="img/webp"
               srcset="img/decorative/men-photo-event.webp, img/decorative/men-photo-event@2x.webp 2x">
             <!-- jpg 1x, 2x -->
-            <img src="img/decorative/men-photo-event.jpg" srcset="img/decorative/men-photo-event@2x.jpg 2x" width="100%"
-              height="100%" alt="Мужчина в клубу пыли из спортивной магнезии на синем фоне">
+            <img src="img/decorative/men-photo-event.jpg" srcset="img/decorative/men-photo-event@2x.jpg 2x" width="660"
+              height="500" alt="Мужчина в клубу пыли из спортивной магнезии на синем фоне">
           </picture>
         </div>
       </div>
@@ -300,8 +343,8 @@
                     <!-- webp 1x, 2x -->
                     <source type="img/webp" srcset="img/coachs/anna-pavlova.webp, img/coachs/anna-pavlova@2x.webp 2x">
                     <!-- jpg 1x, 2x -->
-                    <img src="img/coachs/anna-pavlova.jpg" srcset="img/coachs/anna-pavlova@2x.jpg 2x" width="100%"
-                      height="100%" alt="Анна Павлова - тренер по фитнесу">
+                    <img src="img/coachs/anna-pavlova.jpg" srcset="img/coachs/anna-pavlova@2x.jpg 2x" width="260"
+                      height="294" alt="Анна Павлова - тренер по фитнесу">
                   </picture>
                 </div>
                 <div class="coach__info coach-description">
@@ -329,8 +372,8 @@
                     <!-- webp 1x, 2x -->
                     <source type="img/webp" srcset="img/coachs/alexey-lavrov.webp, img/coachs/alexey-lavrov@2x.webp 2x">
                     <!-- jpg 1x, 2x -->
-                    <img src="img/coachs/alexey-lavrov.jpg" srcset="img/coachs/alexey-lavrov@2x.jpg 2x" width="100%"
-                      height="100%" alt="Алексей Лавров - тренер по фитнесу">
+                    <img src="img/coachs/alexey-lavrov.jpg" srcset="img/coachs/alexey-lavrov@2x.jpg 2x" width="260"
+                      height="294" alt="Алексей Лавров - тренер по фитнесу">
                   </picture>
                 </div>
                 <div class="coach__info coach-description">
@@ -360,7 +403,7 @@
                       srcset="img/coachs/alexander-pashkov.webp, img/coachs/alexander-pashkov@2x.webp 2x">
                     <!-- jpg 1x, 2x -->
                     <img src="img/coachs/alexander-pashkov.jpg" srcset="img/coachs/alexander-pashkov@2x.jpg 2x"
-                      width="100%" height="100%" alt="Александр Пашков - тренер по фитнесу">
+                      width="260" height="294" alt="Александр Пашков - тренер по фитнесу">
                   </picture>
                 </div>
                 <div class="coach__info coach-description">
@@ -388,8 +431,8 @@
                     <!-- webp 1x, 2x -->
                     <source type="img/webp" srcset="img/coachs/maria-ketova.webp, img/coachs/maria-ketova@2x.webp 2x">
                     <!-- jpg 1x, 2x -->
-                    <img src="img/coachs/maria-ketova.jpg" srcset="img/coachs/maria-ketova@2x.jpg 2x" width="100%"
-                      height="100%" alt="Мария Кетова - тренер по фитнесу">
+                    <img src="img/coachs/maria-ketova.jpg" srcset="img/coachs/maria-ketova@2x.jpg 2x" width="260"
+                      height="294" alt="Мария Кетова - тренер по фитнесу">
                   </picture>
                 </div>
                 <div class="coach__info coach-description">
@@ -417,8 +460,8 @@
                     <!-- webp 1x, 2x -->
                     <source type="img/webp" srcset="img/coachs/anna-pavlova.webp, img/coachs/anna-pavlova@2x.webp 2x">
                     <!-- jpg 1x, 2x -->
-                    <img src="img/coachs/anna-pavlova.jpg" srcset="img/coachs/anna-pavlova@2x.jpg 2x" width="100%"
-                      height="100%" alt="Анна Павлова - тренер по фитнесу">
+                    <img src="img/coachs/anna-pavlova.jpg" srcset="img/coachs/anna-pavlova@2x.jpg 2x" width="260"
+                      height="294" alt="Анна Павлова - тренер по фитнесу">
                   </picture>
                 </div>
                 <div class="coach__info coach-description">
@@ -446,8 +489,8 @@
                     <!-- webp 1x, 2x -->
                     <source type="img/webp" srcset="img/coachs/alexey-lavrov.webp, img/coachs/alexey-lavrov@2x.webp 2x">
                     <!-- jpg 1x, 2x -->
-                    <img src="img/coachs/alexey-lavrov.jpg" srcset="img/coachs/alexey-lavrov@2x.jpg 2x" width="100%"
-                      height="100%" alt="Алексей Лавров - тренер по фитнесу">
+                    <img src="img/coachs/alexey-lavrov.jpg" srcset="img/coachs/alexey-lavrov@2x.jpg 2x" width="260"
+                      height="294" alt="Алексей Лавров - тренер по фитнесу">
                   </picture>
                 </div>
                 <div class="coach__info coach-description">
@@ -477,7 +520,7 @@
                       srcset="img/coachs/alexander-pashkov.webp, img/coachs/alexander-pashkov@2x.webp 2x">
                     <!-- jpg 1x, 2x -->
                     <img src="img/coachs/alexander-pashkov.jpg" srcset="img/coachs/alexander-pashkov@2x.jpg 2x"
-                      width="100%" height="100%" alt="Александр Пашков - тренер по фитнесу">
+                      width="260" height="294" alt="Александр Пашков - тренер по фитнесу">
                   </picture>
                 </div>
                 <div class="coach__info coach-description">
@@ -505,8 +548,8 @@
                     <!-- webp 1x, 2x -->
                     <source type="img/webp" srcset="img/coachs/maria-ketova.webp, img/coachs/maria-ketova@2x.webp 2x">
                     <!-- jpg 1x, 2x -->
-                    <img src="img/coachs/maria-ketova.jpg" srcset="img/coachs/maria-ketova@2x.jpg 2x" width="100%"
-                      height="100%" alt="Мария Кетова - тренер по фитнесу">
+                    <img src="img/coachs/maria-ketova.jpg" srcset="img/coachs/maria-ketova@2x.jpg 2x" width="260"
+                      height="294" alt="Мария Кетова - тренер по фитнесу">
                   </picture>
                 </div>
                 <div class="coach__info coach-description">
@@ -605,57 +648,29 @@
 
           <div class="sale__block popular-sale">
 
-            <ul class="popular-sale__list">
-              <li class="popular-sale__item popular-sale__item--title">
-                <h3>Безлимитный абонемент в тренажерный зал</h3>
-              </li>
-              <li class="popular-sale__item popular-sale__item--price">
-                <span>4999</span>
-              </li>
-              <li class="popular-sale__item popular-sale__item--time">
-                <p>Год</p>
-              </li>
-              <li class="popular-sale__item popular-sale__item--link">
-                <a href="#">подробнее</a>
-              </li>
-            </ul>
+            <div class="popular-sale__info">
+              <h3>Безлимитный абонемент в тренажерный зал</h3>
+              <span>4999</span>
+              <p>Год</p>
+              <a href="#">Подробнее</a>
+            </div>
 
             <div class="popular-sale__image">
-              <picture>
-                <!-- Размер изображения 1x - 280 * 462, 2x - 560 * 924 -->
-                <!-- webp - 1x, 2x -->
-                <source type="img/webp" srcset="img/decorative/woman-photo.webp, img/decorative/woman-photo@2x.webp 2x">
-                <!-- jpg - 1x, 2x -->
-                <img src="img/decorative/woman-photo.jpg" srcset="img/decorative/woman-photo@2x.jpg 2x" width="100%"
-                  height="100%" alt="Девушка позирует в спортивном костюме">
-              </picture>
             </div>
 
           </div>
 
-          <ul class="sale__block standard-sale standard-sale--month">
-            <li class="standard-sale__item">
-              <h3>Месяц бесплатно</h3>
-            </li>
-            <li class="standard-sale__item">
-              <p>Приведи друга, получи абонемент в подарок</p>
-            </li>
-            <li class="standard-sale__item">
-              <a href="#">Подробнее</a>
-            </li>
-          </ul>
+          <div class="sale__block standard-sale standard-sale--month">
+            <h3>Месяц бесплатно</h3>
+            <p>Приведи друга, получи абонемент в подарок</p>
+            <a href="#">Подробнее</a>
+          </div>
 
-          <ul class="sale__block standard-sale standard-sale--discount">
-            <li class="standard-sale__item">
-              <h3>Скидка 20%</h3>
-            </li>
-            <li class="standard-sale__item">
-              <p>Корпоративный фитнес с&nbsp;командой</p>
-            </li>
-            <li class="standard-sale__item">
-              <a href="#">Подробнее</a>
-            </li>
-          </ul>
+          <div class="sale__block standard-sale standard-sale--discount">
+            <h3>Скидка 20%</h3>
+            <p>Корпоративный фитнес с&nbsp;командой</p>
+            <a href="#">Подробнее</a>
+          </div>
 
         </div>
       </div>
@@ -665,83 +680,78 @@
       <div class="reviews__container container section-title">
         <h2>Отзывы</h2>
 
-        <!-- Блок для позиционирования стрелок переключения карусели -->
-        <div class="reviews__wrapper">
-
+        <div class="reviews__slider swiper">
           <button class="reviews__button reviews__button--prev swiper-button-prev" type="button"></button>
 
-          <div class="reviews__slider swiper">
-            <div class="reviews__list swiper-wrapper">
+          <div class="reviews__list swiper-wrapper">
 
-              <blockquote class="reviews__item swiper-slide">
-                <h3>Анна Орлова</h3>
-                <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
-                  обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                <div class="reviews__author">
-                  <picture>
-                    <!-- Размер изображения  1x - 80 * 80, 2x - 160 * 160 -->
-                    <!-- webp 1x, 2x -->
-                    <source type="img/webp" srcset="img/reviews/author.webp, img/reviews/author@2x.webp 2x">
-                    <!-- png 1x, 2x -->
-                    <img src="img/reviews/author.png" srcset="img/reviews/author@2x.png 2x" width="100%" height="100%"
-                      alt="Автор отзыва">
-                  </picture>
-                </div>
-              </blockquote>
+            <blockquote class="reviews__item swiper-slide">
+              <h3>Анна Орлова</h3>
+              <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
+                обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+              <div class="reviews__author">
+                <picture>
+                  <!-- Размер изображения  1x - 80 * 80, 2x - 160 * 160 -->
+                  <!-- webp 1x, 2x -->
+                  <source type="img/webp" srcset="img/reviews/author.webp, img/reviews/author@2x.webp 2x">
+                  <!-- png 1x, 2x -->
+                  <img src="img/reviews/author.png" srcset="img/reviews/author@2x.png 2x" width="80" height="80"
+                    alt="Автор отзыва">
+                </picture>
+              </div>
+            </blockquote>
 
-              <blockquote class="reviews__item swiper-slide">
-                <h3>Анна Орлова</h3>
-                <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
-                  обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                <div class="reviews__author">
-                  <picture>
-                    <!-- Размер изображения  1x - 80 * 80, 2x - 160 * 160 -->
-                    <!-- webp 1x, 2x -->
-                    <source type="img/webp" srcset="img/reviews/author.webp, img/reviews/author@2x.webp 2x">
-                    <!-- png 1x, 2x -->
-                    <img src="img/reviews/author.png" srcset="img/reviews/author@2x.png 2x" width="100%" height="100%"
-                      alt="Автор отзыва">
-                  </picture>
-                </div>
-              </blockquote>
+            <blockquote class="reviews__item swiper-slide">
+              <h3>Анна Орлова</h3>
+              <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
+                обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+              <div class="reviews__author">
+                <picture>
+                  <!-- Размер изображения  1x - 80 * 80, 2x - 160 * 160 -->
+                  <!-- webp 1x, 2x -->
+                  <source type="img/webp" srcset="img/reviews/author.webp, img/reviews/author@2x.webp 2x">
+                  <!-- png 1x, 2x -->
+                  <img src="img/reviews/author.png" srcset="img/reviews/author@2x.png 2x" width="80" height="80"
+                    alt="Автор отзыва">
+                </picture>
+              </div>
+            </blockquote>
 
-              <blockquote class="reviews__item swiper-slide">
-                <h3>Анна Орлова</h3>
-                <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
-                  обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                <div class="reviews__author">
-                  <picture>
-                    <!-- Размер изображения  1x - 80 * 80, 2x - 160 * 160 -->
-                    <!-- webp 1x, 2x -->
-                    <source type="img/webp" srcset="img/reviews/author.webp, img/reviews/author@2x.webp 2x">
-                    <!-- png 1x, 2x -->
-                    <img src="img/reviews/author.png" srcset="img/reviews/author@2x.png 2x" width="100%" height="100%"
-                      alt="Автор отзыва">
-                  </picture>
-                </div>
-              </blockquote>
+            <blockquote class="reviews__item swiper-slide">
+              <h3>Анна Орлова</h3>
+              <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
+                обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+              <div class="reviews__author">
+                <picture>
+                  <!-- Размер изображения  1x - 80 * 80, 2x - 160 * 160 -->
+                  <!-- webp 1x, 2x -->
+                  <source type="img/webp" srcset="img/reviews/author.webp, img/reviews/author@2x.webp 2x">
+                  <!-- png 1x, 2x -->
+                  <img src="img/reviews/author.png" srcset="img/reviews/author@2x.png 2x" width="80" height="80"
+                    alt="Автор отзыва">
+                </picture>
+              </div>
+            </blockquote>
 
-              <blockquote class="reviews__item swiper-slide">
-                <h3>Анна Орлова</h3>
-                <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
-                  обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
-                <div class="reviews__author">
-                  <picture>
-                    <!-- Размер изображения  1x - 80 * 80, 2x - 160 * 160 -->
-                    <!-- webp 1x, 2x -->
-                    <source type="img/webp" srcset="img/reviews/author.webp, img/reviews/author@2x.webp 2x">
-                    <!-- png 1x, 2x -->
-                    <img src="img/reviews/author.png" srcset="img/reviews/author@2x.png 2x" width="100%" height="100%"
-                      alt="Автор отзыва">
-                  </picture>
-                </div>
-              </blockquote>
+            <blockquote class="reviews__item swiper-slide">
+              <h3>Анна Орлова</h3>
+              <p>&laquo;Хожу в&nbsp;SuperClub уже больше года. Нравится, что в&nbsp;клубе всегда чисто, тренажеры
+                обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей&raquo;</p>
+              <div class="reviews__author">
+                <picture>
+                  <!-- Размер изображения  1x - 80 * 80, 2x - 160 * 160 -->
+                  <!-- webp 1x, 2x -->
+                  <source type="img/webp" srcset="img/reviews/author.webp, img/reviews/author@2x.webp 2x">
+                  <!-- png 1x, 2x -->
+                  <img src="img/reviews/author.png" srcset="img/reviews/author@2x.png 2x" width="80" height="80"
+                    alt="Автор отзыва">
+                </picture>
+              </div>
+            </blockquote>
 
-            </div>
           </div>
 
           <button class="reviews__button reviews__button--next swiper-button-next" type="button"></button>
-          <!-- Блок для позиционирования стрелок переключения слайдера -->
         </div>
 
       </div>
@@ -759,13 +769,13 @@
 
               <div class="form__wrapper">
                 <p class="form__field form__field--name">
-                  <input class="form__input" type="text" name="user-name" placeholder=" " required>
-                  <label class="form__label">Имя</label>
+                  <input id="field-for-name" class="form__input" type="text" name="user-name" placeholder=" " required>
+                  <label for="field-for-name" class="form__label">Имя</label>
                 </p>
                 <p class="form__field form__field--phone">
-                  <input class="form__input" type="tel" name="user-phone" placeholder=" " maxlength="18"
-                    data-phone-pattern required>
-                  <label class="form__label">Телефон</label>
+                  <input id="field-for-phone" class="form__input" type="tel" name="user-phone" placeholder=" "
+                    maxlength="18" data-phone-pattern required>
+                  <label for="field-for-phone" class="form__label">Телефон</label>
                 </p>
               </div>
 
@@ -818,12 +828,6 @@
   <footer class="footer">
     <h2 class="visually-hidden">Подвал сайта с социальными сетями, навигацией по сайту и контактами</h2>
     <div class="footer__container container">
-
-      <a class="footer__logo logo">
-        <svg width="100%" height="100%">
-          <use xlink:href="img/sprite/sprite.svg#logo"></use>
-        </svg>
-      </a>
 
       <nav class="footer__nav nav">
 

@@ -10,19 +10,18 @@
   }
 }
 
-// Позиционируем стрелки переключения карусели
-.reviews__wrapper {
-  position: relative;
-}
-
 .reviews__slider {
-  max-width: 560px;
+  position: relative;
+  max-width: 680px;
+  padding: 0 60px;
 
   display: flex;
   align-items: center;
 
   @include vp-1199 {
-    max-width: 566px;
+    max-width: none;
+    width: 100%;
+    padding: 0 56px;
   }
 
   @include vp-767 {
@@ -85,6 +84,7 @@
   width: 80px;
   height: 80px;
   background-color: $color-pink-swan;
+  border-radius: 50%;
   position: absolute;
   top: 62px;
   left: 63px;
@@ -102,6 +102,11 @@
   }
 }
 
+.reviews__author img {
+  width: 100%;
+  height: 100%;
+}
+
 // reviews__button
 
 .reviews__button {
@@ -110,7 +115,7 @@
 }
 
 .reviews__button.swiper-button-prev {
-  left: 238px;
+  left: 0;
 
   @include vp-1199 {
     left: -7px;
@@ -122,7 +127,7 @@
 }
 
 .reviews__button.swiper-button-next {
-  right: 236px;
+  right: 0;
 
   @include vp-1199 {
     right: -7px;
