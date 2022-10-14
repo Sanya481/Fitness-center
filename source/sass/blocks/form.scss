@@ -39,7 +39,7 @@
   }
 }
 
-.form__input {
+.form__field input {
   font-family: $ff-placeholder;
   font-size: 14px;
   line-height: 16px;
@@ -54,7 +54,7 @@
   outline: none;
 }
 
-.form__label {
+.form__field label {
   font-size: 14px;
   line-height: 16px;
 
@@ -68,6 +68,7 @@
 }
 
 // Плавное смещение label вверх при фокусе
+// Без классов на элементах формы, анимация не работает
 .form__input:focus ~ .form__label,
 .form__input:not(:placeholder-shown) ~ .form__label {
   font-size: 12px;
@@ -75,7 +76,7 @@
   top: -15px;
 }
 
-.form__button {
+.form button {
   font-family: $ff-placeholder;
   font-weight: 700;
   font-size: 14px;

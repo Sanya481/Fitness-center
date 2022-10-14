@@ -1581,6 +1581,11 @@ main {
   height: 20px;
 }
 
+.logo__icon {
+  width: 100%;
+  height: 100%;
+}
+
 .intro {
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   color: #ffffff;
@@ -1816,6 +1821,7 @@ main {
 .subscription__tabs button.is-active {
   opacity: 1;
   border-bottom: 2px solid #d10a42;
+  margin-bottom: -2px;
 }
 
 .subscription__list {
@@ -2266,6 +2272,16 @@ main {
   right: 6px;
 }
 
+.coach__item:active .coach-description {
+  background-color: rgba(16, 38, 84, 0.89);
+}
+
+.coach__item:active h3,
+.coach__item:active span,
+.coach__item:active .coach-description__list {
+  opacity: 1;
+}
+
 .coach__button:active.swiper-button-prev::after {
   -webkit-transform: translateX(-10px);
   -ms-transform: translateX(-10px);
@@ -2327,16 +2343,6 @@ main {
   -webkit-transition: opacity 1.6s ease;
   -o-transition: opacity 1.6s ease;
   transition: opacity 1.6s ease;
-}
-
-.coach__item:active .coach-description {
-  background-color: rgba(16, 38, 84, 0.89);
-}
-
-.coach__item:active h3,
-.coach__item:active span,
-.coach__item:active .coach-description__list {
-  opacity: 1;
 }
 
 .coach-description__item {
@@ -2856,7 +2862,7 @@ main {
   margin: 0;
 }
 
-.form__input {
+.form__field input {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -2870,7 +2876,7 @@ main {
   outline: none;
 }
 
-.form__label {
+.form__field label {
   font-size: 14px;
   line-height: 16px;
   position: absolute;
@@ -2890,7 +2896,7 @@ main {
   top: -15px;
 }
 
-.form__button {
+.form button {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
@@ -2911,7 +2917,7 @@ main {
   grid-column: 1/-1;
 }
 
-.form__button:active {
+.form button:active {
   background-color: #ffffff;
   color: #0d7aee;
 }
@@ -3120,6 +3126,16 @@ main {
     background-color: #2e80fd;
   }
 
+  .coach__item:hover .coach-description {
+    background-color: rgba(16, 38, 84, 0.89);
+  }
+
+  .coach__item:hover h3,
+  .coach__item:hover span,
+  .coach__item:hover .coach-description__list {
+    opacity: 1;
+  }
+
   .coach__button:hover.swiper-button-prev::after,
   .coach__button:focus.swiper-button-prev::after {
     -webkit-transform: scale(1.5);
@@ -3144,16 +3160,6 @@ main {
     -webkit-transform: rotate(180deg) translateX(-10px);
     -ms-transform: rotate(180deg) translateX(-10px);
     transform: rotate(180deg) translateX(-10px);
-  }
-
-  .coach__item:hover .coach-description {
-    background-color: rgba(16, 38, 84, 0.89);
-  }
-
-  .coach__item:hover h3,
-  .coach__item:hover span,
-  .coach__item:hover .coach-description__list {
-    opacity: 1;
   }
 
   .advantages__block.advantages__block--сoach .advantages__in-numbers {
@@ -3196,15 +3202,15 @@ main {
     color: #0d7aee;
   }
 
-  .form__button:hover,
-  .form__button:focus {
+  .form button:hover,
+  .form button:focus {
     color: #00b2ff;
     background-color: #75dfff;
     text-shadow: 0 0 8px #00b2ff;
     border-radius: 50px;
   }
 
-  .form__button:active {
+  .form button:active {
     color: #0d7aee;
   }
 
@@ -4335,7 +4341,7 @@ main {
     margin-bottom: 33px;
   }
 
-  .form__button {
+  .form button {
     padding: 17px 51px;
     margin-top: 5px;
   }
