@@ -20,6 +20,11 @@
   justify-content: space-between;
 }
 
+.header__left-block {
+  display: flex;
+  align-items: center;
+}
+
 /* Чтобы при добавлении контента логотип не уменьшался и ничего не залазило на него  */
 .header__logo {
   flex-shrink: 0;

@@ -9,6 +9,10 @@
   border-image-source: $red-to-blue;
   border-image-slice: 26;
 
+  @media (prefers-color-scheme: dark) {
+    color: $color-lavender-blue;
+  }
+
   // Дополнительные модификаторы для правльных переносов слов
   @include vp-1199 {
     &--month {
@@ -66,6 +70,10 @@
   text-transform: uppercase;
 
   border-bottom: 1px solid $color-resolution-blue;
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-lavender-blue;
+  }
 
   // Эффекты при наведении в десктопной версии
   @include effects-off {

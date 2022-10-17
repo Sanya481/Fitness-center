@@ -4,6 +4,10 @@
 
   position: relative;
 
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-black-russian;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -108,6 +112,10 @@
 
   transition: color $trans-default, opacity $trans-default;
 
+  @media (prefers-color-scheme: dark) {
+    color: $color-solitude;
+  }
+
   @include vp-1199 {
     line-height: 27px;
     font-size: 18px;
@@ -151,6 +159,10 @@
     &:hover,
     &:focus {
       color: $color-sapphire;
+
+      @media (prefers-color-scheme: dark) {
+        color: $color-solitude;
+      }
     }
   }
 }
@@ -190,6 +202,10 @@
   cursor: pointer;
 
   background-color: $color-default-white;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-default-black-2;
+  }
 
   // Чтобы 'тень' от цены поместить за цену
   position: relative;
@@ -237,6 +253,10 @@
   color: $color-chambray;
   margin: 0 0 65px;
 
+  @media (prefers-color-scheme: dark) {
+    color: $color-echo-blue;
+  }
+
   @include vp-767 {
     margin: 0 0 53px;
   }
@@ -281,15 +301,24 @@
   color: $color-egyptian-blue;
   margin-right: 11px;
 
+  @media (prefers-color-scheme: dark) {
+    color: $color-lavender-blue;
+  }
+
   @include vp-767 {
     font-size: 48px;
     line-height: 72px;
   }
 }
 
-.subscription__price-shadow {
+.subscription__price-currency{
   width: 30px;
   height: 42px;
+  fill: $color-sapphire;
+
+  @media (prefers-color-scheme: dark) {
+    fill: $color-solitude;
+  }
 
   @include vp-767 {
     width: 24px;
@@ -311,6 +340,10 @@
 
   color: $color-sapphire;
   transition: background $trans-600, color $trans-600;
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-default-white;
+  }
 
   @include vp-767 {
     padding: 24px 43px 24px;
