@@ -13,12 +13,16 @@
 }
 
 .intro__container {
-  display: flex;
-  justify-content: space-between;
+
   align-items: center;
   padding-bottom: 51px;
 
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
   @include vp-1199 {
+    display: flex;
+    justify-content: space-between;
     column-gap: 30px;
     padding-bottom: 82px;
   }
@@ -39,10 +43,12 @@
 
   margin-top: 67px;
   padding-left: 98px;
+  margin-right: 64px;
 
   @include vp-1199 {
     margin-top: 23px;
     padding-left: 80px;
+    margin-right: 0;
   }
 
   @include vp-767 {
@@ -167,7 +173,8 @@
   width: 500px;
   height: 556px;
   background-color: $color-cobalt;
-  margin-right: 122px;
+
+  align-self: start;
 
   @include vp-1199 {
     width: 324px;

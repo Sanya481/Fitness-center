@@ -1255,6 +1255,8 @@ button.swiper-pagination-bullet {
 
 /* Dark-mode */
 
+/* Social-intro-effects */
+
 @font-face {
   font-family: "Bebas Neue";
   font-style: normal;
@@ -1671,16 +1673,14 @@ main {
 }
 
 .intro__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   padding-bottom: 51px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .intro__info {
@@ -1697,6 +1697,7 @@ main {
   text-align: right;
   margin-top: 67px;
   padding-left: 98px;
+  margin-right: 64px;
 }
 
 .intro__title {
@@ -1759,7 +1760,9 @@ main {
   width: 500px;
   height: 556px;
   background-color: #003eb7;
-  margin-right: 122px;
+  -ms-flex-item-align: start;
+  -ms-grid-row-align: start;
+  align-self: start;
 }
 
 .intro__image img {
@@ -1771,6 +1774,8 @@ main {
   -ms-flex-item-align: end;
   -ms-grid-row-align: end;
   align-self: end;
+  -ms-grid-column-align: end;
+  justify-self: end;
   margin-bottom: 38px;
 }
 
@@ -1797,7 +1802,24 @@ main {
   column-gap: 15px;
 }
 
-.social-intro__item a {
+/* Чтобы при увеличении ширины одного элемента, другие ни следовали за ним, а оставались на месте */
+
+.social-intro__item {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+
+.social-intro__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: relative;
   font-size: 12px;
   line-height: 14px;
   -webkit-user-select: none;
@@ -1805,11 +1827,91 @@ main {
   -ms-user-select: none;
   user-select: none;
   text-transform: uppercase;
-  color: #ffffff;
+  width: 30px;
+  height: 30px;
+  -webkit-transition: background 0.6s ease, width 0.6s ease, border-radius 0.6s ease;
+  -o-transition: background 0.6s ease, width 0.6s ease, border-radius 0.6s ease;
+  transition: background 0.6s ease, width 0.6s ease, border-radius 0.6s ease;
 }
 
-.social-intro__item a:active {
-  color: #0d7aee;
+.social-intro__link:hover,
+.social-intro__link:focus {
+  width: 100px;
+  border-radius: 20px;
+}
+
+/* Задаем разные цвета фона для элементов */
+
+.social-intro__link--fb:hover,
+.social-intro__link--fb:focus {
+  background: -o-linear-gradient(45deg, #80ff72, #7ee8fa);
+  background: linear-gradient(45deg, #80ff72, #7ee8fa);
+}
+
+.social-intro__link--fb:active {
+  background: #00b2ff;
+}
+
+.social-intro__link--vk:hover,
+.social-intro__link--vk:focus {
+  background: -o-linear-gradient(45deg, #ff9966, red);
+  background: linear-gradient(45deg, #ff9966, red);
+}
+
+.social-intro__link--vk:active {
+  background: #d10a42;
+}
+
+.social-intro__link--ig:hover,
+.social-intro__link--ig:focus {
+  background: -o-linear-gradient(45deg, #56ccf2, #2f80ed);
+  background: linear-gradient(45deg, #56ccf2, #2f80ed);
+}
+
+.social-intro__link--ig:active {
+  background: #2c39f2;
+}
+
+.social-intro__link span {
+  color: #ffffff;
+  position: absolute;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  -o-transition: transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+}
+
+.social-intro__link span:last-child {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.social-intro__link:hover span,
+.social-intro__link:focus span {
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+}
+
+.social-intro__link:hover span:last-child,
+.social-intro__link:focus span:last-child {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition-delay: 0.25s;
+  -o-transition-delay: 0.25s;
+  transition-delay: 0.25s;
+  color: #1f2022;
 }
 
 .intro-zone {
@@ -3135,16 +3237,6 @@ main {
     color: #0d7aee;
   }
 
-  .social-intro__item a:hover,
-  .social-intro__item a:focus {
-    color: #00b2ff;
-    text-shadow: 0 0 8px #00b2ff;
-  }
-
-  .social-intro__item a:active {
-    color: #0d7aee;
-  }
-
   .subscription__tabs button:hover,
   .subscription__tabs button:focus {
     color: #d10a42;
@@ -3358,6 +3450,12 @@ main {
   }
 
   .intro__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
@@ -3367,6 +3465,7 @@ main {
   .intro__info {
     margin-top: 23px;
     padding-left: 80px;
+    margin-right: 0;
   }
 
   .intro__title {
