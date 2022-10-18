@@ -2,7 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {onEventCalllback} from './phone-input-mask.js';
 // import {changeSubscriptionTab} from './subscription-tab.js';
-import {initSwiper} from './vendor.js';
+import {checkReviewsSwiper, checkCoachSwiper} from './vendor.js';
 import './subscription-tab.js';
 
 
@@ -19,7 +19,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-  initSwiper();
+  checkReviewsSwiper();
+  checkCoachSwiper();
 
   // Если таких кнопок нет - то ничего не происходит
   // if (subscriptionTabButtons) {
