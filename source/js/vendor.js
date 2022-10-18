@@ -119,24 +119,26 @@ const initSwiper = () => {
           prevEl: '.reviews__button--prev',
         },
 
-        slidesPerView: 1,
 
-        // Куб
-        effect: 'cube',
-        // Дополнение к cube
-        cubeEffect: {
-          // Настройки тени
-          slideShadows: true,
-          shadow: true,
-          shadowOffset: 20,
-          shadowScale: 0.94,
-        },
-      });
-    }
-  };
+const checkReviewsSwiper = () => {
+  if (reviewsSwiper) {
+    const swiper = new Swiper(reviewsSwiper, {
 
-  checkCoachSwiper();
-  checkReviewsSwiper();
+      // Navigation arrows
+      navigation: {
+        nextEl: '.reviews__button--next',
+        prevEl: '.reviews__button--prev',
+      },
+
+
+
+      spaceBetween: 60,
+      slidesPerView: 1,
+
+
+    });
+  }
 };
 
-export {initSwiper};
+export { checkReviewsSwiper, checkCoachSwiper };
+
