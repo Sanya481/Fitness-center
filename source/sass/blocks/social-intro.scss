@@ -1,5 +1,6 @@
 .social-intro {
   align-self: end;
+  justify-self: end;
   margin-bottom: 38px;
 
   @include vp-1199 {
@@ -23,27 +24,89 @@
   column-gap: 15px;
 }
 
-.social-intro__item a {
+/* Чтобы при увеличении ширины одного элемента, другие ни следовали за ним, а оставались на месте */
+.social-intro__item {
+  align-self: flex-end;
+}
+
+.social-intro__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+
   font-size: 12px;
   line-height: 14px;
   user-select: none;
-
   text-transform: uppercase;
+
+  width: 30px;
+  height: 30px;
+
+  transition:
+    background $trans-600,
+    width $trans-600,
+    border-radius $trans-600;
+}
+
+.social-intro__link:hover,
+.social-intro__link:focus {
+  width: 100px;
+  border-radius: 20px;
+}
+
+/* Задаем разные цвета фона для элементов */
+.social-intro__link--fb:hover,
+.social-intro__link--fb:focus {
+  background: $fb-hover-effect;
+}
+
+.social-intro__link--fb:active {
+  background: $color-deep-sky-blue;
+}
+
+.social-intro__link--vk:hover,
+.social-intro__link--vk:focus {
+  background: $vk-hover-effect;
+}
+
+.social-intro__link--vk:active {
+  background: $color-crimson;
+}
+
+.social-intro__link--ig:hover,
+.social-intro__link--ig:focus {
+  background: $ig-hover-effect;
+}
+
+.social-intro__link--ig:active {
+  background: $color-neon-blue;
+}
+
+.social-intro__link span {
   color: $color-default-white;
+  position: absolute;
+  transition: transform $trans-600;
+}
 
-  @include effects-off {
-    &:hover,
-    &:focus {
-      color: $color-deep-sky-blue;
-      text-shadow: 0 0 8px $color-deep-sky-blue;
-    }
+.social-intro__link span:last-child {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
 
-    &:active {
-      color: $color-dodger-blue;
-    }
-  }
+  transform: scale(0);
+  transition: transform $trans-default;
+}
 
-  &:active {
-    color: $color-dodger-blue;
-  }
+.social-intro__link:hover span,
+.social-intro__link:focus span{
+  transform: scale(0);
+}
+
+.social-intro__link:hover span:last-child,
+.social-intro__link:focus span:last-child {
+  transform: scale(1);
+  transition-delay: 0.25s;
+  color: $color-black-russian;
 }

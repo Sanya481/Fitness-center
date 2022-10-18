@@ -67,29 +67,6 @@
   transition: opacity 1.6s ease;
 }
 
-@include effects-off {
-  .coach__item:hover .coach-description {
-    background-color: $coach-item-shadow;
-  }
-
-  // Пытаемся сделать каскадное появление - сверху вниз
-  .coach__item:hover h3,
-  .coach__item:hover span,
-  .coach__item:hover .coach-description__list {
-    opacity: 1;
-  }
-}
-
-.coach__item:active .coach-description {
-  background-color: $coach-item-shadow;
-}
-
-.coach__item:active h3,
-.coach__item:active span,
-.coach__item:active .coach-description__list {
-  opacity: 1;
-}
-
 // Создаем кастомный маркер
 .coach-description__item {
   position: relative;

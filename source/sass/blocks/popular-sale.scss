@@ -105,21 +105,24 @@
   order: 3;
   border-bottom: 1px solid $color-default-white;
 
+  transition: color $trans-default-1, letter-spacing $trans-default-1;
+
   // Эффекты при наведении в десктопной версии
   @include effects-off {
     // popular-sale
     &:hover,
     &:focus {
-      color: $color-slate-blue;
+      letter-spacing: 2px;
+      color: $color-lavender-blue;
     }
 
     &:active {
-      color: $deep-dodger-blue;
+      color: $color-burgundy;
     }
   }
 
   // Эффекты при нажатии в планшетной и мобильной версии
   &:active {
-    color: $deep-dodger-blue;
+    color: $color-burgundy;
   }
 }

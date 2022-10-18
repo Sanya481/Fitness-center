@@ -4,18 +4,22 @@
   padding: 0;
 
   position: absolute;
-  bottom: 24px;
-  left: -78px;
-
+  left: -96px;
+  top: 120px;
+  right: 255px;
 
   @include vp-1199 {
     bottom: 17px;
     left: -80px;
+    right: 205px;
+    top: 90px;
   }
 
   @include vp-767 {
     left: 0;
-    bottom: 12px;
+    bottom: 0px;
+    right: 180px;
+    top: 80px;
   }
 }
 
@@ -42,4 +46,21 @@
   line-height: 21px;
 
   color: $color-default-white;
+  transition: color $trans-default;
+
+  @include effects-off {
+    &:hover,
+    &:focus {
+      color: $color-crimson;
+    }
+
+    &:active {
+      color: $color-perano;
+    }
+  }
+
+   // Эффекты при нажатии в планшетной и мобильной версии
+   &:active {
+    color: $color-perano;
+   }
 }
