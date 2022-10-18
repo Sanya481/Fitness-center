@@ -163,7 +163,8 @@
 
   // Эффекты при нажатии в планшетной и мобильной версии
   &:active {
-    background-color: $deep-dodger-blue;
+    background: $red-bottom-blue;
+    border-radius: 10px;
   }
 }
 

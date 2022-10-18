@@ -139,12 +139,12 @@
     }
 
     &:active {
-      color: $color-egyptian-blue;
+      color: $color-crimson;
     }
   }
 
   &:active {
-    color: $color-egyptian-blue;
+    color: $color-crimson;
     opacity: 1;
   }
 }
@@ -231,7 +231,6 @@
   }
 
   @include effects-off {
-
     &:hover,
     &:focus {
       border: 7px solid;
@@ -399,13 +398,21 @@
     }
 
     &:active {
+      color: #dee9ff;
+      border-radius: 10px;
+      opacity: 1;
       background: $color-torch-red;
+
     }
   }
 
   // Эффекты при нажатии в планшетной и мобильной версии
   &:active {
     background: $color-torch-red;
+    border-radius: 10px;
+    background: $blue-to-red;
+    color: #dee9ff;
+    border-radius: 10px;
   }
 }
 

@@ -27,6 +27,11 @@ $color-slate-blue:                  #694ed5;
 $color-blue:                        #1600ff;
 $color-persian-blue:                #2e35ac;
 $color-red-1:                       #e60101;
+$color-blue-gem:                    #4e299f;
+$color-burgundy:                    #820919;
+$color-navy-blue:                   #0064ff;
+$color-safety-orange:               #ff7300;
+$color-electric-purple:             #c700ff;
 
 /* Dark-mode */
 $color-solitude:                    #e2ecff;
@@ -46,15 +51,19 @@ $btn-shadow-intro:                  5px 5px 10px #020d18, inset -5px -5px 8px -4
 $btn-shadow-intro--active:          5px 5px 10px #020d18, inset -5px -5px 8px -4px #020d18, inset -6px -6px 8px 0 #3185d5, -5px -5px 10px #3185d5, inset 5px 5px 8px -4px #3185d5, inset 6px 6px 8px 0 #c9c9c9;
 $btn-event:                         rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
-$color-video-shadow:                rgba(20, 54, 122, 0.5);
-$text-shadow-blue:                  rgba(28, 51, 116, 0.2);
+/* Linear-gradient */
 $color-shadow-text:                 linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
-$coach-item-shadow:                 rgba(16, 38, 84, 0.89);
 $blue-to-white:                     linear-gradient(90deg, rgba(16, 38, 84, 1) 50%, rgba(255, 255, 255, 1) 50%);
 $blue-to-black:                     linear-gradient(90deg, rgba(16, 38, 84, 1) 50%, rgba(18, 18, 18, 1) 50%);
 $red-to-blue:                       linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
+$blue-to-red:                       linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(89, 174, 252, 1) 0%, rgba(180, 46, 54, 1) 66%);
+$color-video-shadow:                rgba(20, 54, 122, 0.5);
+$text-shadow-blue:                  rgba(28, 51, 116, 0.2);
+$coach-item-shadow:                 rgba(16, 38, 84, 0.89);
 $subscription__underline-btn:       rgba(120, 120, 120, 0.2);
 $line-color:                        rgba(209, 10, 66, 0.2);
+$red-bottom-blue:                   linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(0,133,255,1) 0%, rgba(167,24,32,1) 66%);
+$blue-to-white-1:                   linear-gradient(261deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 0%, rgba(16, 38, 84, 1) 52%);
 
 $alice-blue:                        #f2f5f6;
 $color-deep-sky-blue-2:             #00b3ff;
@@ -86,7 +95,6 @@ $deep-sky-blue:                     #00acee;
 $deep-dodger-blue:                  #2e80fd;
 $color-aqua:                        #00e7ff;
 $color-dodger-blue:                 #37a1ff;
-
 
 // Background
 // ----------------------------------

@@ -69,8 +69,8 @@
 
 // Плавное смещение label вверх при фокусе
 // Без классов на элементах формы, анимация не работает
-.form__input:focus ~ .form__label,
-.form__input:not(:placeholder-shown) ~ .form__label {
+.form__input:focus~.form__label,
+.form__input:not(:placeholder-shown)~.form__label {
   font-size: 12px;
   opacity: 0.7;
   top: -15px;
@@ -91,7 +91,11 @@
   cursor: pointer;
   padding: 16px 49px;
   letter-spacing: 0.05em;
-  transition: border-radius $trans-600;
+
+  transition:
+    border-radius 0.8s $tf-default,
+    transform 0.1s $tf-default-1,
+    box-shadow 0.2s $tf-default-1;
 
   grid-column: 1/-1;
 
@@ -103,19 +107,26 @@
   @include effects-off {
     &:hover,
     &:focus {
-      color: $color-deep-sky-blue;
-      background-color: $color-turquoise-blue;
+      color: $color-perano;
+      background: $blue-to-white-1;
       text-shadow: 0 0 8px $color-deep-sky-blue;
       border-radius: 50px;
+
+      transform: translateY(-2px);
+      box-shadow: 0 7px 0 currentColor;
     }
 
     &:active {
-      color: $color-dodger-blue;
+      color: $color-deep-sky-blue;
+
+      transform: translateY(0);
+      box-shadow: 0 3px 0 currentColor;
     }
   }
 
   &:active {
-    background-color: $color-default-white;
-    color: $color-dodger-blue;
+    color: $color-perano;
+    background: $blue-to-white-1;
+    border-radius: 15px 0 0px 15px;
   }
 }
