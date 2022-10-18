@@ -40,7 +40,10 @@
   color: $color-default-white;
   user-select: none;
 
-  transition: letter-spacing $trans-default, color $trans-default;
+  transition:
+    letter-spacing $trans-default,
+    color $trans-default,
+    text-shadow $trans-default-1;
 
   @include vp-1199 {
     font-size: 24px;
@@ -57,8 +60,9 @@
   @include effects-off {
     &:hover,
     &:focus {
-      letter-spacing: 1.5px;
-      color: $color-dark-erulean;
+      letter-spacing: 1.8px;
+      color: $color-deep-sky-blue;
+      text-shadow: 0px -4px 20px $color-deep-sky-blue;
     }
 
     &:active {

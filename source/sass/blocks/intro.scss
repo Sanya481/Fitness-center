@@ -140,6 +140,8 @@
 
   transition: all 0.3s ease;
 
+  box-shadow: $btn-shadow-intro;
+
   @include vp-1199 {
     width: 183px;
     padding: 19px 8px;
@@ -160,6 +162,7 @@
 
     &:active {
       color: $color-dodger-blue;
+      box-shadow: $btn-shadow-intro--active;
     }
   }
 

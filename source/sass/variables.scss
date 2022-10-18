@@ -20,11 +20,13 @@ $color-chambray:                    #495a7d;
 $color-egyptian-blue:               #103aae;
 $color-cobalt:                      #003eb7;
 $color-crimson:                     #d10a42;
+$color-crimson-2:                   rgba(209, 10, 66, 0.3);
 $color-dark-erulean:                #003d85;
 $color-purple-heart:                #4e3bd0;
 $color-slate-blue:                  #694ed5;
 $color-blue:                        #1600ff;
 $color-persian-blue:                #2e35ac;
+$color-red-1:                       #e60101;
 
 /* Dark-mode */
 $color-solitude:                    #e2ecff;
@@ -38,6 +40,11 @@ $color-prelude:                     #ccb9db;
 $fb-hover-effect:                   linear-gradient(45deg, #80ff72, #7ee8fa);
 $vk-hover-effect:                   linear-gradient(45deg, #ff9966, red);
 $ig-hover-effect:                   linear-gradient(45deg, #56ccf2, #2f80ed);
+
+/* Box-shadow */
+$btn-shadow-intro:                  5px 5px 10px #020d18, inset -5px -5px 8px -4px #020d18, -5px -5px 10px #3185d5, inset 5px 5px 8px -4px #3185d5;
+$btn-shadow-intro--active:          5px 5px 10px #020d18, inset -5px -5px 8px -4px #020d18, inset -6px -6px 8px 0 #3185d5, -5px -5px 10px #3185d5, inset 5px 5px 8px -4px #3185d5, inset 6px 6px 8px 0 #c9c9c9;
+$btn-event:                         rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
 $color-video-shadow:                rgba(20, 54, 122, 0.5);
 $text-shadow-blue:                  rgba(28, 51, 116, 0.2);
@@ -121,6 +128,7 @@ $ff-placeholder-second:             "Bebas Neue", "Arial", sans-serif;
 $tf-default:                        ease;
 $tf-default-1:                      ease-in-out;
 $trans-default:                     0.3s $tf-default;
+$trans-default-1:                   0.3s $tf-default-1;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-callback:                    0.6s cubic-bezier(0.55, 0, 0.1, 1);
@@ -131,6 +139,7 @@ $trans-600:                         0.6s $tf-default;
 $trans-800:                         0.8s $tf-default;
 $trans-1000:                        1s $tf-default-1;
 $trans-5000:                        5s $tf-default-1;
+
 
 // Viewports
 // ---------------------------------

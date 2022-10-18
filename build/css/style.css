@@ -1257,6 +1257,8 @@ button.swiper-pagination-bullet {
 
 /* Social-intro-effects */
 
+/* Box-shadow */
+
 @font-face {
   font-family: "Bebas Neue";
   font-style: normal;
@@ -1578,9 +1580,9 @@ main {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  -webkit-transition: letter-spacing 0.3s ease, color 0.3s ease;
-  -o-transition: letter-spacing 0.3s ease, color 0.3s ease;
-  transition: letter-spacing 0.3s ease, color 0.3s ease;
+  -webkit-transition: letter-spacing 0.3s ease, color 0.3s ease, text-shadow 0.3s ease-in-out;
+  -o-transition: letter-spacing 0.3s ease, color 0.3s ease, text-shadow 0.3s ease-in-out;
+  transition: letter-spacing 0.3s ease, color 0.3s ease, text-shadow 0.3s ease-in-out;
 }
 
 .header__block a:active {
@@ -1750,6 +1752,8 @@ main {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  -webkit-box-shadow: 5px 5px 10px #020d18, inset -5px -5px 8px -4px #020d18, -5px -5px 10px #3185d5, inset 5px 5px 8px -4px #3185d5;
+  box-shadow: 5px 5px 10px #020d18, inset -5px -5px 8px -4px #020d18, -5px -5px 10px #3185d5, inset 5px 5px 8px -4px #3185d5;
 }
 
 .intro__link a:active {
@@ -1919,8 +1923,9 @@ main {
   margin: 0;
   padding: 0;
   position: absolute;
-  bottom: 24px;
-  left: -78px;
+  left: -96px;
+  top: 120px;
+  right: 255px;
 }
 
 .intro-zone a {
@@ -2097,13 +2102,32 @@ main {
   margin: 0 auto;
   max-width: 208px;
   color: #102654;
-  -webkit-transition: background 0.6s ease, color 0.6s ease;
-  -o-transition: background 0.6s ease, color 0.6s ease;
-  transition: background 0.6s ease, color 0.6s ease;
+  -webkit-transition: background-image 0.6s ease, color 0.6s ease, border-radius 0.6s ease;
+  -o-transition: background-image 0.6s ease, color 0.6s ease, border-radius 0.6s ease;
+  transition: background-image 0.6s ease, color 0.6s ease, border-radius 0.6s ease;
+  position: relative;
+  overflow: hidden;
+  /* Убираем иконку в планшетной/мобильной версии */
 }
 
 .subscription__item a:active {
   background: #ed0233;
+}
+
+/* Анимация пульсации кнопки - "купить абонемент" */
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-box-shadow: 0 0 25px #75dfff, 0 0 50px #7b0eff;
+    box-shadow: 0 0 25px #75dfff, 0 0 50px #7b0eff;
+  }
+}
+
+@keyframes pulsate {
+  0% {
+    -webkit-box-shadow: 0 0 25px #75dfff, 0 0 50px #7b0eff;
+    box-shadow: 0 0 25px #75dfff, 0 0 50px #7b0eff;
+  }
 }
 
 .sale h2 {
@@ -2231,6 +2255,9 @@ main {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   border-bottom: 1px solid #1c3374;
+  -webkit-transition: color 0.3s ease, letter-spacing 0.3s ease;
+  -o-transition: color 0.3s ease, letter-spacing 0.3s ease;
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
 }
 
 .standard-sale a:active {
@@ -2292,9 +2319,56 @@ main {
   padding: 25px 20px;
   color: #ffffff;
   border: 4px solid #ffffff;
-  -webkit-transition: background-color 0.3s ease;
-  -o-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-box-shadow: 0 0 38px 0 #fff;
+  box-shadow: 0 0 38px 0 #fff;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  text-shadow: 0 0 20px #e60101;
+  position: relative;
+  z-index: 2;
+}
+
+.event__bottom-block a::before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 120%;
+  /* Делаем тень от кнопки с помощью transform и псевдоэлементов */
+  -webkit-transform: perspective(85px) rotateX(45deg) scale(1.1, 0.5);
+  transform: perspective(85px) rotateX(45deg) scale(1.1, 0.5);
+  -webkit-filter: blur(20px);
+  filter: blur(20px);
+  pointer-events: none;
+  opacity: 0;
+  outline: none;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.event__bottom-block a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px 6px #fff;
+  box-shadow: 0 0 20px 6px #fff;
+  opacity: 0;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
 .event__bottom-block a:active {
@@ -3219,8 +3293,9 @@ main {
 @media (min-width: 1200px) {
   .header__block a:hover,
   .header__block a:focus {
-    letter-spacing: 1.5px;
-    color: #003d85;
+    letter-spacing: 1.8px;
+    color: #00b2ff;
+    text-shadow: 0px -4px 20px #00b2ff;
   }
 
   .header__block a:active {
@@ -3235,12 +3310,16 @@ main {
 
   .intro__link a:active {
     color: #0d7aee;
+    -webkit-box-shadow: 5px 5px 10px #020d18, inset -5px -5px 8px -4px #020d18, inset -6px -6px 8px 0 #3185d5, -5px -5px 10px #3185d5, inset 5px 5px 8px -4px #3185d5, inset 6px 6px 8px 0 #c9c9c9;
+    box-shadow: 5px 5px 10px #020d18, inset -5px -5px 8px -4px #020d18, inset -6px -6px 8px 0 #3185d5, -5px -5px 10px #3185d5, inset 5px 5px 8px -4px #3185d5, inset 6px 6px 8px 0 #c9c9c9;
   }
 
   .subscription__tabs button:hover,
   .subscription__tabs button:focus {
     color: #d10a42;
     opacity: 1;
+    border-bottom: 2px solid rgba(209, 10, 66, 0.3);
+    margin-bottom: -2px;
   }
 
   .subscription__tabs button:active {
@@ -3250,6 +3329,7 @@ main {
   .subscription__tabs button.is-active:hover,
   .subscription__tabs button.is-active:focus {
     color: #102654;
+    border-bottom: 2px solid #d10a42;
   }
 
   .subscription__item:hover,
@@ -3259,11 +3339,35 @@ main {
     border-image-slice: 26;
   }
 
+  .subscription__item a::before {
+    content: "\1F4AA";
+    position: absolute;
+    font-size: 17px;
+    line-height: 20px;
+    width: 24px;
+    height: 22px;
+    left: -50px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: left 0.3s ease;
+    -o-transition: left 0.3s ease;
+    transition: left 0.3s ease;
+  }
+
   .subscription__item a:hover,
   .subscription__item a:focus {
     background: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
     background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     color: #ffffff;
+    border-radius: 30px;
+    /* Сделаем немного другую анимацию в темной теме сайта */
+  }
+
+  .subscription__item a:hover::before,
+  .subscription__item a:focus::before {
+    left: 10px;
   }
 
   .subscription__item a:active {
@@ -3282,6 +3386,7 @@ main {
   .standard-sale a:hover,
   .standard-sale a:focus {
     color: #00acee;
+    letter-spacing: 1.8px;
   }
 
   .standard-sale a:active {
@@ -3290,11 +3395,26 @@ main {
 
   .event__bottom-block a:hover,
   .event__bottom-block a:focus {
-    background-color: #1600ff;
+    color: #e60101;
+    border-radius: 15px;
+    background: #fff;
+    font-size: 15px;
+  }
+
+  .event__bottom-block a:hover::after,
+  .event__bottom-block a:focus::after {
+    opacity: 1;
+  }
+
+  .event__bottom-block a:hover::before,
+  .event__bottom-block a:focus::before {
+    opacity: 1;
+    /* Убираем обводку при фокусе */
+    outline: none;
   }
 
   .event__bottom-block a:active {
-    background-color: #2e80fd;
+    font-size: 13px;
   }
 
   .coach__item:hover .coach-description {
@@ -3409,6 +3529,13 @@ main {
   .subscription__tabs button.is-active:hover,
   .subscription__tabs button.is-active:focus {
     color: #e3ecf6;
+  }
+
+  .subscription__item a:hover,
+  .subscription__item a:focus {
+    border-radius: 10px;
+    -webkit-animation: pulsate 1s ease-in-out;
+    animation: pulsate 1s ease-in-out;
   }
 }
 
