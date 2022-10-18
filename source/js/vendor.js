@@ -4,7 +4,6 @@ import './vendor/swiper.js';
 const coachSwiper = document.querySelector('.coach__slider');
 const reviewsSwiper = document.querySelector('.reviews__slider');
 
-
 const checkCoachSwiper = () => {
   if (coachSwiper) {
     const swiper = new Swiper(coachSwiper, {
@@ -118,16 +117,11 @@ const checkReviewsSwiper = () => {
         nextEl: '.reviews__button--next',
         prevEl: '.reviews__button--prev',
       },
-
-
-
       spaceBetween: 60,
       slidesPerView: 1,
-
-
     });
   }
 };
 
-export { checkReviewsSwiper, checkCoachSwiper };
+export {checkReviewsSwiper, checkCoachSwiper};
 
