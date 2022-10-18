@@ -34,6 +34,7 @@
 
     @include retina {
       background-image: url("../img/decorative/woman-photo-tablet@2x.jpg");
+      background-position: center top;
     }
   }
 
@@ -106,7 +107,6 @@
 
   // Эффекты при наведении в десктопной версии
   @include effects-off {
-
     // popular-sale
     &:hover,
     &:focus {

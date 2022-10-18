@@ -120,20 +120,14 @@ const checkReviewsSwiper = () => {
         prevEl: '.reviews__button--prev',
       },
 
+
+
+      spaceBetween: 60,
       slidesPerView: 1,
 
-      // Куб
-      effect: 'cube',
-      // Дополнение к cube
-      cubeEffect: {
-        // Настройки тени
-        slideShadows: true,
-        shadow: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
-      },
+
     });
   }
 };
 
-export {checkReviewsSwiper, checkCoachSwiper};
+export { checkReviewsSwiper, checkCoachSwiper };
