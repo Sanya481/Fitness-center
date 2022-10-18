@@ -1603,73 +1603,6 @@ main {
   height: 100%;
 }
 
-.switcher {
-  margin: 0;
-}
-
-.switcher label {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  width: 250px;
-  height: 80px;
-}
-
-.switcher input {
-  visibility: hidden;
-}
-
-.switcher__round {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  cursor: pointer;
-  background-color: yellow;
-  -webkit-box-shadow: -5px -5px 8px rgba(255, 255, 255, 0.2), 5px 5px 8px rgba(0, 0, 0, 0.2);
-  box-shadow: -5px -5px 8px rgba(255, 255, 255, 0.2), 5px 5px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 50px;
-}
-
-.switcher__round::before {
-  content: "";
-  position: absolute;
-  height: 65px;
-  width: 65px;
-  background: #fff;
-  border-radius: 50px;
-  left: 4px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: .5s;
-  -o-transition: .5s;
-  transition: .5s;
-}
-
-.switcher input:checked + .switcher__round {
-  background-color: red;
-}
-
-.switcher input:checked + .switcher__round::before {
-  -webkit-transform: translate(177px, -50%);
-  -ms-transform: translate(177px, -50%);
-  transform: translate(177px, -50%);
-}
-
-.switcher span:last-child {
-  position: relative;
-  text-align: center;
-  margin: 0;
-  pointer-events: none;
-  font-size: 32px;
-  line-height: 24px;
-  font-weight: 700;
-  display: block;
-}
-
 .intro {
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
   color: #ffffff;
@@ -4224,6 +4157,7 @@ main {
 
   .popular-sale__image {
     background-image: url("../img/decorative/woman-photo-tablet@2x.jpg");
+    background-position: center top;
   }
 }
 
