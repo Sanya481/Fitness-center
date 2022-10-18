@@ -1,5 +1,9 @@
 .advantages {
   background-color: $color-ghost-white;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-black-russian;
+  }
 }
 
 .advantages__container {
@@ -149,6 +153,10 @@
   font-size: 14px;
   line-height: 21px;
   color: $color-persian-blue;
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-prelude;
+  }
 }
 
 .advantages__info h3 {
