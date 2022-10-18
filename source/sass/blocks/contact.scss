@@ -3,6 +3,10 @@
 
   @include vp-1199 {
     padding: 0;
+
+    @media (prefers-color-scheme: dark) {
+      background: $color-default-black-2;
+    }
   }
 }
 
@@ -138,6 +142,10 @@
   line-height: 21px;
   color: $color-sapphire;
 
+  @media (prefers-color-scheme: dark) {
+    color: $color-solitude;
+  }
+
   @include vp-1199 {
     font-size: 18px;
     line-height: 27px;
@@ -157,6 +165,7 @@
 
   &:active {
     color: $color-dodger-blue;
+    text-shadow: 0 0px 20px $color-electric-indigo;
   }
 }
 

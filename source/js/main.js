@@ -1,11 +1,13 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {onEventCalllback} from './phone-input-mask.js';
-import {checkReviewsSwiper, checkCoachSwiper} from './vendor.js';
-import {changeSubscriptionTab} from './subscription-tab.js';
+// import {changeSubscriptionTab} from './subscription-tab.js';
+import {initSwiper} from './vendor.js';
+import './subscription-tab.js';
+
 
 // Кнопки для переключения табов
-const subscriptionTabButtons = document.querySelectorAll('[data-tab-button]');
+// const subscriptionTabButtons = document.querySelectorAll('[data-tab-button]');
 // Находим все поля ввода телефона и вешаем обработчик
 const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
 
@@ -17,13 +19,12 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
-  checkReviewsSwiper();
-  checkCoachSwiper();
+  initSwiper();
 
   // Если таких кнопок нет - то ничего не происходит
-  if (subscriptionTabButtons) {
-    changeSubscriptionTab();
-  }
+  // if (subscriptionTabButtons) {
+  //   changeSubscriptionTab();
+  // }
 
   // Если нет ни одного поля ввода номера телефона - то ничего не происходит
   if (phoneInputs) {

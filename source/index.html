@@ -18,14 +18,37 @@
     <div class="header__container container">
 
       <div class="header__block">
+        <!-- <div class="header__left-block"> -->
         <a class="header__logo logo">
-          <svg width="100%" height="100%">
+          <svg class="logo__icon" width="89" height="20">
             <use xlink:href="img/sprite/sprite.svg#logo"></use>
           </svg>
         </a>
+
+        <!-- Переключатель темы сайта -->
+        <!-- <div class="header__theme-toggle theme-color">
+            <svg class="theme-color__light" height="30" width="30">
+              <use xlink:href="img/sprite/sprite.svg#sun"></use>
+            </svg>
+
+            <p class="theme-color__toggle switcher">
+              <label>
+                <input type="checkbox" name="box">
+                <span class="switcher__round"></span>
+                <span>Off</span>
+              </label>
+            </p>
+
+            <svg class="theme-color__dark" height="30" width="30">
+              <use xlink:href="img/sprite/sprite.svg#moon"></use>
+            </svg>
+          </div>
+        </div> -->
+
         <a href="+78005555555">
           8-800-555-55-55
         </a>
+
       </div>
 
     </div>
@@ -77,13 +100,22 @@
         <div class="intro__social social-intro">
           <ul class="social-intro__list">
             <li class="social-intro__item">
-              <a href="#">fb</a>
+              <a href="#" class="social-intro__link social-intro__link--fb">
+                <span>fb</span>
+                <span>Facebook</span>
+              </a>
             </li>
             <li class="social-intro__item">
-              <a href="#">vk</a>
+              <a href="#" class="social-intro__link social-intro__link--vk">
+                <span>vk</span>
+                <span>Vkontakte</span>
+              </a>
             </li>
             <li class="social-intro__item">
-              <a href="#">ig</a>
+              <a href="#" class="social-intro__link social-intro__link--ig">
+                <span>ig</span>
+                <span>Instagram</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -128,7 +160,7 @@
               <img src="img/background/video-background.jpg" srcset="img/background/video-background@2x.jpg 2x"
                 width="364" height="228" alt="Пример тренажеров, которые есть в зале">
             </picture>
-            <a href="https://www.youtube.com/watch?v=9TZXsZItgdw"></a>
+            <a href="https://www.youtube.com/watch?v=9TZXsZItgdw" target="_blank"></a>
           </div>
 
         </div>
@@ -143,22 +175,22 @@
         <div class="subscription__tabs" data-tab-section>
           <!-- Дополнительная обертка для линии -->
           <div class="subscription__underline-btn">
-            <button class="is-active" type="button" data-tab-button="tab-1">1&nbsp;месяц</button>
-            <button type="button" data-tab-button="tab-2">6&nbsp;месяцев</button>
-            <button type="button" data-tab-button="tab-3">12&nbsp;месяцев</button>
+            <button type="button" data-tab-button>1&nbsp;месяц</button>
+            <button type="button" data-tab-button>6&nbsp;месяцев</button>
+            <button type="button" data-tab-button>12&nbsp;месяцев</button>
           </div>
         </div>
 
         <div class="subscription__variants">
 
-          <ul class="subscription__list is-active" data-tab-content="tab-1">
+          <ul class="subscription__list" data-tab-content>
             <li class="subscription__item">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
               <div class="subscription__price">
                 <span>5000</span>
                 <span>5000</span>
-                <svg class="subscription__price-shadow" width="30" height="42">
+                <svg class="subscription__price-currency" width="30" height="42">
                   <use xlink:href="img/sprite/sprite.svg#rouble"></use>
                 </svg>
               </div>
@@ -170,7 +202,7 @@
               <div class="subscription__price">
                 <span>1700</span>
                 <span>1700</span>
-                <svg class="subscription__price-shadow" width="30" height="42">
+                <svg class="subscription__price-currency" width="30" height="42">
                   <use xlink:href="img/sprite/sprite.svg#rouble"></use>
                 </svg>
               </div>
@@ -182,7 +214,7 @@
               <div class="subscription__price">
                 <span>2700</span>
                 <span>2700</span>
-                <svg class="subscription__price-shadow" width="30" height="42">
+                <svg class="subscription__price-currency" width="30" height="42">
                   <use xlink:href="img/sprite/sprite.svg#rouble"></use>
                 </svg>
               </div>
@@ -190,14 +222,14 @@
             </li>
           </ul>
 
-          <ul class="subscription__list" data-tab-content="tab-2">
+          <ul class="subscription__list" data-tab-content>
             <li class="subscription__item">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
               <div class="subscription__price">
                 <span>10000</span>
                 <span>10000</span>
-                <svg class="subscription__price-shadow" width="30" height="42">
+                <svg class="subscription__price-currency" width="30" height="42">
                   <use xlink:href="img/sprite/sprite.svg#rouble"></use>
                 </svg>
               </div>
@@ -209,7 +241,7 @@
               <div class="subscription__price">
                 <span>20000</span>
                 <span>20000</span>
-                <svg class="subscription__price-shadow" width="30" height="42">
+                <svg class="subscription__price-currency" width="30" height="42">
                   <use xlink:href="img/sprite/sprite.svg#rouble"></use>
                 </svg>
               </div>
@@ -221,7 +253,7 @@
               <div class="subscription__price">
                 <span>30000</span>
                 <span>30000</span>
-                <svg class="subscription__price-shadow" width="30" height="42">
+                <svg class="subscription__price-currency" width="30" height="42">
                   <use xlink:href="img/sprite/sprite.svg#rouble"></use>
                 </svg>
               </div>
@@ -229,14 +261,14 @@
             </li>
           </ul>
 
-          <ul class="subscription__list" data-tab-content="tab-3">
+          <ul class="subscription__list" data-tab-content>
             <li class="subscription__item">
               <h3>С&nbsp;тренером</h3>
               <p>12&nbsp;занятий</p>
               <div class="subscription__price">
                 <span>15000</span>
                 <span>15000</span>
-                <svg class="subscription__price-shadow" width="30" height="42">
+                <svg class="subscription__price-currency" width="30" height="42">
                   <use xlink:href="img/sprite/sprite.svg#rouble"></use>
                 </svg>
               </div>
@@ -248,7 +280,7 @@
               <div class="subscription__price">
                 <span>25000</span>
                 <span>2500</span>
-                <svg class="subscription__price-shadow" width="30" height="42">
+                <svg class="subscription__price-currency" width="30" height="42">
                   <use xlink:href="img/sprite/sprite.svg#rouble"></use>
                 </svg>
               </div>
@@ -260,7 +292,7 @@
               <div class="subscription__price">
                 <span>35000</span>
                 <span>35000</span>
-                <svg class="subscription__price-shadow" width="30" height="42">
+                <svg class="subscription__price-currency" width="30" height="42">
                   <use xlink:href="img/sprite/sprite.svg#rouble"></use>
                 </svg>
               </div>
@@ -768,18 +800,18 @@
             <form class="free-visit__form form" action="https://echo.htmlacademy.ru" method="post">
 
               <div class="form__wrapper">
-                <p class="form__field form__field--name">
+                <p class="form__field">
                   <input id="field-for-name" class="form__input" type="text" name="user-name" placeholder=" " required>
                   <label for="field-for-name" class="form__label">Имя</label>
                 </p>
-                <p class="form__field form__field--phone">
+                <p class="form__field">
                   <input id="field-for-phone" class="form__input" type="tel" name="user-phone" placeholder=" "
                     maxlength="18" data-phone-pattern required>
                   <label for="field-for-phone" class="form__label">Телефон</label>
                 </p>
               </div>
 
-              <button class="form__button" type="submit" value="Отправить">Отправить</button>
+              <button type="submit" value="Отправить">Отправить</button>
 
             </form>
 
@@ -834,7 +866,7 @@
         <ul class="nav__list">
           <li class="nav__item nav__item--logo">
             <a class="nav__footer-logo logo">
-              <svg width="100%" height="100%">
+              <svg class="logo__icon" width="89" height="20">
                 <use xlink:href="img/sprite/sprite.svg#logo"></use>
               </svg>
             </a>
@@ -860,7 +892,7 @@
 
       <ul class="footer__social social">
         <li class="social__item">
-          <a href="#" class="social__link" target="_blank">
+          <a href="#" class="social__link social__link--vk" target="_blank">
             <span class="visually-hidden">Мы в Вконтакте</span>
 
             <svg class="social__icon" width="25" height="25">
@@ -870,20 +902,20 @@
           </a>
         </li>
         <li class="social__item">
-          <a href="#" class="social__link" target="_blank">
+          <a href="#" class="social__link social__link--ok" target="_blank">
             <span class="visually-hidden">Мы в Одноклассниках</span>
 
-            <svg class="social__icon social__icon--vkontakte" width="25" height="25">
+            <svg class="social__icon" width="25" height="25">
               <use xlink:href="img/sprite/sprite.svg#classmates"></use>
             </svg>
 
           </a>
         </li>
         <li class="social__item">
-          <a href="#" class="social__link" target="_blank">
+          <a href="#" class="social__link social__link--rt" target="_blank">
             <span class="visually-hidden">Мы в Реддит</span>
 
-            <svg class="social__icon social__icon--pinterest" width="25" height="25">
+            <svg class="social__icon" width="25" height="25">
               <use xlink:href="img/sprite/sprite.svg#reddit"></use>
             </svg>
 

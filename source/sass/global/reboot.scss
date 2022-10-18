@@ -25,12 +25,20 @@ html {
   text-rendering: optimizeLegibility;
   // если по прежнему есть проблемы с выравниванием
   // https://transfonter.org/ - включите настройку https://prnt.sc/12rnt6g и переконвертируйте шрифт
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-solitude;
+  }
 }
 
 body {
   width: 100%;
 
   background-color: $color-default-white;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-default-black;
+  }
 }
 
 a {

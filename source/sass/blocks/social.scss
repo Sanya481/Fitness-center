@@ -32,23 +32,64 @@
 .social__icon {
   width: 100%;
   height: 100%;
-  fill: $color-alice-blue;
+  fill: $color-black-russian;
   transition: fill $trans-default;
+  background-color: $color-default-white;
+  border-radius: 50%;
+
+  transition:
+    fill $trans-default,
+    background-color $trans-default-1,
+    transform $trans-default-1;
 }
 
 // Эффекты при наведении в десктопной версии
 @include effects-off {
   .social__link:hover .social__icon,
   .social__link:focus .social__icon {
-    fill: $deep-sky-blue;
+    fill: $color-default-white;
+    transform: scale(1.5);
+  }
+
+  /* Задаем каждой иконке соц.сетей свой цвет */
+  .social__link.social__link--vk:hover .social__icon,
+  .social__link.social__link--vk:focus .social__icon {
+    background-color: $color-navy-blue;
+    box-shadow: 0 0px 25px $color-navy-blue;
+  }
+
+  .social__link.social__link--ok:hover .social__icon,
+  .social__link.social__link--ok:focus .social__icon {
+    background-color: $color-safety-orange;
+    box-shadow: 0 0px 25px $color-safety-orange;
+  }
+
+  .social__link.social__link--rt:hover .social__icon,
+  .social__link.social__link--rt:focus .social__icon {
+    background-color: $color-electric-purple;
+    box-shadow: 0 0px 25px $color-electric-purple;
   }
 
   .social__link:active .social__icon {
-    fill: $deep-dodger-blue;
+    fill: $color-default-white;
+    transform: scale(1.2) translateY(3px);
   }
 }
 
 // Эффекты при нажатии в планшетной и мобильной версии
 .social__link:active .social__icon {
-  fill: $deep-dodger-blue;
+  fill: $color-default-white;
+}
+
+/* Задаем каждой иконке соц.сетей свой цвет */
+.social__link.social__link--vk:active .social__icon {
+  background-color: $color-navy-blue;
+}
+
+.social__link.social__link--ok:active .social__icon {
+  background-color: $color-safety-orange;
+}
+
+.social__link.social__link--rt:active .social__icon {
+  background-color: $color-electric-purple;
 }

@@ -4,6 +4,10 @@
 
   position: relative;
 
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-black-russian;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -108,6 +112,10 @@
 
   transition: color $trans-default, opacity $trans-default;
 
+  @media (prefers-color-scheme: dark) {
+    color: $color-solitude;
+  }
+
   @include vp-1199 {
     line-height: 27px;
     font-size: 18px;
@@ -121,19 +129,22 @@
   }
 
   @include effects-off {
+
     &:hover,
     &:focus {
       color: $color-crimson;
       opacity: 1;
+      border-bottom: 2px solid $color-crimson-2;
+      margin-bottom: -2px;
     }
 
     &:active {
-      color: $color-egyptian-blue;
+      color: $color-crimson;
     }
   }
 
   &:active {
-    color: $color-egyptian-blue;
+    color: $color-crimson;
     opacity: 1;
   }
 }
@@ -141,15 +152,22 @@
 .subscription__tabs button.is-active {
   opacity: 1;
   border-bottom: 2px solid $color-crimson;
+  margin-bottom: -2px;
 
   @include vp-767 {
     // padding: 0px 4px 8px 0px;
   }
 
   @include effects-off {
+
     &:hover,
     &:focus {
       color: $color-sapphire;
+      border-bottom: 2px solid $color-crimson;
+
+      @media (prefers-color-scheme: dark) {
+        color: $color-solitude;
+      }
     }
   }
 }
@@ -189,6 +207,10 @@
   cursor: pointer;
 
   background-color: $color-default-white;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-default-black-2;
+  }
 
   // Чтобы 'тень' от цены поместить за цену
   position: relative;
@@ -236,6 +258,10 @@
   color: $color-chambray;
   margin: 0 0 65px;
 
+  @media (prefers-color-scheme: dark) {
+    color: $color-echo-blue;
+  }
+
   @include vp-767 {
     margin: 0 0 53px;
   }
@@ -280,15 +306,24 @@
   color: $color-egyptian-blue;
   margin-right: 11px;
 
+  @media (prefers-color-scheme: dark) {
+    color: $color-lavender-blue;
+  }
+
   @include vp-767 {
     font-size: 48px;
     line-height: 72px;
   }
 }
 
-.subscription__price-shadow {
+.subscription__price-currency {
   width: 30px;
   height: 42px;
+  fill: $color-sapphire;
+
+  @media (prefers-color-scheme: dark) {
+    fill: $color-solitude;
+  }
 
   @include vp-767 {
     width: 24px;
@@ -309,7 +344,35 @@
   max-width: 208px;
 
   color: $color-sapphire;
-  transition: background $trans-600, color $trans-600;
+  transition:
+    background-image $trans-600,
+    color $trans-600,
+    border-radius $trans-600;
+
+  position: relative;
+  overflow: hidden;
+
+  /* Убираем иконку в планшетной/мобильной версии */
+  @include effects-off {
+    &::before {
+      content: "\1F4AA";
+      position: absolute;
+      font-size: 17px;
+      line-height: 20px;
+      width: 24px;
+      height: 22px;
+
+      left: -50px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      transition: left $trans-default;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: $color-default-white;
+  }
 
   @include vp-767 {
     padding: 24px 43px 24px;
@@ -321,15 +384,41 @@
     &:focus {
       background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
       color: $color-default-white;
+      border-radius: 30px;
+
+      /* Сделаем немного другую анимацию в темной теме сайта */
+      @media (prefers-color-scheme: dark) {
+        border-radius: 10px;
+        animation: pulsate 1s ease-in-out;
+      }
+
+      &::before {
+        left: 10px;
+      }
     }
 
     &:active {
+      color: #dee9ff;
+      border-radius: 10px;
+      opacity: 1;
       background: $color-torch-red;
+
     }
   }
 
   // Эффекты при нажатии в планшетной и мобильной версии
   &:active {
     background: $color-torch-red;
+    border-radius: 10px;
+    background: $blue-to-red;
+    color: #dee9ff;
+    border-radius: 10px;
+  }
+}
+
+/* Анимация пульсации кнопки - "купить абонемент" */
+@keyframes pulsate {
+  0% {
+    box-shadow: 0 0 25px $color-turquoise-blue, 0 0 50px $color-electric-indigo;
   }
 }
